@@ -431,17 +431,33 @@
                     data-title="{{ collection.title | escape }}"
                     data-description="{{ collection.description | strip_html | escape }}"
                     data-url="{{ collection.url }}"
-                    data-img-primary="{{ main_img | image_url: width: 1200 }}"
-                    data-img-secondary="{{ second_img | image_url: width: 1200 }}"
-                    data-thumb-primary="{{ main_img | image_url: width: 300 }}"
-                    data-thumb-secondary="{{ second_img | image_url: width: 300 }}"
+                    data-img-primary="{% if main_img %}{{ main_img | image_url: width: 1200 }}{% endif %}"
+                    data-img-secondary="{% if second_img %}{{ second_img | image_url: width: 1200 }}{% endif %}"
+                    data-thumb-primary="{% if main_img %}{{ main_img | image_url: width: 300 }}{% endif %}"
+                    data-thumb-secondary="{% if second_img %}{{ second_img | image_url: width: 300 }}{% endif %}"
                   >
                     <div class="coll-thumb-flip-card">
                       <div class="coll-thumb-front">
-                        {{ main_img | image_url: width: 300 | image_tag: loading: 'lazy' }}
+                        {%- if main_img -%}
+                          {{ main_img | image_url: width: 300 | image_tag: loading: 'lazy' }}
+                        {%- else -%}
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 120" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+                            <rect width="82" height="120" fill="#e8e8e8"/>
+                            <line x1="0" y1="0" x2="82" y2="120" stroke="#ccc" stroke-width="2"/>
+                            <line x1="82" y1="0" x2="0" y2="120" stroke="#ccc" stroke-width="2"/>
+                          </svg>
+                        {%- endif -%}
                       </div>
                       <div class="coll-thumb-back">
-                        {{ second_img | image_url: width: 300 | image_tag: loading: 'lazy', alt: 'Back Thumb' }}
+                        {%- if second_img -%}
+                          {{ second_img | image_url: width: 300 | image_tag: loading: 'lazy', alt: 'Back Thumb' }}
+                        {%- else -%}
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 120" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+                            <rect width="82" height="120" fill="#e8e8e8"/>
+                            <line x1="0" y1="0" x2="82" y2="120" stroke="#ccc" stroke-width="2"/>
+                            <line x1="82" y1="0" x2="0" y2="120" stroke="#ccc" stroke-width="2"/>
+                          </svg>
+                        {%- endif -%}
                       </div>
 
                     </div>
@@ -456,10 +472,26 @@
         <div class="coll-list-right" id="ClRight-{{ section.id | replace: '-', '_' }}">
           <div class="coll-flip-card" id="FlipCard-{{ section.id | replace: '-', '_' }}">
              <div class="coll-flip-front">
-                {{ first_main_img | image_url: width: 1200 | image_tag: class: 'coll-master-img primary', alt: first_collection.title, loading: 'lazy' }}
+                {%- if first_main_img -%}
+                  {{ first_main_img | image_url: width: 1200 | image_tag: class: 'coll-master-img primary', alt: first_collection.title, loading: 'lazy' }}
+                {%- else -%}
+                  <svg class="coll-master-img primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 542 710" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+                    <rect width="542" height="710" fill="#e8e8e8"/>
+                    <line x1="0" y1="0" x2="542" y2="710" stroke="#ccc" stroke-width="8"/>
+                    <line x1="542" y1="0" x2="0" y2="710" stroke="#ccc" stroke-width="8"/>
+                  </svg>
+                {%- endif -%}
              </div>
              <div class="coll-flip-back">
-                {{ first_second_img | image_url: width: 1200 | image_tag: class: 'coll-master-img secondary', alt: first_collection.title, loading: 'lazy' }}
+                {%- if first_second_img -%}
+                  {{ first_second_img | image_url: width: 1200 | image_tag: class: 'coll-master-img secondary', alt: first_collection.title, loading: 'lazy' }}
+                {%- else -%}
+                  <svg class="coll-master-img secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 542 710" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+                    <rect width="542" height="710" fill="#e8e8e8"/>
+                    <line x1="0" y1="0" x2="542" y2="710" stroke="#ccc" stroke-width="8"/>
+                    <line x1="542" y1="0" x2="0" y2="710" stroke="#ccc" stroke-width="8"/>
+                  </svg>
+                {%- endif -%}
              </div>
 
           </div>

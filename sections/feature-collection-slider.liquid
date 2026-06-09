@@ -509,14 +509,22 @@
             id="FcPreview-{{ section.id | replace: '-', '_' }}"
           >
             {%- assign first_preview_image = first_product.media[1] | default: first_product.featured_media -%}
-            {{
-              first_preview_image
-              | image_url: width: 1000
-              | image_tag:
-                alt: first_product.title,
-                widths: '400, 600, 800, 1000',
-                sizes: '(min-width: 750px) 600px, 100vw'
-            }}
+            {%- if first_preview_image -%}
+              {{
+                first_preview_image
+                | image_url: width: 1000
+                | image_tag:
+                  alt: first_product.title,
+                  widths: '400, 600, 800, 1000',
+                  sizes: '(min-width: 750px) 600px, 100vw'
+              }}
+            {%- else -%}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 3" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+                <rect width="4" height="3" fill="#e8e8e8"/>
+                <line x1="0" y1="0" x2="4" y2="3" stroke="#ccc" stroke-width="0.05"/>
+                <line x1="4" y1="0" x2="0" y2="3" stroke="#ccc" stroke-width="0.05"/>
+              </svg>
+            {%- endif -%}
           </a>
 
           <div class="feat-coll-thumbs-wrap">
@@ -536,14 +544,30 @@
                     data-title="{{ product.title | escape }}"
                     data-available="{{ product.available }}"
                     data-price="{{ product.price | money }}"
-                    data-glass="{{ preview_image | image_url: width: 600 }}"
-                    data-lifestyle="{{ lifestyle_image | image_url: width: 1200 }}"
+                    data-glass="{% if preview_image %}{{ preview_image | image_url: width: 600 }}{% endif %}"
+                    data-lifestyle="{% if lifestyle_image %}{{ lifestyle_image | image_url: width: 1200 }}{% endif %}"
                     data-product-id="{{ product.id }}"
                     data-variant-id="{{ product.selected_or_first_available_variant.id | default: product.variants[0].id }}"
                     data-product-url="{{ shop.url | append: product.url }}"
                   >
-                    {{ lifestyle_image | image_url: width: 200 | image_tag: class: 'thumb-lifestyle', loading: 'lazy' }}
-                    {{ preview_image | image_url: width: 200 | image_tag: class: 'thumb-glass', loading: 'lazy' }}
+                    {%- if lifestyle_image -%}
+                      {{ lifestyle_image | image_url: width: 200 | image_tag: class: 'thumb-lifestyle', loading: 'lazy' }}
+                    {%- else -%}
+                      <svg class="thumb-lifestyle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 120" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+                        <rect width="82" height="120" fill="#e8e8e8"/>
+                        <line x1="0" y1="0" x2="82" y2="120" stroke="#ccc" stroke-width="2"/>
+                        <line x1="82" y1="0" x2="0" y2="120" stroke="#ccc" stroke-width="2"/>
+                      </svg>
+                    {%- endif -%}
+                    {%- if preview_image -%}
+                      {{ preview_image | image_url: width: 200 | image_tag: class: 'thumb-glass', loading: 'lazy' }}
+                    {%- else -%}
+                      <svg class="thumb-glass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 120" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+                        <rect width="82" height="120" fill="#e8e8e8"/>
+                        <line x1="0" y1="0" x2="82" y2="120" stroke="#ccc" stroke-width="2"/>
+                        <line x1="82" y1="0" x2="0" y2="120" stroke="#ccc" stroke-width="2"/>
+                      </svg>
+                    {%- endif -%}
                   </div>
                 {%- endfor -%}
               </div>
@@ -557,16 +581,24 @@
           class="feat-coll-right"
           id="FcRight-{{ section.id | replace: '-', '_' }}"
         >
-          {{
-            first_lifestyle_image
-            | image_url: width: 1200
-            | image_tag:
-              class: 'master-lifestyle-img',
-              alt: first_product.title,
-              loading: 'lazy',
-              widths: '600, 800, 1000, 1200',
-              sizes: '(min-width: 750px) 50vw, 100vw'
-          }}
+          {%- if first_lifestyle_image -%}
+            {{
+              first_lifestyle_image
+              | image_url: width: 1200
+              | image_tag:
+                class: 'master-lifestyle-img',
+                alt: first_product.title,
+                loading: 'lazy',
+                widths: '600, 800, 1000, 1200',
+                sizes: '(min-width: 750px) 50vw, 100vw'
+            }}
+          {%- else -%}
+            <svg class="master-lifestyle-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 542 710" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;">
+              <rect width="542" height="710" fill="#e8e8e8"/>
+              <line x1="0" y1="0" x2="542" y2="710" stroke="#ccc" stroke-width="8"/>
+              <line x1="542" y1="0" x2="0" y2="710" stroke="#ccc" stroke-width="8"/>
+            </svg>
+          {%- endif -%}
         </a>
       </div>
     {%- else -%}
