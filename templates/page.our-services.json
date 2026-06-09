@@ -1,0 +1,403 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_TtqrjW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dra8Pb": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR SERVICE",
+            "heading_tag": "h1"
+          }
+        },
+        "text_rmNm4H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At SEESON, each design is developed with precision and attention to detail throughout the production process.</p><p>From initial concept to finished product, every detail is shaped with intention, considering form, materiality, and wearing experience. Personalized adjustments, from frame fitting to design consultation, ensure each pair offers comfort and a precise fit for everyday wear.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dra8Pb",
+        "text_rmNm4H"
+      ],
+      "name": "DỊCH VỤ",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 20,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_carousel_AxTVVy": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_4Qri6b": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/CLEANING_SERVICE.jpg",
+            "mobile_image": "shopify://shop_images/CLEANING_SERVICE_b081a545-1bc2-4ef1-8980-f775f153078a.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_4Qri6b"
+      ],
+      "name": "DỊCH VỤ VỆ SINH",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h2",
+        "text": "<p><strong>CLEANING SERVICE<br/></strong><br/>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores.<br/>Turnaround time: 2–3 business days.<br/>Note: The refreshing service is only available for selected product lines. Please contact the store for detailed information.</p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_8zAWpB": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_carousel_ML6wFw": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_xVDrhX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/FRAME_ADJUSTMENT_SERVICE_5c3483ea-da53-48ca-a879-a9fb5512bb59.jpg",
+            "mobile_image": "shopify://shop_images/FRAME_ADJUSTMENT_SERVICE.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_xVDrhX"
+      ],
+      "name": "DỊCH VỤ GIA CỐ GỌNG KÍNH",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h2",
+        "text": "<p><strong>FRAME ADJUSTMENT SERVICE<br/><br/></strong>Complimentary lifetime frame adjustment service.<br/>Available at SEESON stores.</p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_fKzqXJ": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 30,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "image_carousel_fDJ87C": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_mPJrdP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Eye_Examination_Refraction.jpg",
+            "mobile_image": "shopify://shop_images/Eye_Examination_Refraction_ca5aff33-a31d-4c9d-a905-59eb4380d048.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_mPJrdP"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 767px) {.button--primary {font-size: 12px; text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }}",
+        "@media screen and (min-width: 768px) {.button--primary {font-size: 16px; text-decoration: none; } .button--primary:hover {text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.1px; }}"
+      ],
+      "name": "ĐO KHÁM KHÚC XẠ",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h2",
+        "text": "<p><strong>EYE EXAMINATION & REFRACTION<br/><br/></strong>SEESON offers professional refraction services conducted by a team of highly trained technicians, following a standardized 16-step protocol and supported by advanced equipment.<br/><br/>Examination hours: 9.00 AM – 9.30 PM<br/>*Service exclusively available for SEESON frames.</p>",
+        "text_alignment": "left-top",
+        "button_1_label": "LEARN MORE ABOUT THE LENSES' FEATURES",
+        "button_1_link": "https://drive.google.com/file/d/1Ep61GvE43h7_OKv4TiMxalJsNeApts1m/view?usp=drive_link",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "multicolumn_UYRQzU": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fzQjaR": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "title": "",
+            "image_link": false,
+            "heading_tag": "h3",
+            "text": "<p><strong>DỊCH VỤ VỆ SINH </strong></p><p>Dịch vụ đánh bóng và làm mới gọng kính, làm sạch tròng kính, thay thế ốc gioăng cao su cao cấp. Áp dụng tại các cửa hàng SEESON.</p><p>Thời gian: 2–3 ngày làm việc.</p><p>Lưu ý: Dịch vụ làm mới chỉ áp dụng với một số dòng sản phẩm, vui lòng liên hệ cửa hàng để có thông tin chi tiết.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YaDLBg": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "title": "",
+            "image_link": false,
+            "heading_tag": "h3",
+            "text": "<p><strong>DỊCH VỤ GIA CỐ GỌNG KÍNH</strong></p><p>Dịch vụ nắn chỉnh lại gọng kính miễn phí trọn đời sản phẩm.</p><p>Dịch vụ hiện có tại các cửa hàng của SEESON.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fzQjaR",
+        "column_YaDLBg"
+      ],
+      "disabled": true,
+      "name": "CÁC DỊCH VỤ",
+      "settings": {
+        "remove_space_x": true,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "enable_desktop_slider": false,
+        "show_dots": false,
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 125,
+        "padding_top_mobile": 105,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_Bh37UM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WCzNHR": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>CLEANING SERVICE</strong>",
+            "heading_tag": "h1"
+          }
+        },
+        "text_zAzDqQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/>Polishing and refreshing frames, cleaning lenses, and replacing premium rubber screws and fittings. Available at SEESON stores.<br/>Turnaround time: 2–3 business days.<br/>Note: The refreshing service is only available for selected product lines. Please contact the store for detailed information.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WCzNHR",
+        "text_zAzDqQ"
+      ],
+      "name": "BẢO HÀNH TRỌN ĐỜI",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "multicolumn_rBphaY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_A4tc8k": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Store_CTA_HN.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_HN.jpg",
+            "title": "",
+            "image_link": true,
+            "heading_tag": "h3",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang, O Cho Dua Ward, Hanoi City</p><p>9.00 AM - 10.00 PM | (+84) 986 009 390</p>",
+            "link_label": "",
+            "link": "/pages/stores#store-hanoi"
+          }
+        },
+        "column_NdBXwH": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Store_CTA_SG.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_SG.jpg",
+            "title": "",
+            "image_link": true,
+            "heading_tag": "h3",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | (+84) 986 009 390</p>",
+            "link_label": "",
+            "link": "/pages/stores#store-saigon"
+          }
+        }
+      },
+      "block_order": [
+        "column_A4tc8k",
+        "column_NdBXwH"
+      ],
+      "name": "FLAGSHIP STORES",
+      "settings": {
+        "remove_space_x": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "enable_desktop_slider": false,
+        "show_dots": true,
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_Wxqhxr": {
+      "type": "rich-text",
+      "blocks": {
+        "text_ErNBkq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover SEESON through a curated network of selected stockists. Find your nearest store here.</p><p><a href=\"/pages/stores-new\" title=\"STORES - NEW\">OFFICIAL STOCKISTS</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_ErNBkq"
+      ],
+      "name": "CTA HỆ THỐNG CỬA HÀNG",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 120
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_TtqrjW",
+    "image_carousel_AxTVVy",
+    "rich_text_8zAWpB",
+    "image_carousel_ML6wFw",
+    "rich_text_fKzqXJ",
+    "image_carousel_fDJ87C",
+    "multicolumn_UYRQzU",
+    "rich_text_Bh37UM",
+    "multicolumn_rBphaY",
+    "rich_text_Wxqhxr"
+  ]
+}

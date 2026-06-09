@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_BmJ4mE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PNdAHD": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>SEE YOU SOON</strong>",
+            "heading_tag": "h2"
+          }
+        },
+        "text_q3p39W": {
+          "type": "text",
+          "settings": {
+            "text": "<p>New projects are in progress.</p><p>Stay tuned with SEESON.</p><p>Please check back later, or contact us if you need assistance.</p><p><a href=\"mailto:support@seeson.vn \" title=\"mailto:support@seeson.vn \">support@seeson.vn</a> or (+84) 986 009 390</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PNdAHD",
+        "text_q3p39W"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 180,
+        "padding_top_mobile": 100,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_BmJ4mE"
+  ]
+}

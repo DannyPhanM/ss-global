@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-hamburger"  width="12" height="9" viewBox="0 0 12 9" fill="none">
+  <path d="M0 0V1.5H12V0H0Z" fill="currentColor"/>
+  <path d="M0 3.75V5.25H12V3.75H0Z" fill="currentColor"/>
+  <path d="M0 7.5V9H12V7.5H0Z" fill="currentColor"/>
+</svg>

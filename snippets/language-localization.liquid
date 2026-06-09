@@ -1,0 +1,62 @@
+{%- comment -%}
+  Renders the language picker for the localization form
+
+  Accepts:
+    - localPosition: pass in the position in which the form is coming up to create specific IDs
+{%- endcomment -%}
+
+<div class="disclosure">
+  <button
+    type="button"
+    class="disclosure__button localization-form__select localization-selector link link--text caption-large"
+    aria-expanded="false"
+    aria-controls="{{ localPosition }}List"
+    aria-describedby="{{ localPosition }}Label"
+  >
+    <span>
+      {% if localization.language.iso_code == 'vi' %}
+        VIE
+      {% elsif localization.language.iso_code == 'en' %}
+        ENG
+      {% else %}
+        {{ localization.language.iso_code | upcase }}
+      {% endif %}
+
+    </span>
+    <span class="svg-wrapper">
+      {% render 'core-icon', name: 'caret' %}
+    </span>
+  </button>
+  <div class="disclosure__list-wrapper language-selector" hidden>
+    <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
+      {%- for language in localization.available_languages -%}
+        <li class="disclosure__item" tabindex="-1">
+          <a
+            class="link link--text disclosure__link caption-large focus-inset"
+            href="#"
+            hreflang="{{ language.iso_code }}"
+            lang="{{ language.iso_code }}"
+            {% if language.iso_code == localization.language.iso_code %}
+              aria-current="true"
+            {% endif %}
+            data-value="{{ language.iso_code }}"
+          >
+            <span class="svg-wrapper">
+              {% render 'core-icon', name: 'checkmark' %}
+            </span>
+            <span>
+              {% if language.iso_code == 'vi' %}
+                VIE
+              {% elsif language.iso_code == 'en' %}
+                ENG
+              {% else %}
+                {{ language.iso_code | upcase }}
+              {% endif %}
+            </span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+<input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">

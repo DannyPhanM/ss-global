@@ -1,0 +1,262 @@
+{{ 'collapsible-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media(max-width: 749px) {
+      .collabsible-custom__details .collabsible-custom__blocks {
+    gap: 20px !important;
+  }
+
+  .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block .collabsible-custom__block-content {
+      padding-bottom: 0;
+  }
+
+  .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block + .collabsible-custom__block {
+      padding-top: 0 !important;
+  }
+  
+  .collabsible-custom__details .collabsible-custom__blocks .collabsible-custom__block + .collabsible-custom__block .collabsible-custom__block-content {
+      padding-bottom: 0;
+      padding-top: 0;
+      scrollbar-width: none;
+  }
+  }
+
+
+{%- endstyle -%}
+
+<div class="collabsible-custom color-{{ section.settings.color_scheme }} gradient {% if section.settings.remove_border_top %} remove-top {% endif %} {% if section.settings.enable_border_bottom %} border-bottom {% endif %}">
+  <div class="collabsible-custom__wrapper section-{{ section.id }}-padding{% if section.settings.full_width %} content-container--full-width{% else %} page-width{% endif %}">
+    <accordion-component {% if section.settings.enable_global_toggle %} global{% endif %}>
+      <details class="collabsible-custom__details"{% if section.settings.open_by_default %} open{% endif %}>
+        <summary class="collabsible-custom__summary" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; cursor: pointer;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <{{ section.settings.heading_tag }} class="collabsible-custom__title {{ section.settings.heading_tag }}" style="margin: 0;">{{ section.settings.title }}</{{ section.settings.heading_tag }}>
+          </div>
+          <span class="collabsible-custom__icon" style="display: flex; align-items: center; position: relative; width: 20px; height: 20px;">
+            <span class="icon-plus"><span class="svg-wrapper">{% render 'core-icon', name: 'plus' %}</span></span>
+            <span class="icon-minus"><span class="svg-wrapper">{% render 'core-icon', name: 'minus' %}</span></span>
+          </span>
+        </summary>
+        <div class="accordion__content-container">
+          <div class="collabsible-custom__blocks">
+            {%- for block in section.blocks -%}
+              <div class="collabsible-custom__block" {{ block.shopify_attributes }} style="padding-top: {{  block.settings.padding_top }}px; padding-bottom: {{ block.settings.padding_bottom }}px">
+                <div class="collabsible-custom__block-content rte">{{ block.settings.content }}</div>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </details>
+    </accordion-component>
+  </div>
+</div>
+
+<style>
+  .collabsible-custom__details {
+    transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: auto;
+  }
+  .collabsible-custom__details .icon-minus {
+    display: none;
+  }
+  .collabsible-custom__details[open] .icon-plus {
+    display: none;
+  }
+  .collabsible-custom__icon .svg-wrapper {
+    align-self: center;
+    fill: rgb(var(--color-foreground));
+    width: 20px;
+    height: 20px;
+    color: #999;
+  }
+  .collabsible-custom__icon .svg-wrapper svg {
+  
+  }
+  .collabsible-custom__details[open] .icon-minus {
+    display: flex;
+  }
+  .collabsible-custom__details .accordion__content-container {
+    overflow: hidden;
+  }
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Collabsible Custom",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_global_toggle",
+      "label": "Enable global toggle (Close others)",
+      "default": true
+    },
+        {
+      "type": "checkbox",
+      "id": "remove_border_top",
+      "label": "Remove border top",
+      "default": false
+    },
+    
+        {
+      "type": "checkbox",
+      "id": "enable_border_bottom",
+      "label": "enable border bottom",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "open_by_default",
+      "label": "Open by default",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Collabsible Custom Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 50
+    },
+        {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top (Mobile)",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 10
+    },
+        {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom (Mobile)",
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collabsible_block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Block Content"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "label": "Padding top",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "label": "Padding bottom",
+          "default": 50
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collabsible Custom",
+      "blocks": [
+        { "type": "collabsible_block" },
+        { "type": "collabsible_block" }
+      ]
+    }
+  ]
+}
+{% endschema %}

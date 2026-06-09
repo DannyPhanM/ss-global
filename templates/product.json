@@ -1,0 +1,283 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "collapsible_tab_9M6Lid": {
+          "type": "collapsible_tab",
+          "settings": {
+            "enable_sizing_data": false,
+            "heading": "DETAILS",
+            "icon": "none",
+            "content": "{{ product.description }}",
+            "page": "",
+            "sizing_description": "<p>To determine the right frame size, measure the total width of your current glasses. A suitable frame size should be within ±4mm of the width of your current pair.</p>"
+          }
+        },
+        "collapsible_tab_4rJxwr": {
+          "type": "collapsible_tab",
+          "settings": {
+            "enable_sizing_data": true,
+            "heading": "SIZING",
+            "icon": "none",
+            "content": "{{ product.description }}",
+            "page": "",
+            "sizing_description": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "wishlist_plus_advanced_pdp_button_4dHhhE": {
+          "type": "shopify://apps/wishlist-plus/blocks/advanced-pdp-button/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "text",
+        "title",
+        "variant_picker",
+        "collapsible_tab_9M6Lid",
+        "collapsible_tab_4rJxwr",
+        "price",
+        "buy_buttons",
+        "wishlist_plus_advanced_pdp_button_4dHhhE"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.product__media.media img {width: 90%; margin: 0 auto; display: block; }}"
+      ],
+      "name": "THÔNG TIN SẢN PHẨM",
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked_single",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 100,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 60
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "name": "SẢN PHẨM LIÊN QUAN",
+      "settings": {
+        "heading": "YOU MAY ALSO LIKE",
+        "heading_size": "h2",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 100,
+        "padding_bottom": 60,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "rich_text_BqQawY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_hUdhDm": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"/collections/view-all-sun\" title=\"View All\">BACK TO SHOP</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_hUdhDm"
+      ],
+      "name": "CTA ALL DESIGNS",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 10,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_Ap8tpF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mJdU4n": {
+          "type": "heading",
+          "settings": {
+            "heading": "FLAGSHIP STORES",
+            "heading_tag": "h1"
+          }
+        },
+        "text_9GprWX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Where the Vietnamese spirit moves within a contemporary rhythm. Each detail is carefully refined, shaping the experience through intentional touches.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mJdU4n",
+        "text_9GprWX"
+      ],
+      "name": "HỆ THỐNG CỬA HÀNG FLAGSHIP",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "multicolumn_fEM9Jm": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hqW6yi": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Store_CTA_HN.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_HN.jpg",
+            "title": "",
+            "image_link": true,
+            "heading_tag": "h3",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang, O Cho Dua Ward, Hanoi City</p><p>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
+            "link_label": "",
+            "link": "/pages/stores#store-hanoi"
+          }
+        },
+        "column_QANmAW": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Store_CTA_SG.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_SG.jpg",
+            "title": "",
+            "image_link": true,
+            "heading_tag": "h3",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
+            "link_label": "",
+            "link": "/pages/stores#store-saigon"
+          }
+        }
+      },
+      "block_order": [
+        "column_hqW6yi",
+        "column_QANmAW"
+      ],
+      "name": "FLAGSHIP STORES",
+      "settings": {
+        "remove_space_x": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "enable_desktop_slider": false,
+        "show_dots": true,
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_YDy3wW": {
+      "type": "rich-text",
+      "blocks": {
+        "text_3MXkUe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover SEESON through a curated network of selected stockists. Find your nearest store here.</p><p><a href=\"/pages/stores-new\" title=\"STORES-NEW\">OFFICIAL STOCKISTS OFFICAL STOCKISTS</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_3MXkUe"
+      ],
+      "name": "CTA HỆ THỐNG CỬA HÀNG",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 120
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "rich_text_BqQawY",
+    "rich_text_Ap8tpF",
+    "multicolumn_fEM9Jm",
+    "rich_text_YDy3wW"
+  ]
+}

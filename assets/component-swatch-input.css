@@ -1,0 +1,122 @@
+/* swatch-input lives in its own file for reusability of the swatch in other areas than the product form context */
+.swatch-input__input + .swatch-input__label {
+  --swatch-input--border-radius: 0;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--swatch-input--border-radius);
+  cursor: pointer;
+  position: relative;
+}
+.mobile-facets__item .swatch-input__input + .swatch-input__label {
+  --swatch-input--border-radius: 0;
+}
+.mobile-facets__item .swatch-input__input + .swatch-input__label span { 
+  background: transparent;
+  border-color: #000;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mobile-facets__item .swatch-input__input:checked + .swatch-input__label {
+  /* border-radius: 0 !important;
+  padding: 0;
+  min-width: 14px;
+  width: 14px;
+  height: 14px; */
+}
+.mobile-facets__item .swatch-input__input:checked + .swatch-input__label span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 9'%3E%3Cpath fill='black' fill-rule='evenodd' d='M11.35.643a.5.5 0 0 1 .006.707l-6.77 6.886a.5.5 0 0 1-.719-.006L.638 4.845a.5.5 0 1 1 .724-.69l2.872 3.011 6.41-6.517a.5.5 0 0 1 .707-.006z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.swatch-input__input + .swatch-input__label.swatch-input__label--square {
+  --swatch-input--border-radius: 0.2rem;
+}
+
+/* Active state */
+.swatch-input__input:active + .swatch-input__label,
+.swatch-input__input:checked + .swatch-input__label {
+  /* outline: none;
+  border: 1px solid #000;
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; */
+}
+
+.swatch-input__input:active + .swatch-input__label .swatch,
+.swatch-input__input:checked + .swatch-input__label .swatch {
+
+}
+
+/* Focus visible */
+.swatch-input__input:focus-visible + .swatch-input__label {
+  border: 0.64px solid rgba(var(--color-foreground), 0.5);
+}
+
+/* Active and focused */
+.swatch-input__input:active:focus-visible + .swatch-input__label,
+.swatch-input__input:checked:focus-visible + .swatch-input__label {
+  border: 0.64px solid #000;
+}
+
+/* Visually disabled */
+.swatch-input__input.visually-disabled:not(:active):not(:checked) + .swatch-input__label {
+  transition: none;
+}
+.swatch-input__input.visually-disabled:not(:active):not(:checked) + .swatch-input__label:hover {
+  outline: none;
+}
+
+/* Actually disabled */
+.swatch-input__input:disabled + .swatch-input__label {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Overrides for swatch snippet when used inside disabled swatch-input */
+.swatch-input__input:disabled + .swatch-input__label > .swatch,
+.swatch-input__input.visually-disabled + .swatch-input__label > .swatch {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Disabled styles */
+.swatch-input__input:disabled + .swatch-input__label > .swatch,
+.swatch-input__input.visually-disabled + .swatch-input__label > .swatch {
+  /* opacity: 0.4; */
+}
+
+/* Display crossed out line over swatch when input is disabled */
+.swatch-input__input:disabled + .swatch-input__label > .swatch::after,
+.swatch-input__input.visually-disabled + .swatch-input__label > .swatch::after {
+  /* Diagonal of a square = length of the side * sqrt(2)  */
+  /* --diagonal--size: calc(var(--swatch-input--size) * 1.414);
+  --crossed-line--size: 0.1rem;
+  content: '';
+  position: absolute;
+  bottom: calc(var(--crossed-line--size) * -0.5);
+  left: 0;
+  width: var(--diagonal--size);
+  height: var(--crossed-line--size);
+  background-color: rgb(var(--color-foreground));
+  transform: rotate(-45deg);
+  transform-origin: left; */
+}
+

@@ -1,0 +1,369 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_TtqrjW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dra8Pb": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR JOURNEY BEGINS",
+            "heading_tag": "h1"
+          }
+        },
+        "text_rmNm4H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEESON is Vietnam’s first eyewear design studio.</p><p>Founded in 2018, the brand was built on a desire to create an independent eyewear label — not to repeat familiar standards, but to reshape the definition of eyeglasses through considered design and refined execution.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dra8Pb",
+        "text_rmNm4H"
+      ],
+      "name": "VỀ SEESON",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 20,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_carousel_zQN9YD": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_XW9Gqb": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_YVaWCp": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_jNAFEf": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_EGVpfL": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_77dzed": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Our_Journey_Begin_01.png",
+            "mobile_image": "shopify://shop_images/Our_Journey_Begin_01_405cc81f-0e19-4d54-ace8-b6a82ae77ca7.png",
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_XW9Gqb",
+        "slide_YVaWCp",
+        "slide_jNAFEf",
+        "slide_EGVpfL",
+        "slide_77dzed"
+      ],
+      "name": "IMAGE VỂ SEESON",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_Bh37UM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WCzNHR": {
+          "type": "heading",
+          "settings": {
+            "heading": "TRIẾT LÝ THIẾT KẾ",
+            "heading_tag": "h1"
+          }
+        },
+        "text_zAzDqQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEESON nhìn nhận gọng kính trước hết như một vật thể đơn thuần, có chức năng vận hành của kính thuốc.</p><p>Trong quá trình nghiên cứu và tư duy thiết kế, những tiếp xúc cá nhân với các vật thể quen thuộc trong đời sống trở thành nguồn cảm hứng để hình thành nên ngôn ngữ và concept cho mỗi bộ sưu tập. </p><p>Sự tối giản và tính bền vững là những giá trị mà SEESON luôn hướng tới.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WCzNHR",
+        "text_zAzDqQ"
+      ],
+      "disabled": true,
+      "name": "TRIẾT LÝ THIẾT KẾ",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_carousel_9zX4HU": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_yGQUq7": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_GfTMHB": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_Vfih4a": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_iWXgHL": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_g9GWUT": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_yGQUq7",
+        "slide_GfTMHB",
+        "slide_Vfih4a",
+        "slide_iWXgHL",
+        "slide_g9GWUT"
+      ],
+      "disabled": true,
+      "name": "IMAGE VỂ TRIẾT LÝ",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_YKfw9t": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_LQRJmP": {
+          "type": "heading",
+          "settings": {
+            "heading": "FLAGSHIP STORES",
+            "heading_tag": "h2"
+          }
+        },
+        "text_RhkKdx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEESON spaces are a natural extension of its design philosophy.</p><p>Where Vietnamese spirit exists within a contemporary visual language. More than a retail experience, the stores are designed to be a place to experience the materials, thinking, and craftsmanship behind every touchpoint.<br/><br/><br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LQRJmP",
+        "text_RhkKdx"
+      ],
+      "name": "HỆ THỐNG CỬA HÀNG FLAGSHIP",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "multicolumn_tit84A": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bchcEB": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Store_CTA_HN.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_HN.jpg",
+            "title": "",
+            "image_link": true,
+            "heading_tag": "h3",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang, O Cho Dua Ward, Hanoi City</p><p>9.00 AM - 10.00 PM | (+84) 986 009 390</p>",
+            "link_label": "",
+            "link": "/pages/stores#store-hanoi"
+          }
+        },
+        "column_y8Xw9F": {
+          "type": "column",
+          "settings": {
+            "content_overlay": true,
+            "content_alignment": "left-top",
+            "image": "shopify://shop_images/Store_CTA_SG.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_SG.jpg",
+            "title": "",
+            "image_link": true,
+            "heading_tag": "h3",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | (+84) 986 009 390</p>",
+            "link_label": "",
+            "link": "/pages/stores#store-saigon"
+          }
+        }
+      },
+      "block_order": [
+        "column_bchcEB",
+        "column_y8Xw9F"
+      ],
+      "name": "FLAGSHIP STORES",
+      "settings": {
+        "remove_space_x": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "enable_desktop_slider": false,
+        "show_dots": true,
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "rich_text_a8fbaQ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WVwXLU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover SEESON through a curated network of selected stockists. Find your nearest store here.</p><p><a href=\"/pages/stores-new\" title=\"STORES - NEW\">OFFICIAL STOCKISTS</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_WVwXLU"
+      ],
+      "name": "CTA HỆ THỐNG CỬA HÀNG FLAGSHIP",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 120
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_TtqrjW",
+    "image_carousel_zQN9YD",
+    "rich_text_Bh37UM",
+    "image_carousel_9zX4HU",
+    "rich_text_YKfw9t",
+    "multicolumn_tit84A",
+    "rich_text_a8fbaQ"
+  ]
+}

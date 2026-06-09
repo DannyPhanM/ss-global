@@ -1,0 +1,172 @@
+ {{ 'contact-form.css' | asset_url | stylesheet_tag: preload: true }}
+ {% comment %} 
+ bao hanh
+ {% endcomment %}
+   <div class="page-width">
+<section class="Section Page-Custom-Layout" data-section-id="{{ section.id }}" data-section-type="page-custom-contact">
+  <div class="PageContent">
+    <header class="SectionHeader SectionHeader--left"> 
+        <h1>SEESON FEEDBACK FORM</h1>
+    </header>
+    <div class="form-container">
+        <form name="submit-to-google-sheet">
+          <div id="name_phone">
+            <label class="label-title">CUSTOMER INFORMATION (OPTIONAL)</label>
+            <div class="col-container col-col">
+              <input  name="Họ và Tên" type="text" placeholder="NAME" />
+              <input  name="Số điện thoại" type="text" placeholder="PHONE NUMBER" />
+            </div>
+          </div>
+          
+            <div id="store">
+               <label class="label-title">YOUR PRODUCTS ARE GUARANTEED AT:</label>
+              <div class="col-container">
+                <label class="container">
+                   IRL Flagship 44 Ton Duc Thang, Dong Da, Ha Noi
+                    <input required type="radio" value="IRL Flagship 44 Tôn Đức Thắng, Đống Đa, Hà Nội" name="Chi nhánh" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  IRL Flagship 199 Dien Bien Phu, Ward 6, District 3, Ho Chi Minh
+                    <input required type="radio" value="IRL Flagship 199 Điện Biên Phủ, Phường 6, Quận 3, TP Hồ Chí Minh" name="Chi nhánh" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                   IRL Flagship 92 Nam Ki Khoi Nghia, District 1, Ho Chi Minh
+                    <input required type="radio" value="IRL Flagship 92 Nam Kì Khởi Nghĩa, Quận 1, TP Hồ Chí MInh" name="Chi nhánh" />
+                    <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+    
+            <div id="review">
+               <label class="label-title">OVERALL RATE OF OUR CUSTOMER SERVICE: *</label>
+              <div class="col-container">
+                <label id="review_hl" class="container">
+                   Satisfied
+                    <input required type="radio" value="Hoàn toàn hài lòng" name="Đánh giá" />
+                    <span class="checkmark"></span>
+                </label>
+               <label id="review_khl" class="container">
+                  Unsatisfied
+                    <input required type="radio" value="Chưa hài lòng" name="Đánh giá" />
+                    <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+    
+            <div id="complaint">
+                 <label class="label-title">WHAT MAKES YOU FEEL UNSATISFIED: *</label>
+              <div class="col-container">
+                <label class="container">
+                  Product warranty quality <input  type="checkbox" value="Chất lượng bảo hành sản phẩm" name="Vấn đề 1" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  Staff attitude 
+                    <input type="checkbox"  value="Thái độ nhân viên" name="Vấn đề 2" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                 Warranty Policy
+                    <input type="checkbox"  value="Chính sách bảo hành" name="Vấn đề 3" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  Processing Time
+                    <input type="checkbox"  value="Thời gian xử lý" name="Vấn đề 4" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  Other
+                    <input type="checkbox"  value="Khác" name="Vấn đề 5" />
+                    <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          
+            <div id="message_container">
+              <label class="label-title">PLEASE LET US KNOW MORE ABOUT YOUR EXPERIENCE:  </label>
+              <textarea  id="message" name="Trải nghiệm" rows="4" cols="50" placeholder="Type here" ></textarea>
+            </div>
+          
+            <button class="Button--primary Button--full Button" type="submit">SUBMIT</button>
+          
+        </form>
+    
+        <div class="loading js-loading is-hidden">
+            <div class="loading-spinner">
+                {% render 'loader-icon' %}
+            </div>
+        </div>
+    
+        <p class="js-success-message is-hidden">Your response has been received. Thank you for taking the time to share your experience with SEESON. For further information, please contact hotline 098.600.9390</p>
+        <p class="js-error-message is-hidden">ERROR!</p>
+                  
+    </div>
+  </div>
+</section>
+                </div>
+<script>
+if(localStorage.feedbackbaohanh == 'true'){
+    console.log('đã gửi feedback');
+
+  }else{
+     console.log('chưa gửi feedback');
+  }
+  
+  document.querySelector('#review_hl').addEventListener('click', e => {
+    document.querySelector('#complaint').style.display =  'none';
+    document.querySelector('#message_container').style.display =  'block';
+  })
+  document.querySelector('#review_khl').addEventListener('click', e => {
+    document.querySelector('#complaint').style.display =  'block';
+    document.querySelector('#message_container').style.display =  'block';
+  })
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxoNTJauSLQ6Teif4ytSH7se5qTVoCcqfaAMijcQbltoOBY8tjRTKnxz3v6L_xw0mQT/exec'
+
+const form = document.forms['submit-to-google-sheet']
+  const loading = document.querySelector('.js-loading')
+  const successMessage = document.querySelector('.js-success-message')
+  const errorMessage = document.querySelector('.js-error-message')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    showLoadingIndicator()
+    
+    const formData = new FormData(form)
+    const now = new Date()
+    const pad = (n) => String(n).padStart(2, '0')
+    const formattedDate = `${pad(now.getDate())}/${pad(now.getMonth() + 1)}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`
+    
+    const dateKeys = ['Date', 'date', 'Timestamp', 'timestamp', 'Ngày', 'ngày', 'Thời gian', 'thời gian', 'Ngày gửi', 'ngày gửi', 'Thời gian gửi', 'thời gian gửi', 'Ngày submit', 'ngày submit', 'Created At', 'created_at', 'Created', 'created', 'Ngày tạo', 'ngày tạo']
+    dateKeys.forEach(key => formData.append(key, formattedDate))
+    
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => showSuccessMessage(response))
+      .catch(error => showErrorMessage(error))
+  })
+   
+  function showLoadingIndicator () {
+    form.classList.add('is-hidden')
+    loading.classList.remove('is-hidden')
+  }
+
+  function showSuccessMessage (response) {
+    console.log('Success!', response)
+    setTimeout(() => {
+       localStorage.setItem('feedbackbaohanh', 'true')
+      successMessage.classList.remove('is-hidden')
+      loading.classList.add('is-hidden')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, 200)
+  }
+
+  function showErrorMessage (error) {
+    console.error('Error!', error.message)
+    setTimeout(() => {
+      errorMessage.classList.remove('is-hidden')
+      loading.classList.add('is-hidden')
+    }, 200)
+  }
+</script>

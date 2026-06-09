@@ -1,0 +1,654 @@
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .coll-list-slider {
+    background-color: {{ section.settings.background_color }};
+    position: relative;
+    overflow: hidden;
+    color: #000;
+  }
+
+  .coll-list-flex {
+    display: flex;
+    align-items: stretch;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  @media(min-width: 990px) {
+    .coll-list-flex {
+      padding: 0 80px;
+    }
+  }
+
+  /* DESKTOP LAYOUT (Default) */
+  .coll-list-left {
+    width: 57.63%;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .coll-list-info h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
+  .coll-list-info .description {
+    font-size: 16px;
+    color: #999;
+    margin: 0 0 20px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    max-width: 542px;
+  }
+  .coll-list-info .cta-link {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    text-underline-offset: 4px;
+    text-transform: uppercase;
+    color: #999999;
+  }
+
+  .coll-list-info .cta-link:hover {
+    text-decoration: underline;
+    text-underline-offset: .3rem;
+  }
+
+  .coll-list-thumbs-wrap {
+    margin-top: auto;
+    padding-top: 50px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .coll-thumb-swiper {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .coll-thumb-swiper.swiper-initialized {
+    opacity: 1;
+  }
+
+  .coll-thumb-swiper .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .coll-thumb-swiper .swiper-slide {
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.6;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .coll-thumb-swiper .swiper-slide.show-item { opacity: 1; }
+  .coll-thumb-swiper .swiper-slide img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    aspect-ratio: 82 / 120;
+    display: block;
+  }
+
+  /* INDICATORS (Matches feature-collection-slider) */
+  .coll-list-thumbs-wrap .swiper-slide::after {
+    content: "";
+    position: absolute;
+    background: #999;
+  }
+  
+  .style-bottom.coll-thumb-swiper .swiper-slide.show-item::after {
+    top: 6px; left: 50%; width: 100%; height: 1px;
+    transform: translateX(-50%) scaleX(1);
+  }
+  /* Thumbnail Flip Styles */
+  .coll-thumb-swiper .swiper-slide {
+    perspective: 500px;
+    padding: 0;
+    padding-top: 15px;
+  }
+  /* Thumbnail Image Swap Styles (Simplified from Flip) */
+  .coll-thumb-flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 82 / 120;
+  }
+  .coll-thumb-front, .coll-thumb-back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    transition: opacity 0.4s ease;
+  }
+  .coll-thumb-back {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .coll-thumb-flip-card.is-flipped .coll-thumb-front {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .coll-thumb-flip-card.is-flipped .coll-thumb-back {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .coll-thumb-swiper .swiper-slide img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .coll-list-right {
+    width: 42.37%;
+    height: auto;
+    background: transparent;
+    perspective: 1000px; /* Required for 3D */
+    position: relative; /* Fixed: Required for absolute children like the flip button */
+  }
+  
+  .coll-flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .coll-flip-front {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s ease;
+  }
+  
+  .coll-flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .coll-flip-card.is-flipped .coll-flip-front {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .coll-flip-card.is-flipped .coll-flip-back {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .coll-master-img {
+    width: 100%; 
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Flip Icon Button */
+  .coll-flip-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 40px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    color: #000;
+    background: transparent;
+  }
+
+  .coll-mobile-action-row {
+    display: none;
+  }
+  
+  .coll-flip-btn svg { width: 26px; height: 26px; transition: transform 0.6s ease; }
+.coll-list-info .description  {
+  text-align: justify;
+}
+
+.coll-list-info {
+  max-width: 542px;
+}
+  /* MOBILE LAYOUT (Design Match) */
+  @media screen and (max-width: 749px) {
+    .coll-list-flex {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) 27px; /* Matches feature-collection-slider */
+      grid-template-areas: 
+        "info info"
+        "main thumbs"
+        "action action";
+      gap: 26px;
+      row-gap: 12px;
+      padding: 0 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .coll-mobile-action-row {
+      grid-area: action;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      padding: 0;
+      width: 100%;
+    }
+
+    .coll-mobile-action-row .cta-link {
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #999999;
+      letter-spacing: 0.09px;
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
+
+    .coll-flip-btn-mobile {
+      position: absolute;
+      right: 0;
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .coll-flip-btn-mobile svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .coll-flip-btn {
+      display: none !important;
+    }
+
+    .coll-list-info .cta-link {
+      display: none;
+    }
+    
+    .coll-list-left {
+      display: contents;
+    }
+
+    .coll-list-right {
+      grid-area: main;
+      width: 100% !important;
+      height: 100% !important;
+      aspect-ratio: 275 / 380;
+      background: transparent;
+    }
+
+    .coll-master-img {
+      aspect-ratio: 275 / 380;
+      object-fit: cover;
+    }
+
+    .coll-list-thumbs-wrap {
+      grid-area: thumbs;
+      width: 100% !important;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      overflow: hidden;
+      /* Fix for iOS Safari overflow: hidden bug with transforms */
+      -webkit-mask-image: -webkit-radial-gradient(white, white);
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+      isolation: isolate;
+    }
+
+    .coll-thumb-swiper {
+      width: 100% !important;
+      height: 50% !important;
+      margin-bottom: 0;
+      overflow: visible !important;
+      transition: height 0.3s ease;
+      will-change: height;
+    }
+    .coll-thumb-swiper.is-expanded {
+      max-height: 100% !important;
+    }
+
+    .coll-thumb-swiper .swiper-wrapper {
+      flex-direction: column;
+    }
+
+    .coll-thumb-swiper .swiper-slide {
+      padding: 0 !important;
+      height: 40px;
+    }
+    .coll-thumb-swiper .swiper-slide:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    .coll-list-info {
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 0;
+      padding-bottom: 5px;
+      width: 100%;
+      text-align: left !important;
+      max-width: calc(100% - 70px);
+    }
+
+    .coll-list-info h2 {
+      font-size: 18px;
+      letter-spacing: 0.09px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .coll-list-info .description {
+        font-size: 14px;
+        line-height: 1.4;
+        letter-spacing: 0.09px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    /* Mobile Active Item Style: Overlay border to ensure visibility */
+    .coll-thumb-swiper .swiper-slide::after {
+      display: none !important;
+    }
+    .coll-thumb-swiper .swiper-slide.show-item::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border: 1px solid #999;
+      z-index: 5;
+      pointer-events: none;
+    }
+  }
+{%- endstyle -%}
+
+{%- assign collection_list = section.settings.collection_list -%}
+{%- assign total = collection_list.count | default: 0 -%}
+{%- if total > 0 -%}
+  {%- assign first_collection = collection_list | first -%}
+  {%- assign first_main_img = first_collection.featured_image | default: first_collection.products.first.featured_image -%}
+  {%- assign first_second_img = first_collection.metafields.custom.collection_banner_second | default: first_main_img -%}
+{%- endif -%}
+
+<div class="coll-list-slider section-{{ section.id }}-padding">
+
+  <div class="">
+    {%- if total > 0 -%}
+      <div class="coll-list-flex">
+        <!-- LEFT/CONTENT -->
+        <div class="coll-list-left">
+          <div class="coll-list-info" id="ClInfo-{{ section.id | replace: '-', '_' }}">
+            <h2>{{ first_collection.title | escape }}</h2>
+            <div class="description">{{ first_collection.description | strip_html | escape }}</div>
+            <a href="{{ first_collection.url }}" class="cta-link">{{ section.settings.cta_label | escape }}</a>
+          </div>
+
+
+          <div class="coll-list-thumbs-wrap">
+            <div class="swiper coll-thumb-swiper style-{{ section.settings.indicator_style }}" id="ClMaster-{{ section.id | replace: '-', '_' }}">
+              <div class="swiper-wrapper">
+                {%- for collection in collection_list -%}
+                  {%- assign main_img = collection.featured_image | default: collection.products.first.featured_image -%}
+                  {%- assign second_img = collection.metafields.custom.collection_banner_second | default: main_img -%}
+                  
+                  <div class="swiper-slide" 
+                    data-real-index="{{ forloop.index0 }}"
+                    data-title="{{ collection.title | escape }}"
+                    data-description="{{ collection.description | strip_html | escape }}"
+                    data-url="{{ collection.url }}"
+                    data-img-primary="{{ main_img | image_url: width: 1200 }}"
+                    data-img-secondary="{{ second_img | image_url: width: 1200 }}"
+                    data-thumb-primary="{{ main_img | image_url: width: 300 }}"
+                    data-thumb-secondary="{{ second_img | image_url: width: 300 }}"
+                  >
+                    <div class="coll-thumb-flip-card">
+                      <div class="coll-thumb-front">
+                        {{ main_img | image_url: width: 300 | image_tag: loading: 'lazy' }}
+                      </div>
+                      <div class="coll-thumb-back">
+                        {{ second_img | image_url: width: 300 | image_tag: loading: 'lazy', alt: 'Back Thumb' }}
+                      </div>
+
+                    </div>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT/MASTER IMAGE -->
+        <div class="coll-list-right" id="ClRight-{{ section.id | replace: '-', '_' }}">
+          <div class="coll-flip-card" id="FlipCard-{{ section.id | replace: '-', '_' }}">
+             <div class="coll-flip-front">
+                {{ first_main_img | image_url: width: 1200 | image_tag: class: 'coll-master-img primary', alt: first_collection.title, loading: 'lazy' }}
+             </div>
+             <div class="coll-flip-back">
+                {{ first_second_img | image_url: width: 1200 | image_tag: class: 'coll-master-img secondary', alt: first_collection.title, loading: 'lazy' }}
+             </div>
+
+          </div>
+
+          <button class="coll-flip-btn" aria-label="Flip Image" id="FlipBtn-{{ section.id | replace: '-', '_' }}">
+             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 8.75L19.4 10.0962L17.65 11.8269C19.7833 12.0994 21.5417 12.6603 22.925 13.5096C24.3083 14.359 25 15.3365 25 16.4423C25 17.7724 24.0375 18.9062 22.1125 19.8437C20.1875 20.7812 17.8167 21.25 15 21.25C12.1833 21.25 9.8125 20.7812 7.8875 19.8437C5.9625 18.9062 5 17.7724 5 16.4423C5 15.4487 5.55417 14.5593 6.6625 13.774C7.77083 12.9888 9.21667 12.4038 11 12.0192L11 13.9904C9.71667 14.3109 8.72917 14.7075 8.0375 15.1803C7.34583 15.653 7 16.0737 7 16.4423C7 16.9551 7.7125 17.5641 9.1375 18.2692C10.5625 18.9744 12.5167 19.3269 15 19.3269C17.4833 19.3269 19.4375 18.9744 20.8625 18.2692C22.2875 17.5641 23 16.9551 23 16.4423C23 16.0577 22.575 15.597 21.725 15.0601C20.875 14.5232 19.6667 14.1186 18.1 13.8462L19.4 15.0962L18 16.4423L14 12.5962L18 8.75Z" fill="black"/>
+             </svg>
+          </button>
+        </div>
+
+        <!-- MOBILE ACTION ROW -->
+        <div class="coll-mobile-action-row" id="ClMobileAction-{{ section.id | replace: '-', '_' }}">
+          <a href="{{ first_collection.url }}" class="cta-link">{{ section.settings.cta_label | escape }}</a>
+          <button class="coll-flip-btn-mobile" aria-label="Flip Image" id="FlipBtnMobile-{{ section.id | replace: '-', '_' }}">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 8.75L19.4 10.0962L17.65 11.8269C19.7833 12.0994 21.5417 12.6603 22.925 13.5096C24.3083 14.359 25 15.3365 25 16.4423C25 17.7724 24.0375 18.9062 22.1125 19.8437C20.1875 20.7812 17.8167 21.25 15 21.25C12.1833 21.25 9.8125 20.7812 7.8875 19.8437C5.9625 18.9062 5 17.7724 5 16.4423C5 15.4487 5.55417 14.5593 6.6625 13.774C7.77083 12.9888 9.21667 12.4038 11 12.0192L11 13.9904C9.71667 14.3109 8.72917 14.7075 8.0375 15.1803C7.34583 15.653 7 16.0737 7 16.4423C7 16.9551 7.7125 17.5641 9.1375 18.2692C10.5625 18.9744 12.5167 19.3269 15 19.3269C17.4833 19.3269 19.4375 18.9744 20.8625 18.2692C22.2875 17.5641 23 16.9551 23 16.4423C23 16.0577 22.575 15.597 21.725 15.0601C20.875 14.5232 19.6667 14.1186 18.1 13.8462L19.4 15.0962L18 16.4423L14 12.5962L18 8.75Z" fill="black"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    {%- else -%}
+      <div class="center">Please select collections in the settings.</div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<script>
+(function(){
+  function init(){
+    const sectionId = '{{ section.id | replace: "-", "_" }}';
+    const mEl = document.getElementById('ClMaster-' + sectionId);
+    const iEl = document.getElementById('ClInfo-' + sectionId);
+    const mAction = document.getElementById('ClMobileAction-' + sectionId);
+    const fCard = document.getElementById('FlipCard-' + sectionId);
+    const fBtn = document.getElementById('FlipBtn-' + sectionId);
+    const fBtnMobile = document.getElementById('FlipBtnMobile-' + sectionId);
+    
+    if(!mEl) return;
+
+    function selectCollection(ri) {
+      const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
+      if(slides.length === 0) return;
+      
+      mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
+      slides.forEach(sl => sl.classList.add('show-item'));
+      
+      const slide = slides[0];
+      {% comment %} if(fCard) fCard.classList.remove('is-flipped'); {% endcomment %}
+
+      if(iEl) {
+        const h2 = iEl.querySelector('h2');
+        const desc = iEl.querySelector('.description');
+        if(h2) h2.textContent = slide.getAttribute('data-title');
+        if(desc) desc.textContent = slide.getAttribute('data-description');
+      }
+
+      const ctas = document.querySelectorAll('#ClInfo-' + sectionId + ' .cta-link, #ClMobileAction-' + sectionId + ' .cta-link');
+      ctas.forEach(cta => {
+        cta.href = slide.getAttribute('data-url');
+      });
+
+      if(fCard) {
+        const imgP = fCard.querySelector('.coll-master-img.primary');
+        const imgS = fCard.querySelector('.coll-master-img.secondary');
+        const urlP = slide.getAttribute('data-img-primary');
+        const urlS = slide.getAttribute('data-img-secondary');
+        
+        if(imgP && urlP) {
+          imgP.src = urlP;
+          imgP.srcset = urlP; // Clear/Update srcset to ensure the new image shows
+          if(imgP.dataset.src) imgP.dataset.src = urlP; // For lazyload libraries
+        }
+        if(imgS && urlS) {
+          imgS.src = urlS;
+          imgS.srcset = urlS; // Clear/Update srcset
+          if(imgS.dataset.src) imgS.dataset.src = urlS; // For lazyload libraries
+          if(fBtn) fBtn.style.display = 'flex'; 
+          if(fBtnMobile) fBtnMobile.style.display = 'flex'; 
+        }
+      }
+    }
+
+    const handleFlip = (e) => {
+      e.preventDefault();
+      const isFlipped = fCard.classList.toggle('is-flipped');
+      mEl.querySelectorAll('.coll-thumb-flip-card').forEach(card => {
+        card.classList.toggle('is-flipped', isFlipped);
+      });
+    };
+
+    if(fBtn && fCard) fBtn.addEventListener('click', handleFlip);
+    if(fBtnMobile && fCard) fBtnMobile.addEventListener('click', handleFlip);
+
+    if (typeof Swiper === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        script.onload = () => createSwiper(mEl, selectCollection);
+        document.head.appendChild(script);
+    } else {
+        createSwiper(mEl, selectCollection);
+    }
+  }
+
+  function createSwiper(mEl, selectCollection) {
+    new Swiper(mEl, {
+      slidesPerView: 4, 
+      spaceBetween: 15,
+      watchSlidesProgress: true,
+      breakpoints: { 
+        320: { direction: 'vertical', slidesPerView: 'auto', spaceBetween: 10 },
+        750: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 } 
+      },
+      on: {
+        setTranslate: function() {
+          if (window.innerWidth >= 750) return;
+          const swiperEl = this.el;
+          const translate = this.translate; 
+          const threshold = 150; 
+          const progress = Math.min(Math.max(Math.abs(translate) / threshold, 0), 1);
+          const heightVal = 50 + (progress * 50);
+          swiperEl.style.height = heightVal + "%";
+        },
+        touchStart: function() {
+          if (window.innerWidth < 750) this.el.style.transition = 'none';
+        },
+        touchEnd: function() {
+          if (window.innerWidth < 750) this.el.style.transition = '';
+        },
+        init: function() { 
+            const slides = mEl.querySelectorAll('.swiper-slide');
+            if (slides.length > 0) slides[0].classList.add('show-item');
+        },
+        click: function(s, e) {
+          const sl = e.target.closest('.swiper-slide');
+          if(sl) {
+            const idx = parseInt(sl.getAttribute('data-real-index'));
+            selectCollection(idx);
+
+            const relativeIdx = idx - this.activeIndex;
+            // When user clicks the items on the right (4th visible and beyond) -> Auto scroll forward 2
+            if (relativeIdx >= 3) {
+              this.slideTo(this.activeIndex + 2);
+            }
+            // When user clicks the items on the left (1st or 2nd visible) -> Auto scroll back 2
+            else if (relativeIdx <= 1) {
+              this.slideTo(this.activeIndex - 2);
+            }
+          }
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:load', init);
+  }
+})();
+</script>
+
+
+{% schema %}
+{
+  "name": "Collection Slider",
+  "tag": "section",
+  "class": "section collection-slider-section",
+  "settings": [
+    { "type": "collection_list", "id": "collection_list", "label": "Collections", "limit": 12 },
+    { "type": "text", "id": "cta_label", "label": "Button Label", "default": "DISCOVER THE STORY" },
+    {
+      "type": "select",
+      "id": "indicator_style",
+      "label": "Indicator Style",
+      "options": [
+        { "value": "top", "label": "Option 1: 25px Top" },
+        { "value": "bottom", "label": "Option 2: Full Bottom" }
+      ],
+      "default": "bottom"
+    },
+    { "type": "color", "id": "background_color", "label": "Background Color", "default": "#F2F2F2" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Top", "default": 60 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Bottom", "default": 60 },
+    { "type": "header", "content": "Mobile padding" },
+    { "type": "range", "id": "padding_top_mobile", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Top Mobile", "default": 40 },
+    { "type": "range", "id": "padding_bottom_mobile", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Padding Bottom Mobile", "default": 40 }
+  ],
+  "presets": [{ "name": "Collection Slider" }]
+}
+{% endschema %}

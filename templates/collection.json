@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-collection-banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "slideshow_y6xnXG": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_GBBXDE": {
+          "type": "slide",
+          "settings": {
+            "video_url": "",
+            "video_url_mobile": "",
+            "image": "{{ collection.metafields.custom.banner_desktop.value }}",
+            "mobile_image": "{{ collection.metafields.custom.banner_mobile.value }}",
+            "image_overlay_opacity": 0,
+            "enable_column": true,
+            "heading": "{{ collection.metafields.custom.title_collection_shop.value }}",
+            "heading_size": "h2",
+            "subheading": "",
+            "subheading_custom": "{{ collection.metafields.custom.description_collection_shop | metafield_tag }}",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "",
+            "link_2": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-4"
+          }
+        }
+      },
+      "block_order": [
+        "slide_GBBXDE"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "main-collection-product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "pagination_type": "load_more",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "drawer",
+        "enable_sorting": false,
+        "padding_top": 20,
+        "padding_bottom": 120,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 120
+      }
+    }
+  },
+  "order": [
+    "main-collection-banner",
+    "slideshow_y6xnXG",
+    "main-collection-product-grid"
+  ]
+}

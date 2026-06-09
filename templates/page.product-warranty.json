@@ -1,0 +1,264 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_LCwFbF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rp9Jm9": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>PURCHASE & RETURN POLICY</strong>",
+            "heading_tag": "h1"
+          }
+        },
+        "text_cpRbWY": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Chúng tôi áp dụng chính sách bảo hành cho toàn bộ sản phẩm kính của SEESON. Mỗi yêu cầu đều được tiếp nhận và xử lý với sự chỉn chu và tôn trọng, đảm bảo khách hàng luôn được đồng hành và hỗ trợ tốt nhất, đồng thời duy trì chất lượng sản phẩm theo tiêu chuẩn của SEESON.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rp9Jm9",
+        "text_cpRbWY"
+      ],
+      "name": "CHÍNH SÁCH MUA HÀNG VÀ ĐỔI TRẢ",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_top_mobile": 20,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collapsible_content_LwEYV4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_XXEnxn": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "CHÍNH SÁCH VẬN CHUYỂN",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p>Phí vận chuyển:<br/>Miễn phí vận chuyển với các đơn hàng Online (không bao gồm đơn hàng đổi trả)<br/><br/>Thời gian giao hàng:<br/>*Khu vực nội thành Hà Nội: 1–2 ngày<br/>*Khu vực ngoại thành và các thành phố lớn: 2–3 ngày<br/>*Các khu vực khác: 4–5 ngày</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dDEBmt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "PURCHASE POLICY",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p>SEESON offers free shipping for online orders within Vietnam (excluding exchange and return orders). For international orders, shipping fees will be calculated once complete delivery information has been provided.</p><p><strong>Estimated delivery times:</strong></p><ul><li>Inner districts of Hanoi: 1–2 business days</li><li>Outer districts of Hanoi and major cities: 2–3 business days</li><li>Other regions: 4–5 business days</li></ul><p>International orders: Customers may track their orders using the tracking number sent via email once the shipment has been dispatched, or contact <strong>support@seeson.vn</strong> for assistance.</p><h3>RETURN POLICY</h3><p><strong>FOR DOMESTIC ORDERS (VIETNAM):</strong></p><ul><li><strong>Eligibility period:<br/></strong>Applicable <strong>once only within 07 days</strong> from the purchase date (for in-store purchases) or successful delivery date (for online orders).</li><li><strong>Product condition:<br/></strong>Returned products (including frames and demo lenses) must remain in original condition, free from damage, scratches or deformation, and include all original packaging.</li><li>Returns and exchanges do <strong>not</strong> apply to:</li><li>Lenses (including prescription lenses and SEESON sunglass lenses)</li><li>Promotional or discounted products</li></ul><p><em>*Please note: Orders that do not meet these requirements will be returned to the customer.</em></p><ul><li><strong>Price difference policy:</strong></li><li><strong>Exchange within the same product model (different color):</strong> Free exchange</li><li><strong>Exchange for a different product model:</strong> Pricing will be applied based on the product value at the time of exchange. If the exchanged item has a higher value than the original purchase (according to the invoice), customers are required to pay the difference. Conversely, if the exchanged item has a lower value, SEESON will refund the difference.</li></ul><p><strong>Examples:</strong></p><ul><li>Original item: $175; exchanged item: $200 → Additional payment required: $25</li><li>Original item: $200; exchanged item: $175 → Refund: $25</li></ul><p><strong>FOR INTERNATIONAL ORDERS:</strong></p><p>SEESON does not support direct exchanges. If customers wish to exchange for a different color or style, they are required to return the product for a full refund (to the original payment method or Paypal within 7 business days after the returned item passes quality inspection) and place a new order.</p><h3>RETURN & EXCHANGE PROCEDURE</h3><p><strong>FOR DOMESTIC ORDERS (VIETNAM):</strong></p><p>Please contact our Hotline at <strong>(+84) 986 009 390</strong>, Email at <strong>support@seeson.vn</strong>, or send a message via the SEESON Fanpage for detailed return/exchange instructions.</p><ul><li>Customers may bring the product directly to the original point of purchase or package and ship the item to the designated return address provided by SEESON.</li></ul><p>Important Notes:</p><ul><li>Cross-channel returns/exchanges are <strong>NOT</strong> applicable between online orders and purchases made at <strong>RUE MICHE L’ÉDITION</strong> or other authorized stockists.</li><li>Cross-channel returns/exchanges <strong>ARE</strong> applicable between online orders and purchases made at <strong>IRL FLAGSHIP</strong> stores.</li></ul><p><strong>FOR INTERNATIONAL ORDERS:</strong></p><p>Please contact <strong>support@seeson.vn</strong> or send a message via the SEESON Fanpage for return and exchange instructions.</p><h3>RETURN & EXCHANGE FEES</h3><ul><li></li><li><strong><br/></strong></li><li></li></ul><h1><strong>WARRANTY POLICY</strong></h1><p><em>(Applicable to both domestic and international orders)</em></p><h2>Collapsible content</h2><h3>WARRANTY COVERAGE</h3><h3>WARRANTY SERVICE LOCATIONS</h3><p>Discover how to get the most out of your SEESON products. Click the link below for our detailed guide on usage and maintenance.</p><p><a href=\"https://www.seeson.vn/en/pages/user-guide\">USER GUIDE</a></p><p>2026<a href=\"https://www.seeson.vn/en\">SEESON</a></p><ul><li><a href=\"https://www.seeson.vn/en/pages/contact-us\">CONTACT</a></li><li><a href=\"https://www.seeson.vn/en/pages/user-guide\">USER GUIDE</a></li><li><a href=\"https://www.seeson.vn/en/pages/product-warranty\">POLICIES</a></li><li><a href=\"https://www.seeson.vn/en/pages/hirings\">HIRINGS</a></li></ul><p>ENGMy WishlistSave things as you browseTap ♡ on any product. It lands here so you don't lose it.Saves stay through this session.<strong>Log in to keep them permanently.</strong><a href=\"https://www.seeson.vn/en/account\">Log in to save permanently</a>Keep browsing firstNo account?<a href=\"https://www.seeson.vn/en/account\">Sign up — it takes a minute</a>Don't lose your Collections!Login to save your favorites and access them whenever, wherever!Login to SaveShareWishlist<strong>0</strong>Saved For You<strong>1</strong>Saved for later<strong>0</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PRnaRQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "RETURN POLICY",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p><strong>FOR DOMESTIC ORDERS (VIETNAM):</strong></p><ul><li><strong>Eligibility period:<br/></strong>Applicable <strong>once only within 07 days</strong> from the purchase date (for in-store purchases) or successful delivery date (for online orders).</li><li><strong>Product condition:<br/></strong>Returned products (including frames and demo lenses) must remain in original condition, free from damage, scratches or deformation, and include all original packaging.</li><li>Returns and exchanges do <strong>not</strong> apply to:</li><li>Lenses (including prescription lenses and SEESON sunglass lenses)</li><li>Promotional or discounted products</li></ul><p><em>*Please note: Orders that do not meet these requirements will be returned to the customer.</em></p><ul><li><strong>Price difference policy:</strong></li><li><strong>Exchange within the same product model (different color):</strong> Free exchange</li><li><strong>Exchange for a different product model:</strong> Pricing will be applied based on the product value at the time of exchange. If the exchanged item has a higher value than the original purchase (according to the invoice), customers are required to pay the difference. Conversely, if the exchanged item has a lower value, SEESON will refund the difference.</li></ul><p><strong>Examples:</strong></p><ul><li>Original item: $175; exchanged item: $200 → Additional payment required: $25</li><li>Original item: $200; exchanged item: $175 → Refund: $25</li></ul><p><strong>FOR INTERNATIONAL ORDERS:</strong></p><p>SEESON does not support direct exchanges. If customers wish to exchange for a different color or style, they are required to return the product for a full refund (to the original payment method or Paypal within 7 business days after the returned item passes quality inspection) and place a new order.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wbrPBx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "RETURN & EXCHANGE PROCEDURE",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p><strong>FOR DOMESTIC ORDERS (VIETNAM):</strong></p><p>Please contact our Hotline at <strong>(+84) 986 009 390</strong>, Email at <strong>support@seeson.vn</strong>, or send a message via the SEESON Fanpage for detailed return/exchange instructions.</p><ul><li>Customers may bring the product directly to the original point of purchase or package and ship the item to the designated return address provided by SEESON.</li></ul><p>Important Notes:</p><ul><li>Cross-channel returns/exchanges are <strong>NOT</strong> applicable between online orders and purchases made at <strong>RUE MICHE L’ÉDITION</strong> or other authorized stockists.</li><li>Cross-channel returns/exchanges <strong>ARE</strong> applicable between online orders and purchases made at <strong>IRL FLAGSHIP</strong> stores.</li></ul><p><strong>FOR INTERNATIONAL ORDERS:</strong></p><p>Please contact <strong>support@seeson.vn</strong> or send a message via the SEESON Fanpage for return and exchange instructions.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_q8E8mk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "RETURN & EXCHANGE FEES",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<ul><li><strong>In-store exchange:</strong> Complimentary</li><li><strong>Online returns/exchanges:<br/></strong>SEESON covers all shipping costs in cases where products have manufacturing defects. For returns or exchanges due to personal preference or other reasons, shipping costs will be borne by the customer.</li><li><strong>Demo lens surcharge:</strong> For returned or exchanged frames without the original demo lenses, an additional fee of <strong>50,000 VND</strong> applies (waived for lenses fitted at SEESON).</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_XXEnxn",
+        "collapsible_row_dDEBmt",
+        "collapsible_row_PRnaRQ",
+        "collapsible_row_wbrPBx",
+        "collapsible_row_q8E8mk"
+      ],
+      "custom_css": [],
+      "name": "MUA HÀNG & ĐỔI TRẢ",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_8Kd879": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eFiJx7": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>WARRANTY POLICY</strong>",
+            "heading_tag": "h1"
+          }
+        },
+        "text_GfNzp7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>(Applicable to both domestic and international orders)</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eFiJx7",
+        "text_GfNzp7"
+      ],
+      "name": "CHÍNH SÁCH BẢO HÀNH",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_top_mobile": 20,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collapsible_content_LmMFzM": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_ibKfd8": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "CHÍNH SÁCH VẬN CHUYỂN",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p>Phí vận chuyển:<br/>Miễn phí vận chuyển với các đơn hàng Online (không bao gồm đơn hàng đổi trả)<br/><br/>Thời gian giao hàng:<br/>*Khu vực nội thành Hà Nội: 1–2 ngày<br/>*Khu vực ngoại thành và các thành phố lớn: 2–3 ngày<br/>*Các khu vực khác: 4–5 ngày</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_H4UzDp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WARRANTY COVERAGE",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p>SEESON provides warranty coverage for eyewear frames (based on customer purchase records) with the following details:</p><ul><li>Frame front breakage caused by manufacturing defects is covered under warranty for <strong>1 year</strong>.</li><li>Metal coating components are covered under warranty for <strong>6 months</strong>. The warranty does not apply to peeling caused by direct contact with tables, chairs, or other surfaces.</li><li>Support for maintenance services including frame adjustment, cleaning, screw tightening, and polishing.</li><li>Normal wear and tear such as fading prints, scratches, loosening, etc. are not covered under warranty.</li><li>If a frame covered by warranty due to manufacturing defects is out of stock, SEESON may assist customers in exchanging it for another frame of equivalent value (no refund will be issued if the replacement product has a lower value).</li></ul><p><strong>NOTE:</strong> For warranty claims involving frames, SEESON does not provide warranty coverage for attached lenses.</p><ul><li>The warranty policy does not apply to products damaged due to improper use by customers or issues arising from lens fitting performed by third parties.</li><li>For damages resulting from regular use or beyond the warranty period, SEESON will consider repair solutions on a case-by-case basis. Applicable fees and processing times will be communicated accordingly.</li><li>Prescription lenses based on prescriptions issued by SEESON optometrists are covered under a <strong>30-day prescription warranty</strong>. Updated prescriptions must be verified by SEESON before warranty service is provided.</li><li>The prescription warranty does not apply to lenses made based on customers’ previous prescriptions or prescriptions issued by third parties.</li></ul><h3>WARRANTY SERVICE LOCATIONS</h3><ul><li></li><li></li></ul><p></p><p>Discover how to get the most out of your SEESON products. Click the link below for our detailed guide on usage and maintenance.</p><p><a href=\"https://www.seeson.vn/en/pages/user-guide\">USER GUIDE</a></p><p>2026<a href=\"https://www.seeson.vn/en\">SEESON</a></p><ul><li><a href=\"https://www.seeson.vn/en/pages/contact-us\">CONTACT</a></li><li><a href=\"https://www.seeson.vn/en/pages/user-guide\">USER GUIDE</a></li><li><a href=\"https://www.seeson.vn/en/pages/product-warranty\">POLICIES</a></li><li><a href=\"https://www.seeson.vn/en/pages/hirings\">HIRINGS</a></li></ul><p>ENGMy WishlistSave things as you browseTap ♡ on any product. It lands here so you don't lose it.Saves stay through this session.<strong>Log in to keep them permanently.</strong><a href=\"https://www.seeson.vn/en/account\">Log in to save permanently</a>Keep browsing firstNo account?<a href=\"https://www.seeson.vn/en/account\">Sign up — it takes a minute</a>Don't lose your Collections!Login to save your favorites and access them whenever, wherever!Login to SaveShareWishlist<strong>0</strong>Saved For You<strong>1</strong>Saved for later<strong>0</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9nMtfG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WARRANTY SERVICE LOCATIONS",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<ul><li><strong>Hanoi:</strong> SEESON FLAGSHIP Store — 44 Ton Duc Thang, O Cho Dua Ward</li><li><strong>Ho Chi Minh City:</strong> SEESON IRL FLAGSHIP Store — 199 Dien Bien Phu, Xuan Hoa Ward</li></ul><p>For warranty claims processed via shipping services, all associated shipping costs will be borne by the customer.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_ibKfd8",
+        "collapsible_row_H4UzDp",
+        "collapsible_row_9nMtfG"
+      ],
+      "custom_css": [],
+      "name": "CS BẢO HÀNH",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_8JRnbc": {
+      "type": "rich-text",
+      "blocks": {
+        "text_xLRdLV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover how to get the most out of your SEESON products. Click the link below for our detailed guide on usage and maintenance.</p><p><a href=\"/pages/user-guide-new\" title=\"USER GUIDE - NEW\">USER GUIDE</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_xLRdLV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 20,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 120
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_LCwFbF",
+    "collapsible_content_LwEYV4",
+    "rich_text_8Kd879",
+    "collapsible_content_LmMFzM",
+    "rich_text_8JRnbc"
+  ]
+}

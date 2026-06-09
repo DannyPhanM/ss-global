@@ -1,0 +1,143 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_LCwFbF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rp9Jm9": {
+          "type": "heading",
+          "settings": {
+            "heading": "ACCOMPANYING SEESON",
+            "heading_tag": "h1"
+          }
+        },
+        "text_cpRbWY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At SEESON, alongside competitive compensation and benefits, we value each individual’s growth journey within a creative, considered environment grounded in care and a thoughtfully cultivated working culture.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rp9Jm9",
+        "text_cpRbWY"
+      ],
+      "name": "THAM GIA CÙNG SEESON",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_top_mobile": 20,
+        "padding_bottom": 80,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collapsible_content_LwEYV4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_XXEnxn": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "NHÂN VIÊN BÁN HÀNG (HỒ CHÍ MINH)",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p><strong>MÔ TẢ CÔNG VIỆC</strong></p><ul><li>Tiếp đón, tư vấn và hỗ trợ cho khách hàng trong việc lựa chọn sản phẩm.</li><li>Giải đáp các thắc mắc và cung cấp các trải nghiệm mua hàng tốt nhất tới khách hàng.</li><li>Chủ động trong việc sắp xếp, trưng bày và giữ gìn vệ sinh các sản phẩm trong cửa hàng.</li><li>Xây dựng, truyền tải hình ảnh đẹp, chuyên nghiệp của cửa hàng và thương hiệu SEESON tới khách hàng.</li><li>Tuân thủ các quy trình, chính sách và hướng dẫn bán hàng theo quy định của công ty</li><li>Thực hiện các công việc khác theo sự phân công của quản lý cửa hàng.</li></ul><p><strong>YÊU CẦU</strong></p><ul><li>Tốt nghiệp THPT trở lên</li><li>Giao tiếp tiếng Anh tốt</li><li>Tính cách: vui vẻ, nhiệt tình, ham học hỏi</li><li>Nhanh nhẹn, giao tiếp tốt, yêu thích ngành dịch vụ khách hàng</li><li>Trung thực, có trách nhiệm với công việc </li><li>Kỹ năng giải quyết vấn đề và xử lý tình huống tốt</li><li>Có kinh nghiệm bán hàng và chăm sóc khách hàng, đặc biệt trong lĩnh vực thời trang là 1 lợi thế</li></ul><p><strong>QUYỀN LỢI</strong></p><ul><li>Lương cơ bản + doanh số bán hàng theo ca làm</li><li>Được đào tạo trong môi trường chuyên nghiệp</li><li>Môi trường làm việc trẻ trung, năng động </li><li>Được hưởng chính sách ưu đãi mua hàng dành cho NV</li><li>Quà tặng Lễ Tết, Quốc tế Phụ nữ, Quốc Khánh, Trung Thu, sinh nhật...</li><li>Team building hằng năm</li></ul><p><strong>ĐỊA ĐIỂM LÀM VIỆC</strong></p><ul><li>SEESON tại Rue Miche - <a href=\"https://maps.app.goo.gl/rxF49LrDUd67L4966\">Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, Hồ Chí Minh</a></li><li>SEESON IRL <a href=\"https://www.google.com/maps/place/199+%C4%90i%E1%BB%87n+Bi%C3%AAn+Ph%E1%BB%A7,+Ph%C6%B0%E1%BB%9Dng+6,+Xu%C3%A2n+H%C3%B2a,+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.7857031,106.6932322,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f33921100cf:0x730210f1232859ec!8m2!3d10.7857237!4d106.6932202!16s%2Fg%2F11df7k1l3h?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D\" target=\"_blank\" title=\"https://www.google.com/maps/place/199+%C4%90i%E1%BB%87n+Bi%C3%AAn+Ph%E1%BB%A7,+Ph%C6%B0%E1%BB%9Dng+6,+Xu%C3%A2n+H%C3%B2a,+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.7857031,106.6932322,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f33921100cf:0x730210f1232859ec!8m2!3d10.7857237!4d106.6932202!16s%2Fg%2F11df7k1l3h?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D\">199 Điện Biên Phủ, Phường Xuân Hòa, Thành phố Hồ Chí Minh</a></li></ul><p><strong>THỜI GIAN LÀM VIỆC</strong></p><ul><li>Xoay ca</li><li>Ca sáng: 8:30-13:00</li><li>Ca chiều: 13:00-17:30</li><li>Ca tối: 17:30-22:00</li></ul><p><strong>CÁCH THỨC ỨNG TUYỂN</strong></p><ul><li>Các bạn quan tâm vui lòng gửi CV về địa chỉ email: <a href=\"mailto:retail.hr@seeson.vn\" target=\"_blank\" title=\"mailto:retail.hr@seeson.vn\"><em>retail.hr@seeson.vn</em></a></li><li>Các ứng viên qua vòng hồ sơ sẽ được liên hệ phỏng vấn.</li></ul><p><strong>Lưu ý:</strong></p><ul><li>Tiêu đề email ghi rõ: [NHÂN VIÊN BÁN HÀNG_HCM] - Họ tên</li><li>CV đính kèm ảnh chân dung chụp 6 tháng gần đây</li><li>CV ghi rõ ứng tuyển Full-time hay Part-time</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dDEBmt": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "NHÂN VIÊN KIỂM TRA CHẤT LƯỢNG (HÀ NỘI)",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p><strong>MÔ TẢ CÔNG VIỆC</strong></p><ul><li>Kiểm tra sản phẩm hoàn thiện, đảm bảo sản phẩm không có lỗi và đáp ứng các tiêu chuẩn chất lượng.</li><li>Phân loại sản phẩm đạt tiêu chuẩn/ không đạt tiêu chuẩn</li><li>Phát hiện và xử lý các lỗi phát sinh trên sản phẩm</li><li>Vệ sinh, đóng gói sản phẩm sau khi hoàn thành quy trình kiểm tra chất lượng.</li></ul><p><strong>YÊU CẦU CÔNG VIỆC</strong></p><ul><li>Đang học tại các trường ĐH/CĐ tại Hà Nội</li><li>Trung thực, có trách nhiệm với công việc </li><li>Cẩn thận, tỉ mỉ, có khả năng quan sát tốt</li></ul><p><strong>MỨC LƯƠNG</strong></p><ul><li>25.000 VNĐ/ Giờ</li></ul><p><strong>THỜI GIAN LÀM VIỆC</strong></p><ul><li>Tối thiểu 4h/ ca, 6 ca/ tuần</li><li>Đăng kí ca linh hoạt theo tuần</li></ul><p><strong>ĐỊA ĐIỂM LÀM VIỆC</strong></p><ul><li>44 Tôn Đức Thắng, Phường Ô Chợ Dừa, Thành phố Hà Nội</li></ul><p><strong>CÁCH THỨC ỨNG TUYỂN</strong></p><ul><li>Các bạn quan tâm vui lòng gửi CV về địa chỉ email: <a href=\"mailto:retail.hr@seeson.vn\" target=\"_blank\" title=\"mailto:retail.hr@seeson.vn\"><em>retail.hr@seeson.vn</em></a></li><li>Các ứng viên qua vòng hồ sơ sẽ được liên hệ phỏng vấn.</li></ul><p><strong>Lưu ý:</strong></p><ul><li>Tiêu đề email ghi rõ: [QUALITY CONTROL] - Họ tên</li><li>CV đính kèm ảnh chân dung chụp 6 tháng gần đây</li><li>CV ghi rõ ứng tuyển Full-time hay Part-time</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PRnaRQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "ONLINE CUSTOMER SERVICE (HA NOI)",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p><strong>JOB DESCRIPTION</strong></p><ul><li>Receive and advise customers on SEESON's online sales channels</li><li>Monitor and process online orders</li><li>Receive inquiries, assist in answering and resolving customer complaints</li><li>Perform other tasks as assigned by the supervisor/manager</li></ul><p><strong>REQUIREMENTS</strong></p><ul><li>Female preferred, age: 18-21 years old</li><li>Currently studying at universities in Hanoi</li><li>Cheerful, enthusiastic, eager to learn personality</li><li>Good communication, problem-solving, and quick situational handling skills</li><li>Honest and responsible in work</li><li>Good conversational English</li></ul><p><strong>BENEFITS</strong></p><ul><li>Basic salary + sales commission</li><li>13th-month salary</li><li>Training & development opportunities</li><li>Young, dynamic work environment</li><li>Employee purchase discounts</li><li>Gifts for holidays such as Lunar New Year, International Women's Day, National Day, Mid-Autumn Festival, birthday, etc.</li><li>Annual team building</li></ul><p><strong>WORK LOCATION</strong></p><ul><li>19-21 Yen Ninh Alley, Ba Dinh District, Hanoi</li></ul><p><strong>WORKING HOURS</strong></p><ul><li>Shift work:</li><li>Morning shift: 8:30 AM - 1:00 PM</li><li>Afternoon shift: 1:00 PM - 5:30 PM</li><li>Evening shift: 5:30 PM - 10:00 PM</li></ul><p><strong>HOW TO APPLY</strong></p><ul><li>Interested candidates please send your CV to the email address: <a href=\"mailto:retail.hr@seeson.vn\" target=\"_blank\" title=\"mailto:retail.hr@seeson.vn\"><em>retail.hr@seeson.vn</em></a></li><li>Candidates who pass the resume screening round will be contacted for an interview.</li></ul><p><strong>Note:</strong></p><ul><li>Email subject should be: <em><strong>[ONLINE CS] - Full name</strong></em></li><li>CV must include a portrait photo taken within the last 6 months</li></ul><h3>PRODUCT QUALITY CONTROL (HANOI)</h3><p></p><ul><li></li><li></li><li></li><li></li></ul><p></p><ul><li></li><li></li><li></li><li></li></ul><p></p><ul><li></li><li></li><li></li><li></li><li></li><li></li></ul><p></p><ul><li></li></ul><p></p><ul><li></li><li></li></ul><p></p><p></p><p></p><p></p><ul><li></li><li></li></ul><p>2026<a href=\"https://www.seeson.vn/en\">SEESON</a></p><ul><li><a href=\"https://www.seeson.vn/en/pages/contact-us\">CONTACT</a></li><li><a href=\"https://www.seeson.vn/en/pages/user-guide\">USER GUIDE</a></li><li><a href=\"https://www.seeson.vn/en/pages/product-warranty\">POLICIES</a></li><li><a href=\"https://www.seeson.vn/en/pages/hirings\">HIRINGS</a></li></ul><p>ENGMy WishlistSave things as you browseTap ♡ on any product. It lands here so you don't lose it.Saves stay through this session.<strong>Log in to keep them permanently.</strong><a href=\"https://www.seeson.vn/en/account\">Log in to save permanently</a>Keep browsing firstNo account?<a href=\"https://www.seeson.vn/en/account\">Sign up — it takes a minute</a>Don't lose your Collections!Login to save your favorites and access them whenever, wherever!Login to SaveShareWishlist<strong>0</strong>Saved For You<strong>1</strong>Saved for later<strong>0</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JdHcGD": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "JUNIOR GRAPHIC DESIGNER (HÀ NỘI)",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p><strong>MÔ TẢ CÔNG VIỆC</strong></p><ul><li>Thiết kế ấn phẩm truyền thông cho các kênh Facebook, Instagram, Website và POSM theo từng chiến dịch.</li><li>Thiết kế tài liệu nhận diện thương hiệu (Brand Profile, Catalogue, Brand Guidelines…) theo định hướng hình ảnh của brand.</li><li>Phối hợp cùng team Marketing & Creative để đảm bảo thẩm mỹ nhất quán trên tất cả nền tảng.</li><li>Thực hiện các nhiệm vụ thiết kế khác theo yêu cầu của cấp trên.</li></ul><p><strong>YÊU CẦU</strong></p><ul><li>Tối thiểu 01 năm kinh nghiệm ở vị trí Graphic Designer hoặc đã tham gia thực hiện dự án thiết kế</li><li>Ưu tiên ứng viên có kinh nghiệm làm việc với thương hiệu thời trang hoặc ngành sáng tạo.</li><li>Sử dụng thành thạo các phần mềm thiết kế và dựng hình như: Figma và các phần mềm Adobe Suite.</li><li>Tư duy thẩm mỹ tốt, yêu thích phong cách thiết kế hiện đại, tối giản.</li><li>Có tinh thần học hỏi, chủ động, cẩn thận trong chi tiết.</li></ul><p><strong>QUYỀN LỢI</strong></p><ul><li>Lương thưởng thỏa thuận theo kinh nghiệm và năng lực</li><li>Chăm sóc sức khỏe: gắn bó lâu dài có chế độ phúc lợi và bảo hiểm xã hội</li><li>Tháng lương thứ 13, thưởng các ngày lễ tết theo quy định chung</li><li>Môi trường phù hợp để học hỏi về thời trang và xây dựng nhận diện thương hiệu.</li></ul><p><strong>ĐỊA ĐIỂM LÀM VIỆC</strong></p><ul><li>19-21 Ngõ Yên Ninh, Ba Đình, Hà Nội</li></ul><p><strong>THỜI GIAN LÀM VIỆC</strong></p><ul><li>Làm việc từ <strong>Thứ Hai </strong>đến <strong>Thứ Sáu </strong>hàng tuần</li><li>Ứng viên có thể linh hoạt lựa chọn ca sáng hoặc ca chiều theo tuần:</li><li><strong>Ca sáng:</strong> 10:00 – 15:30</li><li><strong>Ca chiều:</strong> 14:00 – 18:00</li></ul><p><strong>CÁCH THỨC ỨNG TUYỂN</strong></p><ul><li>Gửi CV và Portfolio trực tiếp về email: creative@seeson.vn</li><li>Tiêu đề Email ghi rõ: Họ và tên_ỨNG TUYỂN JUNIOR GRAPHIC DESIGNER</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NXPVAV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "PRODUCT QUALITY CONTROL (HA NOI)",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p><strong>JOB DESCRIPTION</strong></p><ul><li>Inspect finished products to ensure they are defect-free and meet quality standards.</li><li>Sort products into standard/non-standard categories.</li><li>Identify and address defects that arise in products.</li><li>Clean and package products after the quality inspection process is complete.</li></ul><p><strong>REQUIREMENTS</strong></p><ul><li>Female preferred, age: 18-21 years old</li><li>Currently studying at universities/colleges in Hanoi</li><li>Honest and responsible at work</li><li>Careful, meticulous, with good observation skills</li></ul><p><strong>BENEFITS</strong></p><ul><li>Salary: 25,500 VND/hour</li><li>Bonuses on holidays and Tet throughout the year</li><li>Trained in a professional environment</li><li>Young and dynamic working environment</li><li>Entitled to employee purchase discount policies</li><li>Gifts for holidays, International Women's Day, National Day, Mid-Autumn Festival, birthdays, etc.</li></ul><p><strong>WORK LOCATION</strong></p><ul><li>44 Ton Duc Thang, O Cho Dua Ward, Hanoi City</li></ul><p><strong>WORKING HOURS</strong></p><ul><li>Minimum 4.5 hours/shift, 6 shifts/week</li><li>Flexible shift registration weekly</li></ul><p><strong>HOW TO APPLY</strong></p><p>Interested candidates please send your CV to the email address: <em><strong>retail.hr@seeson.vn</strong></em></p><p>Candidates who pass the resume screening round will be contacted for an interview.</p><p><em>Note:</em></p><ul><li>Email subject should be: <em><strong>[QUALITY CONTROL] - Full Name</strong></em></li><li>CV must include a portrait photo taken within the last 6 months</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_XXEnxn",
+        "collapsible_row_dDEBmt",
+        "collapsible_row_PRnaRQ",
+        "collapsible_row_JdHcGD",
+        "collapsible_row_NXPVAV"
+      ],
+      "custom_css": [],
+      "name": "VỊ TRÍ TUYỂN DỤNG",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 120
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_LCwFbF",
+    "collapsible_content_LwEYV4"
+  ]
+}

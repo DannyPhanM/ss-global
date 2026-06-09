@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "404.json",
+  "context": {
+    "market": "vn"
+  },
+  "sections": {
+    "rich_text_BmJ4mE": {
+      "blocks": {
+        "heading_PNdAHD": {
+          "settings": {
+            "heading": "SEE YOU SOON"
+          }
+        },
+        "text_q3p39W": {
+          "settings": {
+            "text": "<p>New projects are in progress. </p><p>Stay tuned with SEESON.</p><p>Please check back later, or contact us if you need assistance.</p><p>support@seeson.vn   or   (+84) 986 009 390<br/><br/></p>"
+          }
+        }
+      }
+    }
+  }
+}

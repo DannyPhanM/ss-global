@@ -1,0 +1,118 @@
+{% comment %}
+  Renders a product media modal. Also see 'product-media-gallery'
+
+  Accepts:
+  - product: {Object} Product liquid object
+  - variant_images: {Array} Product images associated with a variant
+
+  Usage:
+  {% render 'product-media-modal' %}
+{% endcomment %}
+
+{%- liquid
+  # Filter media based on variant alt text
+  assign current_variant = product.selected_or_first_available_variant
+  assign all_option_values = ''
+  for option in product.options_with_values
+    for value in option.values
+      assign handle = value | handleize | append: ','
+      assign all_option_values = all_option_values | append: handle
+    endfor
+  endfor
+  assign all_option_values = all_option_values | split: ',' | uniq
+
+  assign current_option_values = ''
+  for option in current_variant.options
+    assign handle = option | handleize | append: ','
+    assign current_option_values = current_option_values | append: handle
+  endfor
+  assign current_option_values = current_option_values | split: ','
+
+  assign filtered_media_ids = ''
+  for media in product.media
+    assign should_show = true
+    if media.alt != blank and product.variants.size > 1
+      assign alt_handle = media.alt | handleize
+      assign is_variant_image = false
+      for val in all_option_values
+        if val != blank and alt_handle contains val
+          assign is_variant_image = true
+          break
+        endif
+      endfor
+
+      if is_variant_image
+        assign should_show = false
+        for val in current_option_values
+          if val != blank and alt_handle contains val
+            assign should_show = true
+            break
+          endif
+        endfor
+      endif
+    endif
+
+    # Always show featured media of current variant
+    if media.id == current_variant.featured_media.id
+       assign should_show = true
+    endif
+
+    if should_show
+      assign media_id_str = media.id | append: ''
+      assign filtered_media_ids = filtered_media_ids | append: media_id_str | append: ','
+    endif
+  endfor
+  assign filtered_media_ids = filtered_media_ids | split: ',' | compact
+-%}
+
+<product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
+  <div
+    class="product-media-modal__dialog color-{{ section.settings.color_scheme }} gradient"
+    role="dialog"
+    aria-label="{{ 'products.modal.label' | t }}"
+    aria-modal="true"
+    tabindex="-1"
+  >
+    <button
+      id="ModalClose-{{ section.id }}"
+      type="button"
+      class="product-media-modal__toggle"
+      aria-label="{{ 'accessibility.close' | t }}"
+    >
+      {% render 'core-icon', name: 'close' %}
+    </button>
+
+    <div
+      class="product-media-modal__content color-{{ section.settings.color_scheme }} gradient"
+      role="document"
+      aria-label="{{ 'products.modal.label' | t }}"
+      tabindex="0"
+    >
+      {%- liquid
+        if current_variant.featured_media != null
+          assign media = current_variant.featured_media
+          render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
+        endif
+      -%}
+
+      {%- for media in product.media -%}
+        {%- liquid
+          assign media_id_str = media.id | append: ""
+          unless filtered_media_ids contains media_id_str
+            continue
+          endunless
+
+          if section.settings.hide_variants and variant_images contains media.src or variant_images contains media.id
+            assign variant_image = true
+          else
+            assign variant_image = false
+          endif
+
+          unless media.id == current_variant.featured_media.id
+            render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
+          endunless
+        -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</product-modal>

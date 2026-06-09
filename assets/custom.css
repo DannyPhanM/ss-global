@@ -1,0 +1,40 @@
+.template--index slideshow-component {
+  position: relative;
+}
+.template--index slideshow-component .slideshow__controls {
+  position: absolute;
+  bottom: 65px;
+  width: 100%;
+  z-index: 1;
+  border: none;
+}
+.template--index slideshow-component .slider-button {
+  display: none;
+}
+.template--index slideshow-component .slider-counter__link span {
+  background: #fff !important;
+  width: 6px;
+  height: 6px;
+  border-radius: 0;
+  box-sizing: content-box;
+  border: none;
+}
+/* Slideshow video full height */
+.slideshow__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Temporarily disable scroll reveal animations */
+.scroll-trigger.animate--fade-in,
+.scroll-trigger.animate--slide-in,
+.scroll-trigger.animate--zoom-in {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  visibility: visible !important;
+}

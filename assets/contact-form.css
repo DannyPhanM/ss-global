@@ -1,0 +1,240 @@
+:root {
+  --accent: #F18260;
+  --purple: #252431;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
+  transform: translateY(-50%);
+
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: #000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.form-container {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+button {
+  padding: 0 14px;
+  background-color: #000;
+  min-height: 36px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.checkmark {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.form-container,
+form[name=submit-to-google-sheet] textarea, form[name=submit-to-google-sheet] input[type=text], form[name=submit-to-google-sheet] input[type=text]::placeholder {
+  font-family: var(--font-body-family) !important;
+}
+
+input:focus {
+  outline: 1px solid var(--accent);
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* button:hover {
+  background-color: var(--accent);
+} */
+
+.is-hidden {
+  display: none !important;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+}
+
+.loading-spinner svg {
+  position: relative;
+  animation: rotate 2s linear infinite;
+  height: 50px;
+  width: 50px;
+}
+
+.loading-spinner circle {
+  stroke: var(--accent);
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+form[name="submit-to-google-sheet"] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+form[name="submit-to-google-sheet"] label {
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+form[name="submit-to-google-sheet"] .label-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+form[name="submit-to-google-sheet"] input[type="text"] {
+  border: none;
+  outline: none;
+  background: #F3F3F3;
+  padding: 8px 11px;
+  height: 35px;
+}
+
+button.Button--primary.Button--full.Button {
+  line-height: 23px;
+  text-transform: uppercase;
+  border: none;
+  min-height: 40px;
+}
+
+form[name="submit-to-google-sheet"] textarea {
+  border: none;
+  outline: none;
+  background: #F3F3F3;
+  padding: 8px 11px;
+  min-height: 35px;
+  width: 100%;
+}
+
+[data-section-type="page-custom-contact"] {
+  max-width: 650px;
+
+}
+
+
+[data-section-type="page-custom-contact"] .PageContent header p {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400
+}
+
+.col-container.col-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#complaint,
+#message_container {
+  display: none
+}
+
+.PageContent h1 {
+  margin-top: 20px;
+}
+
+@media(min-width: 768px) {
+  .PageContent h1 {
+    margin-top: 60px;
+  }
+}

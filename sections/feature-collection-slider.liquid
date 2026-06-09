@@ -1,0 +1,877 @@
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+{%- style -%}
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+      }
+      @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+      }
+
+      .feat-coll-info-text .price .sold-out {
+        color: #999;
+      }
+
+      .feat-coll-slider {
+        background-color: {{ section.settings.background_color }};
+        position: relative;
+        overflow: hidden;
+        color: #000;
+      }
+
+      .feat-coll-flex {
+        display: flex;
+        align-items: stretch;
+        max-width: var(--page-width);
+        margin: 0 auto;
+        padding: 0 80px;
+      }
+
+      .feat-coll-header {
+        max-width: var(--page-width);
+        margin: 0 auto 88px;
+        padding: 0 80px;
+      }
+      .feat-coll-header h2 {
+        font-size: 40px;
+        font-weight: 600;
+        margin: 0 0 0px;
+        text-transform: uppercase;
+      }
+      .feat-coll-header .description {
+        font-size: 16px;
+        color: #999;
+        max-width: 542px;
+        line-height: 1.2;
+        margin-top: 13px;
+        text-align: justify;
+      }
+
+      /* Thumb rotation logic - available at all screen sizes if class is present */
+      .thumb-glass { display: none !important; }
+      .thumb-lifestyle { display: block !important; }
+      .feat-coll-slider.is-rotated .thumb-lifestyle { display: none !important; }
+      .feat-coll-slider.is-rotated .thumb-glass { display: block !important; }
+
+      /* DESKTOP LAYOUT (Default) */
+      .feat-coll-left {
+        width: 57.63%;
+        padding: 32px;
+        padding-left: 0;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .feat-coll-info-text h3 {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: -5%;
+        color: #000;
+        margin: 0 0 8px;
+        text-transform: uppercase;
+        font-family: var(--font-card-title-family);
+        letter-spacing: -5%;
+      }
+      .feat-coll-info .price {
+        font-size: 30px;
+        color: #000;
+        font-weight: 600;
+        margin-top: 10px;
+        line-height: 1.2;
+        letter-spacing: 5%;
+        text-transform: uppercase;
+      }
+
+      .feat-coll-info-text h3 a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .feat-coll-info-text h3 a:hover {
+        /* color: #000; */
+      }
+
+      .feat-coll-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .feat-coll-info-actions button {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none !important;
+        box-shadow: none !important;
+        min-width: unset !important;
+        line-height: normal !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+      }
+      .feat-coll-info-actions svg {
+        width: 30px !important;
+        height: 30px !important;
+        padding-top: 5px !important;
+        color: #000;
+        transition: all 0.3s ease;
+        display: block;
+      }
+
+      .feat-coll-info-actions svg path {
+      }
+  .feat-coll-info-actions button.swym-button svg + svg  {
+    display: none;
+  }
+      .feat-coll-info-actions button.swym-button.swym-added svg + svg {
+        display: block;
+      }
+          .feat-coll-info-actions button.swym-button.swym-added svg  {
+            display: none;
+          }
+
+      .feat-coll-info-actions .swym-added.swym-add-to-wishlist {
+        background: transparent !important;
+        opacity: 1;
+      }
+
+      .feat-coll-info-actions .rotate-btn {
+        display: none;
+      }
+
+      @media screen and (max-width: 749px) {
+        .feat-coll-info-actions {
+          display: flex;
+          gap: 30px;
+          align-items: center;
+        }
+        .feat-coll-info-actions .rotate-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 38px;
+          height: 38px;
+          border: 1px solid #000;
+          padding: 5px;
+        }
+        .feat-coll-info-text h3 a {
+          font-size: 14px;
+        }
+      }
+      /* Hide Swym default heart icon */
+      .feat-coll-info-actions .swym-button::after,
+      .feat-coll-info-actions .swym-button::before { display: none !important; }
+
+
+      .feat-coll-preview {
+        display: flex;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2.054 / 1;
+        background: transparent;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin: 0;
+        text-decoration: none;
+      }
+      .feat-coll-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.4s ease;
+        max-width: 574px;
+        object-position: center bottom;
+      }
+
+      .feat-coll-thumbs-wrap {
+        margin-top: auto;
+        padding-top: 84px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .thumb-master-swiper .swiper-slide {
+        height: auto;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        opacity: 0.6;
+        position: relative;
+      }
+      .thumb-master-swiper .swiper-slide.show-item { opacity: 1; }
+      .thumb-master-swiper .swiper-slide img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        aspect-ratio: 82 / 120;
+        display: block;
+      }
+
+      /* INDICATORS */
+      .feat-coll-thumbs-wrap .swiper-slide::after {
+        content: "";
+        position: absolute;
+        background: #999;
+      }
+
+      /* Style Top (25px) */
+      .style-top.thumb-master-swiper .swiper-slide { padding-top: 15px; }
+      .style-top.thumb-master-swiper .swiper-slide::after {
+        top: 3px; left: 50%; width: 25px; height: 2px;
+        transform: translateX(-50%) scaleX(0);
+      }
+      .style-top.thumb-master-swiper .swiper-slide.show-item::after { transform: translateX(-50%) scaleX(1); }
+
+      /* Style Full Top (Was Bottom) */
+      .style-bottom.thumb-master-swiper .swiper-slide { padding-top: 10px; }
+      .style-bottom.thumb-master-swiper .swiper-slide::after {
+        top: 3px; left: 50%; width: 100%; height: 1.5px;
+        transform: translateX(-50%) scaleX(0); transform-origin: left;
+      }
+      .style-bottom.thumb-master-swiper .swiper-slide.show-item::after { transform: translateX(-50%) scaleX(1); }
+
+      .feat-coll-right {
+        display: block;
+        width: 42.37%;
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+      }
+      .master-lifestyle-img {
+        width: 100%; height: 100%;
+        aspect-ratio: 542 / 710;
+        display: block;
+        transition: opacity 0.5s ease;
+        object-fit: cover;
+      }
+
+      .feat-coll-header .description p {
+        margin: 0;
+      }
+
+      /* MOBILE LAYOUT (Design Match) */
+      @media screen and (max-width: 749px) {
+
+        .feat-coll-flex {
+          display: grid !important;
+          grid-template-columns: minmax(0, 1fr) 27px; /* Image | Thumbs */
+          grid-template-rows: auto auto; /* Let first row size to main image, second row for info */
+          grid-template-areas:
+            "main thumbs"
+            "info info";
+          gap: 26px;
+          row-gap: 10px;
+          padding: 0 15px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .master-lifestyle-img {
+          aspect-ratio: 275 / 380;
+          object-fit: cover;
+        }
+        .thumb-master-swiper .swiper-slide img {
+          aspect-ratio: 27 / 40;
+        }
+        .feat-coll-header {
+          padding: 0 15px;
+          margin-bottom: 25px;
+        }
+        .feat-coll-header h2 {
+          font-size: 22px;
+        }
+        .feat-coll-header .description {
+          font-size: 14px;
+        }
+
+        .feat-coll-left {
+          display: contents; /* Allows children to be positioned by grid */
+        }
+
+        .feat-coll-right {
+          grid-area: main;
+          width: 100% !important;
+          aspect-ratio: 275 / 380;
+          background: transparent;
+          /* This element drives the row height */
+          min-height: 0; /* Allow shrinking within grid */
+        }
+
+        .feat-coll-thumbs-wrap {
+          grid-area: thumbs;
+          width: 100% !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          position: relative;
+          overflow: hidden;
+          /* Fix for iOS Safari overflow: hidden bug with transforms */
+          -webkit-mask-image: -webkit-radial-gradient(white, white);
+          -webkit-backface-visibility: hidden;
+          -webkit-transform: translate3d(0, 0, 0);
+          isolation: isolate;
+        }
+
+        .thumb-master-swiper {
+          /* Absolutely position the swiper so its content doesn't expand the grid row */
+          position: absolute !important;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 50% !important;
+          width: 100%;
+          overflow: visible !important;
+          transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          will-change: height;
+        }
+        .thumb-master-swiper.is-expanded {
+          height: 100% !important;
+        }
+
+        .thumb-master-swiper .swiper-slide {
+          padding: 0 !important;
+          height: 40px; /* Fix height to 40px as requested */
+          flex-shrink: 0;
+        }
+        .thumb-master-swiper .swiper-slide:last-child {
+          margin-bottom: 0 !important;
+        }
+
+        .feat-coll-info {
+          grid-area: info;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding-top: 10px;
+          width: 100%;
+        }
+
+        .feat-coll-info-text h3 {
+          font-size: 16px;
+          margin-bottom: 3px;
+        }
+
+        .feat-coll-info .price {
+          font-size: 14px;
+          margin-top: 0;
+        }
+
+        .feat-coll-preview {
+          display: none;
+        }
+
+        /* Mobile Active Item Style: Overlay border to ensure visibility */
+        .thumb-master-swiper .swiper-slide::after {
+          display: none !important;
+        }
+        .thumb-master-swiper .swiper-slide.show-item::before {
+          content: "";
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          border: 1px solid #999;
+          z-index: 5;
+          pointer-events: none;
+        }
+      }
+      @media(max-width: 989px) {
+       .feat-coll-flex {
+        padding: 0 50px;
+        display: flex;
+      }
+      .feat-coll-header {
+        padding: 0 15px;
+      }
+
+      .feat-coll-header h2 {
+        font-size: 18px;
+      }
+    .feat-coll-header .description {
+      font-size: 14px;
+      width: calc(100% - 70px);
+    }
+
+    }
+
+    @media(min-width: 750px) and (max-width: 989px) {
+      .feat-coll-header {
+        padding: 0 50px;
+      }
+    }
+
+      @media(max-width: 749px) {
+        .feat-coll-header, .feat-coll-flex {
+          padding: 0 15px;
+        }
+        .feat-coll-info-actions button, .feat-coll-info-actions svg {
+          width: 24px !important;
+          height: 24px !important;
+          padding-top: 0 !important;
+        }
+      }
+{%- endstyle -%}
+
+{%- assign product_list = section.settings.product_list -%}
+{%- assign total = product_list.count | default: 0 -%}
+{%- if total > 0 -%}
+  {%- assign first_product = product_list | first -%}
+  {%- assign first_lifestyle_image = first_product.media[4] | default: first_product.featured_media -%}
+{%- endif -%}
+
+<div class="feat-coll-slider section-{{ section.id }}-padding">
+  <div class="">
+    {%- if section.settings.heading != blank or section.settings.description != blank -%}
+      <div class="feat-coll-header">
+        {%- if section.settings.heading != blank -%}
+          <h2>{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <div class="description">{{ section.settings.description }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if total > 0 -%}
+      <div class="feat-coll-flex">
+        <!-- LEFT/CONTENT -->
+        <div class="feat-coll-left">
+          <div class="feat-coll-info" id="FcInfo-{{ section.id | replace: '-', '_' }}">
+            <div class="feat-coll-info-text">
+              <h3 class="product-title-link">
+                <a href="{{ first_product.url }}">{{ first_product.title | escape }}</a>
+              </h3>
+              <p class="price">
+                {%- if first_product.available -%}
+                  {{ first_product.price | money }}
+                {%- else -%}
+                  <span class="sold-out">{{ 'products.product.sold_out' | t | default: 'Out of stock' }}</span>
+                {%- endif -%}
+              </p>
+            </div>
+
+            <div class="feat-coll-info-actions">
+              <button
+                type="button"
+                aria-label="Add to Wishlist"
+                class="swym-button swym-add-to-wishlist swym-add-to-wishlist-view-product swym-bookmark product_{{ first_product.id }}"
+                data-with-epi="true"
+                data-swaction="addToWishlist"
+                data-product-id="{{ first_product.id }}"
+                data-variant-id="{{ first_product.selected_or_first_available_variant.id | default: first_product.variants[0].id }}"
+                data-product-url="{{ shop.url | append: first_product.url }}"
+                id="FcWishlist-{{ section.id | replace: '-', '_' }}"
+              >
+                {% comment %}
+                  <svg
+                    viewBox="0 0 19 24"
+                    fill="none"
+                    class="icon-bookmark"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M5 6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.07989 3 8.2 3H15.8C16.9201 3 17.4802 3 17.908 3.21799C18.2843 3.40973 18.5903 3.71569 18.782 4.09202C19 4.51984 19 5.07989 19 6.2V21L12 16L5 21V6.2Z" stroke="currentColor" stroke-width="1.75px" stroke-linejoin="round"></path>
+                  </svg>
+                {% endcomment %}
+
+            {% render 'core-icon', name: 'wishlist', class: 'icon-wishlist' %}
+            {% render 'core-icon', name: 'wishlist-added', class: 'icon-wishlist-added' %}
+              </button>
+
+              <button
+                type="button"
+                class="rotate-btn"
+                id="FcRotate-{{ section.id | replace: '-', '_' }}"
+                aria-label="Rotate Image"
+              >
+                {% comment %}
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.5 9C14.5 12.0376 12.0376 14.5 9 14.5C5.96243 14.5 3.5 12.0376 3.5 9C3.5 5.96243 5.96243 3.5 9 3.5C10.724 3.5 12.2619 4.29446 13.2679 5.51408" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 2.5V5.5H10.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {% endcomment %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4 7L15.52 8.07692L14.12 9.46154C15.8267 9.67949 17.2333 10.1282 18.34 10.8077C19.4467 11.4872 20 12.2692 20 13.1538C20 14.2179 19.23 15.125 17.69 15.875C16.15 16.625 14.2533 17 12 17C9.74667 17 7.85 16.625 6.31 15.875C4.77 15.125 4 14.2179 4 13.1538C4 12.359 4.44333 11.6474 5.33 11.0192C6.21667 10.391 7.37333 9.92308 8.8 9.61538L8.8 11.1923C7.77333 11.4487 6.98333 11.766 6.43 12.1442C5.87667 12.5224 5.6 12.859 5.6 13.1538C5.6 13.5641 6.17 14.0513 7.31 14.6154C8.45 15.1795 10.0133 15.4615 12 15.4615C13.9867 15.4615 15.55 15.1795 16.69 14.6154C17.83 14.0513 18.4 13.5641 18.4 13.1538C18.4 12.8462 18.06 12.4776 17.38 12.0481C16.7 11.6186 15.7333 11.2949 14.48 11.0769L15.52 12.0769L14.4 13.1538L11.2 10.0769L14.4 7Z" fill="black"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <a
+            href="{{ first_product.url }}"
+            class="feat-coll-preview"
+            id="FcPreview-{{ section.id | replace: '-', '_' }}"
+          >
+            {%- assign first_preview_image = first_product.media[1] | default: first_product.featured_media -%}
+            {{
+              first_preview_image
+              | image_url: width: 1000
+              | image_tag:
+                alt: first_product.title,
+                widths: '400, 600, 800, 1000',
+                sizes: '(min-width: 750px) 600px, 100vw'
+            }}
+          </a>
+
+          <div class="feat-coll-thumbs-wrap">
+            <div
+              class="swiper thumb-master-swiper style-{{ section.settings.indicator_style }}"
+              id="FcMaster-{{ section.id | replace: '-', '_' }}"
+            >
+              <div class="swiper-wrapper">
+                {%- for product in product_list -%}
+                  {%- liquid
+                    assign lifestyle_image = product.media[4] | default: product.featured_media
+                    assign preview_image = product.media[1] | default: product.featured_media
+                  -%}
+                  <div
+                    class="swiper-slide"
+                    data-real-index="{{ forloop.index0 }}"
+                    data-title="{{ product.title | escape }}"
+                    data-available="{{ product.available }}"
+                    data-price="{{ product.price | money }}"
+                    data-glass="{{ preview_image | image_url: width: 600 }}"
+                    data-lifestyle="{{ lifestyle_image | image_url: width: 1200 }}"
+                    data-product-id="{{ product.id }}"
+                    data-variant-id="{{ product.selected_or_first_available_variant.id | default: product.variants[0].id }}"
+                    data-product-url="{{ shop.url | append: product.url }}"
+                  >
+                    {{ lifestyle_image | image_url: width: 200 | image_tag: class: 'thumb-lifestyle', loading: 'lazy' }}
+                    {{ preview_image | image_url: width: 200 | image_tag: class: 'thumb-glass', loading: 'lazy' }}
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT/MAIN IMAGE -->
+        <a
+          href="{{ first_product.url }}"
+          class="feat-coll-right"
+          id="FcRight-{{ section.id | replace: '-', '_' }}"
+        >
+          {{
+            first_lifestyle_image
+            | image_url: width: 1200
+            | image_tag:
+              class: 'master-lifestyle-img',
+              alt: first_product.title,
+              loading: 'lazy',
+              widths: '600, 800, 1000, 1200',
+              sizes: '(min-width: 750px) 50vw, 100vw'
+          }}
+        </a>
+      </div>
+    {%- else -%}
+      <div class="center">Please select products in the settings.</div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<script>
+  (function(){
+      function init(){
+      const sectionId = '{{ section.id | replace: "-", "_" }}';
+      const wrapper = document.getElementById('FcMaster-' + sectionId).closest('.feat-coll-slider');
+      const mEl = document.getElementById('FcMaster-' + sectionId);
+      const iEl = document.getElementById('FcInfo-' + sectionId);
+      const pEl = document.getElementById('FcPreview-' + sectionId);
+      const rEl = document.getElementById('FcRight-' + sectionId);
+      const rotateBtn = document.getElementById('FcRotate-' + sectionId);
+
+      if(!mEl) return;
+
+      let isRotated = false;
+      let currentIdx = 0;
+
+      function selectProduct(ri, skipWishlist = false) {
+        currentIdx = ri;
+        const slides = mEl.querySelectorAll('.swiper-slide[data-real-index="' + ri + '"]');
+        if(slides.length === 0) return;
+
+        mEl.querySelectorAll('.swiper-slide').forEach(sl => sl.classList.remove('show-item'));
+        slides.forEach(sl => sl.classList.add('show-item'));
+
+        const slide = slides[0];
+        const wBtn = document.getElementById('FcWishlist-' + sectionId);
+
+        if(iEl) {
+          const tA = iEl.querySelector('h3 a');
+          if(tA) {
+            tA.textContent = slide.getAttribute('data-title');
+            tA.href = slide.getAttribute('data-product-url');
+          }
+          const isAvailable = slide.getAttribute('data-available') === 'true';
+          iEl.querySelector('.price').innerHTML = isAvailable ? slide.getAttribute('data-price') : `<span class="sold-out">{{ 'products.product.sold_out' | t | default: 'Out of stock' }}</span>`;
+        }
+
+        if(wBtn && !skipWishlist) {
+          const pid = slide.getAttribute('data-product-id');
+          const vid = slide.getAttribute('data-variant-id');
+          const purl = slide.getAttribute('data-product-url');
+          const oldPid = wBtn.getAttribute('data-product-id');
+
+          if (pid !== oldPid) {
+              wBtn.setAttribute('data-product-id', pid);
+              wBtn.setAttribute('data-variant-id', vid);
+              wBtn.setAttribute('data-product-url', purl);
+              
+              // Update Swym product class
+              wBtn.classList.remove('product_' + oldPid);
+              wBtn.classList.add('product_' + pid);
+
+              // Reset classes and refresh state
+              wBtn.classList.remove('swym-added');
+              
+              if (typeof window.syncSwymWishlistButtons === 'function') {
+                window.syncSwymWishlistButtons();
+              } else if (window._swat && typeof window._swat.fetchWishlist === 'function') {
+                // Check current wishlist status
+                window._swat.fetchWishlist(function(items) {
+                  const isInWishlist = items.some(item => item.empi == pid || item.epi == vid);
+                  if (isInWishlist) {
+                    wBtn.classList.add('swym-added');
+                  }
+                  if (typeof window._swat.initializeAllButtons === 'function') {
+                    window._swat.initializeAllButtons();
+                  }
+                });
+              }
+          }
+        }
+
+        if(pEl) {
+          pEl.href = slide.getAttribute('data-product-url');
+          const gImg = pEl.querySelector('img');
+          const glass = isRotated ? slide.getAttribute('data-lifestyle') : slide.getAttribute('data-glass');
+          if(gImg && glass) {
+            gImg.style.opacity = '0';
+            setTimeout(() => { 
+                gImg.removeAttribute('srcset');
+                gImg.removeAttribute('sizes');
+                gImg.src = glass; 
+                gImg.onload = () => gImg.style.opacity = '1'; 
+                if (gImg.complete) gImg.style.opacity = '1';
+            }, 50);
+          }
+        }
+        if(rEl) {
+          rEl.href = slide.getAttribute('data-product-url');
+          const lImg = rEl.querySelector('img');
+          const life = isRotated ? slide.getAttribute('data-glass') : slide.getAttribute('data-lifestyle');
+          if(lImg && life) {
+            lImg.style.opacity = '0';
+            setTimeout(() => { 
+                lImg.removeAttribute('srcset');
+                lImg.removeAttribute('sizes');
+                lImg.src = life; 
+                lImg.onload = () => lImg.style.opacity = '1'; 
+                if (lImg.complete) lImg.style.opacity = '1';
+            }, 50);
+          }
+        }
+      }
+
+      if (rotateBtn) {
+        rotateBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          isRotated = !isRotated;
+          if (wrapper) wrapper.classList.toggle('is-rotated', isRotated);
+          // Use currentIdx to preserve the selected product
+          selectProduct(currentIdx, true);
+        });
+      }
+
+      if (typeof Swiper === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+        script.onload = () => createSwiper(mEl, selectProduct);
+        document.head.appendChild(script);
+      } else {
+        createSwiper(mEl, selectProduct);
+      }
+    }
+
+    function createSwiper(mEl, selectProduct) {
+        new Swiper(mEl, {
+            slidesPerView: 4, 
+            spaceBetween: 15,
+            watchSlidesProgress: true,
+            breakpoints: {
+                320: { direction: 'vertical', slidesPerView: 'auto', spaceBetween: 10 },
+                750: { direction: 'horizontal', slidesPerView: 4, spaceBetween: 15 },
+                990: { direction: 'horizontal', slidesPerView: 7, spaceBetween: 22 }
+            },
+            on: {
+                setTranslate: function() {
+                    if (window.innerWidth >= 750) return;
+                    const swiperEl = this.el;
+                    const translate = this.translate; 
+                    const threshold = 150; 
+                    const progress = Math.min(Math.max(Math.abs(translate) / threshold, 0), 1);
+                    const heightVal = 50 + (progress * 50);
+                    swiperEl.style.height = heightVal + "%";
+                },
+                touchStart: function() {
+                    if (window.innerWidth < 750) this.el.style.transition = 'none';
+                },
+                touchEnd: function() {
+                    if (window.innerWidth < 750) this.el.style.transition = '';
+                },
+                init: function() { 
+                    const slides = mEl.querySelectorAll('.swiper-slide');
+                    if (slides.length > 0) slides[0].classList.add('show-item');
+                },
+                click: function(swiper, event) {
+                    const slide = event.target.closest('.swiper-slide');
+                    if (slide) {
+                        const realIndex = slide.getAttribute('data-real-index');
+                        if (realIndex !== null) {
+                            const idx = parseInt(realIndex);
+                            selectProduct(idx);
+
+                            const relativeIdx = idx - this.activeIndex;
+
+                            // When user clicks the items on the right (4th visible and beyond) -> Auto scroll forward 2
+                            if (relativeIdx >= 3) {
+                                this.slideTo(this.activeIndex + 2);
+                            }
+                            // When user clicks the items on the left (1st or 2nd visible) -> Auto scroll back 2
+                            else if (relativeIdx <= 1) {
+                                this.slideTo(this.activeIndex - 2);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+    if (Shopify.designMode) {
+      document.addEventListener('shopify:section:load', init);
+    }
+    // Global Swym Synchronization
+    window.SwymCallbacks = window.SwymCallbacks || [];
+    window.SwymCallbacks.push(function(swat) {
+      const sectionId = '{{ section.id | replace: "-", "_" }}';
+      swat.evtLayer.addEventListener('sw:removedfromwishlist', function(e) {
+        const deletedPid = e.detail.empi;
+        const deletedVid = e.detail.epi;
+        const wBtn = document.getElementById('FcWishlist-' + sectionId);
+        const btnPid = wBtn ? wBtn.getAttribute('data-product-id') : null;
+        const btnVid = wBtn ? wBtn.getAttribute('data-variant-id') : null;
+        
+        if (wBtn && (btnPid == deletedPid || btnVid == deletedVid)) {
+          wBtn.classList.remove('swym-added');
+        }
+      });
+      
+      swat.evtLayer.addEventListener('sw:addedtowishlist', function(e) {
+        const addedPid = e.detail.empi;
+        const addedVid = e.detail.epi;
+        const wBtn = document.getElementById('FcWishlist-' + sectionId);
+        const btnPid = wBtn ? wBtn.getAttribute('data-product-id') : null;
+        const btnVid = wBtn ? wBtn.getAttribute('data-variant-id') : null;
+
+        if (wBtn && (btnPid == addedPid || btnVid == addedVid)) {
+          wBtn.classList.add('swym-added');
+        }
+      });
+
+      // Check initial state for first slide
+      const activeSlide = document.querySelector(`#FcMaster-${sectionId} .swiper-slide-active`) || document.querySelector(`#FcMaster-${sectionId} .swiper-slide`);
+      if (activeSlide && typeof swat.fetchWishlist === 'function') {
+        const pid = activeSlide.getAttribute('data-product-id');
+        swat.fetchWishlist(function(items) {
+          const isInWishlist = items.some(item => item.empi == pid);
+          const wBtn = document.getElementById('FcWishlist-' + sectionId);
+          if (wBtn && isInWishlist) {
+            wBtn.classList.add('swym-added');
+          }
+        });
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Feature Coll Slider",
+  "tag": "section",
+  "class": "section feature-collection-slider",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "SEESON LATEST ARRIVALS" },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Explore our carefully curated collection of spectacles and sunglasses.</p>"
+    },
+    { "type": "product_list", "id": "product_list", "label": "Products" },
+    {
+      "type": "select",
+      "id": "indicator_style",
+      "label": "Indicator Style",
+      "options": [
+        { "value": "top", "label": "Option 1: 25px Top" },
+        { "value": "bottom", "label": "Option 2: Full Bottom" }
+      ],
+      "default": "bottom"
+    },
+    { "type": "color", "id": "background_color", "label": "Background Color", "default": "#F2F2F2" },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    },
+    { "type": "header", "content": "Mobile padding" },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 40
+    }
+  ],
+  "presets": [{ "name": "Feature Coll Slider" }]
+}
+{% endschema %}

@@ -1,0 +1,292 @@
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.7 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.7 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .athletes-premium-slider {
+    background-color: {{ section.settings.background_color }};
+    position: relative;
+    overflow: hidden;
+    color: #000;
+  }
+
+  /* Header nằm đè lên slider */
+  .athletes-header {
+    position: absolute;
+    top: 6rem;
+    left: 4rem;
+    width: 35%;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .athletes-header * { pointer-events: auto; }
+  
+  .athletes-header h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    text-transform: uppercase;
+  }
+
+  .athletes-header .description {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    color: rgba(0,0,0,0.8);
+    max-width: 400px;
+  }
+
+  /* Swiper Main Styles */
+  .swiper {
+    width: 100%;
+    height: 85vh;
+    min-height: 600px;
+    padding-bottom: 50px !important;
+  }
+
+  .swiper-wrapper {
+    align-items: flex-end; /* Các thumbnail nằm dưới chân */
+  }
+
+  .swiper-slide {
+    width: 120px !important; /* Chiều rộng thumbnail mặc định */
+    height: 120px !important;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+
+  /* Khi slide được active (phóng to) */
+  .swiper-slide-active {
+    width: 65vw !important; /* Phóng to 65% chiều rộng */
+    height: 100% !important; /* Cao tối đa viewport */
+  }
+
+  /* Layout của nội dung bên trong mỗi slide */
+  .athlete-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .athlete-card img,
+  .athlete-card svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+    filter: grayscale(100%);
+  }
+
+  .swiper-slide-active img,
+  .swiper-slide-active svg {
+    filter: grayscale(0);
+    object-fit: contain;
+    object-position: bottom right;
+  }
+
+  /* Icon 360/Refresh giả định */
+  .rotate-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: all 0.5s ease;
+  }
+
+  .swiper-slide-active .rotate-icon {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+
+  @media screen and (max-width: 749px) {
+    .athletes-header {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 3rem 2rem;
+    }
+    .swiper {
+      height: 60vh;
+      min-height: 400px;
+    }
+    .swiper-slide-active {
+      width: 85vw !important;
+    }
+    .swiper-slide {
+      width: 80px !important;
+      height: 80px !important;
+    }
+  }
+{%- endstyle -%}
+
+<div class="athletes-premium-slider section-{{ section.id }}-padding">
+  <div class="athletes-header">
+    <h2 class="h1">{{ section.settings.heading }}</h2>
+    <div class="description rte">{{ section.settings.description }}</div>
+    {%- if section.settings.button_label != blank -%}
+      <a href="{{ section.settings.button_link }}" class="link underlined-link">
+        {{ section.settings.button_label }}
+      </a>
+    {%- endif -%}
+  </div>
+
+  <!-- Slider main container -->
+  <div class="swiper" id="Swiper-{{ section.id.handle }}">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        <div class="swiper-slide" {{ block.shopify_attributes }}>
+          <div class="athlete-card">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 2000 | image_tag: loading: 'lazy' }}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+            
+            <div class="rotate-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<!-- Swiper JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('#Swiper-{{ section.id.handle }}', {
+      slidesPerView: 'auto',
+      centeredSlides: false,
+      spaceBetween: 0,
+      initialSlide: {{ section.blocks.size | minus: 1 }}, // Bắt đầu từ slide cuối cùng bên phải
+      grabCursor: true,
+      slideToClickedSlide: true,
+      resistanceRatio: 0.5,
+      // Hiệu ứng mượt hơn khi touch
+      touchRatio: 1,
+      on: {
+        init: function() {
+           // Đảm bảo slide cuối được active lúc đầu
+           this.slideTo({{ section.blocks.size | minus: 1 }});
+        }
+      }
+    });
+
+    // Sync logic: Khi vuốt, Swiper tự động gán class .swiper-slide-active
+    // Chúng ta chỉ cần CSS xử lý kích thước dựa trên class đó.
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Athletes Premium Slider",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "THE ATHLETES COLLECTION"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Inspired by the rhythm of motion and iconic sports silhouettes, the collection introduces minimalist, modern designs.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "DISCOVER THE STORY"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F2F2F2"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "athlete",
+      "name": "Athlete",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Athlete Portrait"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Athletes Premium Slider",
+      "blocks": [
+        { "type": "athlete" },
+        { "type": "athlete" },
+        { "type": "athlete" },
+        { "type": "athlete" },
+        { "type": "athlete" }
+      ]
+    }
+  ]
+}
+{% endschema %}

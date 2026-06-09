@@ -1,0 +1,746 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_BXkFfc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cpCWiE": {
+          "type": "heading",
+          "settings": {
+            "heading": "HANOI IRL FLAGSHIP",
+            "heading_tag": "h1"
+          }
+        },
+        "text_UNbYqd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Located between Hàng Cháo and Hàng Bột, SEESON exists as a quiet pause between the movement of Hàng Đẫy Stadium and the stillness of Văn Miếu – Quốc Tử Giám. Set within a renovated 1970s–80s house, the space preserves layers of its architectural memory. Raw textures and hand-finished details retain traces of the making process.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cpCWiE",
+        "text_UNbYqd"
+      ],
+      "name": "HANOI IRL FLAGSHIP",
+      "settings": {
+        "section_id": "store-hanoi",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 20,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_carousel_pLDqbg": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_Vb4pBP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_01_db599851-0c79-4aa9-bc41-66aee336bd00.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_01.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_MJjG87": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_02_8e4864b0-d51a-43b3-b445-120c58eddb91.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_p7pYVx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_03_219af374-059c-4b7d-9fb7-3556fde502d7.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_03.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_7eRJXU": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_04_3b783ee8-7228-4647-ad1f-4c15ea9904b5.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_04.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_T97WFW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_05_c95c5668-adc3-4cfe-bee5-a9e64cce4569.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_05.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_yGPBJt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_06_3c0f8c08-a726-4658-8bd3-df03e0634743.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_06.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_tVkyNf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_07_2a181de9-7c49-4183-822c-15c561e0b99b.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_07.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_aLccAg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_08_7c2247e6-ae41-48ea-a511-fab104cf9f6d.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_08.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_9DWWNC": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_09_46b280b0-c5e7-4a20-b91d-9994f0f532b3.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_09.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_YFXipK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_10_4284bbd0-f0bd-4711-a481-4f791238ec4f.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_10.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_xPVBbd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Hanoi_11_9d44594c-5bcb-4a88-b4c2-d0d352a03533.jpg",
+            "mobile_image": "shopify://shop_images/Hanoi_11.jpg",
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_Vb4pBP",
+        "slide_MJjG87",
+        "slide_p7pYVx",
+        "slide_7eRJXU",
+        "slide_T97WFW",
+        "slide_yGPBJt",
+        "slide_tVkyNf",
+        "slide_aLccAg",
+        "slide_9DWWNC",
+        "slide_YFXipK",
+        "slide_xPVBbd"
+      ],
+      "name": "Image HANOI IRL FLAGSHIP",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "<p>44 Tôn Đức Thắng, Phường Ô Chợ Dừa, Thành phố Hà Nội<br/>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_amaBJ9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iBBJ8P": {
+          "type": "heading",
+          "settings": {
+            "heading": "SAIGON IRL FLAGSHIP",
+            "heading_tag": "h2"
+          }
+        },
+        "text_nYf6jD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Following the stillness of the Hanoi Flagship, the Saigon Flagship embraces silence as its central concept. Conceived as a quiet pause within the movement of Saigon, the space reflects a contemporary Vietnamese essence through its materials, light, and familiar sense of ease within the city.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iBBJ8P",
+        "text_nYf6jD"
+      ],
+      "name": "SAIGON IRL FLAGSHIP",
+      "settings": {
+        "section_id": "store-saigon",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_carousel_YK39QA": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_tDxeTg": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_JmKdjq": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_4eA74b": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_LAJGk8": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_GEEG4i": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_fBj79a": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_8XGhgt": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_3Hzxmg": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_gjMHkK": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_aetUMF": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_GiRbMT": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_tDxeTg",
+        "slide_JmKdjq",
+        "slide_4eA74b",
+        "slide_LAJGk8",
+        "slide_GEEG4i",
+        "slide_fBj79a",
+        "slide_8XGhgt",
+        "slide_3Hzxmg",
+        "slide_gjMHkK",
+        "slide_aetUMF",
+        "slide_GiRbMT"
+      ],
+      "name": "Image SAIGON IRL FLAGSHIP",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "<p>199 Điện Biên Phủ, Phường Xuân Hoà, Thành phố Hồ Chí Minh<br/>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_JzCCmn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xFz78f": {
+          "type": "heading",
+          "settings": {
+            "heading": "RUE MICHE L'EDITION",
+            "heading_tag": "h2"
+          }
+        },
+        "text_k3cAAK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEESON at Rue Miche L’Édition — a flagship store within Southeast Asia’s largest multi-brand retail concept by scale — exists among a curated selection of Vietnamese design labels. The space extends the spirit of SEESON’s previous flagships, where traditional materials meet a contemporary sculptural language. Light, form, and objects merge into an environment that feels both familiar and open to a new context.<br/><br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xFz78f",
+        "text_k3cAAK"
+      ],
+      "name": "Rue Miche L'Edition",
+      "settings": {
+        "section_id": "store-hanoi",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_carousel_Yny3pg": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_rAjBEM": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_fUrw4C": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_ajX6gB": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_ArbjWe": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_WJgwyM": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        },
+        "slide_KFazMT": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_rAjBEM",
+        "slide_fUrw4C",
+        "slide_ajX6gB",
+        "slide_ArbjWe",
+        "slide_WJgwyM",
+        "slide_KFazMT"
+      ],
+      "name": "Image RUE MICHE",
+      "settings": {
+        "full_width_mobile": true,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "<p>B3 Unionsquare, 171 Đồng Khởi, Phường Sài Gòn, Thành phố Hồ Chí Minh<br/>10.00 AM - 9.30 PM  |  (+84) 904 260 842</p>",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_ah3XAQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9AHqAx": {
+          "type": "heading",
+          "settings": {
+            "heading": "OFFICIAL STOCKISTS",
+            "heading_tag": "h2"
+          }
+        },
+        "text_PBjazx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover SEESON through a curated network of selected stockists. Find your nearest store here.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9AHqAx",
+        "text_PBjazx"
+      ],
+      "name": "HỆ THỐNG ĐẠI LÝ PHÂN PHỐI CHÍNH THỨC",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 120,
+        "padding_top_mobile": 60,
+        "padding_bottom": 30,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "collabsible_custom_FHwd3m": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_BfDW4C": {
+          "type": "collabsible_block",
+          "disabled": true,
+          "settings": {
+            "content": "<h4><strong>Rue Miche L'Édition</strong></h4><p>Tầng B3, Unionsquare, 171 Đồng Khởi, Bến Nghé, Quận 1, TP.HCM</p><h4></h4><h4><strong>Mắt kính Việt Phát</strong></h4><p>169 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận</p><p>198 Hoàng Diệu, Khánh Hội, TP.HCM</p>",
+            "padding_top": 30,
+            "padding_bottom": 0
+          }
+        },
+        "collabsible_block_rFY4mU": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<h4>Mắt kính Tâm Đức</h4><p>328 Nguyễn Thị Thập, Phường Tân Quy, Quận 7, TP.HCM</p><p>438 Quang Trung, Phường 10, Quận Gò Vấp, TP.HCM</p><p>144B Phạm Viết Chánh, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM</p><p>107 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, TP.HCM</p><p>1/2 Chương Dương, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM</p><p>199 Lê Đại Hành, Phường 13, Quận 11, TP.HCM</p>",
+            "padding_top": 30,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_BfDW4C",
+        "collabsible_block_rFY4mU"
+      ],
+      "disabled": true,
+      "name": "THÀNH PHỐ HÀ NỘI",
+      "settings": {
+        "enable_global_toggle": true,
+        "remove_border_top": true,
+        "enable_border_bottom": false,
+        "open_by_default": false,
+        "title": "THÀNH PHỐ HÀ NỘI",
+        "heading_tag": "h3",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collabsible_custom_ntF3mT": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_VfyjCA": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<h4>Mắt kính Tâm Đức</h4><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+Qu%E1%BA%ADn+7/@10.7386376,106.7083364,17z/data=!3m1!4b1!4m6!3m5!1s0x31752fad9eee2aaf:0xfc20085ae1090d2!8m2!3d10.7386376!4d106.7132073!16s%2Fg%2F11v3z0r0rx?hl=vi-VN&entry=tts\" target=\"_blank\" title=\"328 Nguyễn Thị Thập, Phường Tân Hưng, Thành phố Hồ Chí Minh\">328 Nguyễn Thị Thập, Phường Tân Hưng, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+G%C3%B2+V%E1%BA%A5p/@10.833446,106.6636165,17z/data=!3m1!4b1!4m6!3m5!1s0x317529b818d2e279:0xbc1a8097703444c8!8m2!3d10.833446!4d106.6661914!16s%2Fg%2F11tj36k4rs?hl=vi-VN&entry=tts\" target=\"_blank\" title=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+G%C3%B2+V%E1%BA%A5p/@10.833446,106.6636165,17z/data=!3m1!4b1!4m6!3m5!1s0x317529b818d2e279:0xbc1a8097703444c8!8m2!3d10.833446!4d106.6661914!16s%2Fg%2F11tj36k4rs?hl=vi-VN&entry=tts\">438 Quang Trung, Phường Gò Vấp, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+Qu%E1%BA%ADn+1/@10.766772,106.6786537,17z/data=!3m1!4b1!4m6!3m5!1s0x31752fd5792e77a7:0x788104520aa23c21!8m2!3d10.766772!4d106.6835246!16s%2Fg%2F11n0pdg7dq?hl=vi-VN&entry=tts\" target=\"_blank\" title=\"144B Phạm Viết Chánh, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh\">144B Phạm Viết Chánh, Phường Cầu Ông Lãnh, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://maps.app.goo.gl/ssfZPbcbsvXqzgDa7\" target=\"_blank\" title=\"107 Xô Viết Nghệ Tĩnh, Phường Gia Định, Thành phố Hồ Chí Minh\">107 Xô Viết Nghệ Tĩnh, Phường Gia Định, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+Th%E1%BB%A7+%C4%90%E1%BB%A9c/@10.8509773,106.7571649,17z/data=!4m6!3m5!1s0x31752794af365629:0x36bcbe6137ac9007!8m2!3d10.8509773!4d106.7597398!16s%2Fg%2F11fl764fmc?hl=vi-VN&entry=tts\" target=\"_blank\" title=\"1/2 Chương Dương, Khu phố 2, Phường Thủ Đức, Thành phố Hồ Chí Minh\">1/2 Chương Dương, Khu phố 2, Phường Thủ Đức, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+Chi+nh%C3%A1nh+Q11/@10.763316,106.6534041,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f9456809151:0x6a0cdabd4311d9b1!8m2!3d10.763316!4d106.655979!16s%2Fg%2F11gxv_qw0t?hl=vi-VN&entry=tts\" target=\"_blank\" title=\"199 Lê Đại Hành P.13, Phường Phú Thọ, Thành phố Hồ Chí Minh\">199 Lê Đại Hành, Phường Phú Thọ, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+T%C3%A2n+B%C3%ACnh/@10.798758,106.6530461,17z/data=!3m1!4b1!4m6!3m5!1s0x317529367317e005:0xab3b745564754922!8m2!3d10.798758!4d106.655621!16s%2Fg%2F11f2wcwm5j?hl=vi-VN&entry=tts\" target=\"_blank\" title=\"155 Nguyễn Thái Bình, Phường Tân Sơn Nhất, Thành phố Hồ Chí Minh\">155 Nguyễn Thái Bình, Phường Tân Sơn Nhất, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+Qu%E1%BA%ADn+12/@10.8617474,106.6087978,17z/data=!3m1!4b1!4m6!3m5!1s0x31752b0061fee9e5:0x8155b506c163214f!8m2!3d10.8617421!4d106.6113727!16s%2Fg%2F11vyt1j2t8?hl=vi-VN&entry=tts&g_ep=EgoyMDI0MDYxOS4xKgBIAVAD\" target=\"_blank\" title=\"123/1 Đường Nguyễn Ảnh Thủ, Ấp Trung Chánh 1, Xã Bà Điểm, Thành phố Hồ Chí Minh\">123/1 Đường Nguyễn Ảnh Thủ, Ấp Trung Chánh 1, Xã Bà Điểm, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+T%C3%A2m+%C4%90%E1%BB%A9c+-+Qu%E1%BA%ADn+9/@10.843979,106.783893,16z/data=!4m6!3m5!1s0x317527b0de75e061:0x9cd7d62b5c5c96ac!8m2!3d10.843979!4d106.7838934!16s%2Fg%2F11wmw6st53?coh=225987&entry=tts&g_ep=EgoyMDI0MTExMi4wIPu8ASoASAFQAw%3D%3D\" target=\"_blank\" title=\"252 Lê Văn Việt, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh\">252 Lê Văn Việt, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh</a></p><h4>Mắt kính Việt Phát</h4><p><a href=\"https://www.google.com/maps/place/169+%C4%90.+L%C3%AA+V%C4%83n+S%E1%BB%B9,+Ph%C6%B0%E1%BB%9Dng+14,+Ph%C3%BA+Nhu%E1%BA%ADn,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7920633,106.6684071,17z/data=!3m1!4b1!4m6!3m5!1s0x3175292b5d7170c9:0x232268b34bccb20e!8m2!3d10.792058!4d106.670982!16s%2Fg%2F11c1zqp8yk?entry=tts&g_ep=EgoyMDI1MDExNS4wIPu8ASoASAFQAw%3D%3D\" target=\"_blank\" title=\"169 Lê Văn Sỹ, Phường Phú Nhuận, Thành phố Hồ Chí Minh\">169 Lê Văn Sỹ, Phường Phú Nhuận, Thành phố Hồ Chí Minh</a></p><p><a href=\"https://maps.app.goo.gl/1zf6DkH8DJ9FFMrFA?g_st=ipc\" target=\"_blank\" title=\"198 Hoàng Diệu, Phường Khánh Hội, Thành phố Hồ Chí Minh\">198 Hoàng Diệu, Phường Khánh Hội, Thành phố Hồ Chí Minh</a></p>",
+            "padding_top": 30,
+            "padding_bottom": 0
+          }
+        },
+        "collabsible_block_r7f7Bz": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<h4>Mắt kính Việt</h4><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+k%C3%ADnh+Vi%E1%BB%87t/@10.7718881,106.6656322,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f112ea37c1d:0x2cffacf70aecc97c!8m2!3d10.7718828!4d106.6682071!16s%2Fg%2F11cm0941fm?hl=vi-VN&entry=tts&g_ep=EgoyMDI0MDcxNy4wKgBIAVAD\" target=\"_blank\" title=\"421/26 Bis Sư Vạn Hạnh, Phường Hòa Hưng, Thành phố Hồ Chí Minh\">421/26 Bis Sư Vạn Hạnh, Phường Hòa Hưng, Thành phố Hồ Chí Minh</a></p><h4>Mắt kính EnY Optometry</h4><p><a href=\"https://maps.app.goo.gl/q2vz9QUfJSKyVaNM6\" target=\"_blank\" title=\"288 Nguyễn Thị Minh Khai, Phường Bàn Cờ, Thành phố Hồ Chí Minh\">288 Nguyễn Thị Minh Khai, Phường Bàn Cờ, Thành phố Hồ Chí Minh</a></p>",
+            "padding_top": 20,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_VfyjCA",
+        "collabsible_block_r7f7Bz"
+      ],
+      "name": "THÀNH PHỐ HỒ CHÍ MINH",
+      "settings": {
+        "enable_global_toggle": true,
+        "remove_border_top": false,
+        "enable_border_bottom": false,
+        "open_by_default": false,
+        "title": "HO CHI MINH CITY",
+        "heading_tag": "h3",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collabsible_custom_yrcNyz": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_BE84UT": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<h4>An Gia OPTIC</h4><p><a href=\"https://www.google.com/maps/place/AN+GIA+OPTIC/@10.0356909,105.7729115,17z/data=!3m1!4b1!4m6!3m5!1s0x31a063d33fbf2b49:0xa29d25b78905114a!8m2!3d10.0356909!4d105.7754864!16s%2Fg%2F11j48mb1df?hl=vi-VN&entry=tts\" target=\"_blank\" title=\"184 Trần Hưng Đạo, Phường Ninh Kiều, Thành phố Cần Thơ\">184 Trần Hưng Đạo, Phường Ninh Kiều, Thành phố Cần Thơ</a></p><p><a href=\"https://www.google.com/maps?q=Vincom+Plaza+Xu%C3%A2n+Kh%C3%A1nh,+209+%C4%90.+30+Th%C3%A1ng+4,+Xu%C3%A2n+Kh%C3%A1nh,+Ninh+Ki%E1%BB%81u,+C%E1%BA%A7n+Th%C6%A1&ftid=0x31a08820e288dc5b:0x301560920bedaf72&entry=gps&lucs=,94255441,94242544,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94203019,47084304,94208458,94208447&g_ep=CAISEjI0LjUwLjAuNzA0NDI3ODkxMBgAINeCAyp1LDk0MjU1NDQxLDk0MjQyNTQ0LDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjAzMDE5LDQ3MDg0MzA0LDk0MjA4NDU4LDk0MjA4NDQ3QgJWTg%3D%3D&skid=b8418f1e-b1d0-4b85-ba83-3b7e12c5a169&g_st=com.google.maps.preview.copy\" target=\"_blank\" title=\"Sảnh chính L1-K7, TTTM Vincom Xuân Khánh, Thành phố Cần Thơ\">Sảnh chính L1-K7, TTTM Vincom Xuân Khánh, Thành phố Cần Thơ</a></p>",
+            "padding_top": 30,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_BE84UT"
+      ],
+      "name": "THÀNH PHỐ CẦN THƠ",
+      "settings": {
+        "enable_global_toggle": true,
+        "remove_border_top": false,
+        "enable_border_bottom": false,
+        "open_by_default": false,
+        "title": "CAN THO CITY",
+        "heading_tag": "h3",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collabsible_custom_jTRY9X": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_RcAwYt": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<h4>Quang OPTIC</h4><p><a href=\"https://www.google.com/maps/place/Quang+Optic/@16.0606857,108.2154775,3348m/data=!3m1!1e3!4m6!3m5!1s0x314219dca0621d45:0x7abc8d31c13313ce!8m2!3d16.0606857!4d108.2154775!16s%2Fg%2F11sswpw179?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D\" target=\"_blank\" title=\"84 Nguyễn Văn Linh, Phường Hải Châu, Thành phố Đà Nẵng\">84 Nguyễn Văn Linh, Phường Hải Châu, Thành phố Đà Nẵng</a></p><p><a href=\"https://maps.app.goo.gl/rkCpXEBUtLriYyBY9\" title=\"400 Hùng Vương, Phường Thanh Khê, Thành phố Đà Nẵng\">400 Hùng Vương, Phường Thanh Khê, Thành phố Đà Nẵng</a></p>",
+            "padding_top": 30,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_RcAwYt"
+      ],
+      "name": "THÀNH PHỐ ĐÀ NẴNG",
+      "settings": {
+        "enable_global_toggle": true,
+        "remove_border_top": false,
+        "enable_border_bottom": false,
+        "open_by_default": false,
+        "title": "DA NANG CITY",
+        "heading_tag": "h3",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collabsible_custom_3wryTN": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_g947ci": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<h4>Mắt kính COKI</h4><p><a href=\"https://www.google.com/maps/place/K%C3%ADnh+m%E1%BA%AFt+COKI/@20.8519457,106.6732622,814m/data=!3m1!1e3!4m6!3m5!1s0x314a7b675ccb3be1:0x50d2fd1ea29d72ee!8m2!3d20.8517664!4d106.6730934!16s%2Fg%2F11t9wjtlpt?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D\" target=\"_blank\" title=\"https://www.google.com/maps/place/K%C3%ADnh+m%E1%BA%AFt+COKI/@20.8519457,106.6732622,814m/data=!3m1!1e3!4m6!3m5!1s0x314a7b675ccb3be1:0x50d2fd1ea29d72ee!8m2!3d20.8517664!4d106.6730934!16s%2Fg%2F11t9wjtlpt?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D\">267 Hai Bà Trưng, Phường An Biên, Thành phố Hải Phòng</a></p><p><a href=\"https://maps.app.goo.gl/X4XkmkwBeByzSuei7\" target=\"_blank\" title=\"https://maps.app.goo.gl/X4XkmkwBeByzSuei7\">70 Đà Nẵng, Phường Thuỷ Nguyên,  Thành phố Hải Phòng</a></p>",
+            "padding_top": 30,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_g947ci"
+      ],
+      "name": "THÀNH PHỐ HẢI PHÒNG",
+      "settings": {
+        "enable_global_toggle": true,
+        "remove_border_top": false,
+        "enable_border_bottom": false,
+        "open_by_default": false,
+        "title": "HAI PHONG CITY",
+        "heading_tag": "h3",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collabsible_custom_49bhGp": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_jh43rz": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<h4>Zeiss Vision Center By Hoàng Yến</h4><p><a href=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+HO%C3%80NG+Y%E1%BA%BEN/@12.2530319,109.1893148,17z/data=!3m1!4b1!4m6!3m5!1s0x31706785d972d3f9:0xdbb057f8b79d5fac!8m2!3d12.2530267!4d109.1918897!16s%2Fg%2F11clyqt087?entry=tts&g_ep=EgoyMDI0MDkyMi4wKgBIAVAD\" target=\"_blank\" title=\"https://www.google.com/maps/place/M%E1%BA%AFt+K%C3%ADnh+HO%C3%80NG+Y%E1%BA%BEN/@12.2530319,109.1893148,17z/data=!3m1!4b1!4m6!3m5!1s0x31706785d972d3f9:0xdbb057f8b79d5fac!8m2!3d12.2530267!4d109.1918897!16s%2Fg%2F11clyqt087?entry=tts&g_ep=EgoyMDI0MDkyMi4wKgBIAVAD\">80 Phan Bội Châu, Phường Vạn Thạnh, Thành phố Nha Trang, Tỉnh Khánh Hòa</a></p>",
+            "padding_top": 30,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_jh43rz"
+      ],
+      "name": "THÀNH PHỐ NHA TRANG",
+      "settings": {
+        "enable_global_toggle": true,
+        "remove_border_top": false,
+        "enable_border_bottom": false,
+        "open_by_default": false,
+        "title": "NHA TRANG CITY",
+        "heading_tag": "h3",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collabsible_custom_NwFr4G": {
+      "type": "collabsible-custom",
+      "blocks": {
+        "collabsible_block_eBcFeE": {
+          "type": "collabsible_block",
+          "settings": {
+            "content": "<h4>Mắt kính Đặng Phước Quân</h4><p><a href=\"https://www.google.com/maps/place/31+%C4%90.+Nguy%E1%BB%85n+V%C4%83n+C%E1%BB%AB,+Ph%C6%B0%E1%BB%9Dng+1,+%C4%90%C3%A0+L%E1%BA%A1t,+L%C3%A2m+%C4%90%E1%BB%93ng/@11.9400652,108.4316037,426m/data=!3m1!1e3!4m6!3m5!1s0x3171132dc3adb719:0xe4f8fcdc586a51a6!8m2!3d11.9401572!4d108.4325773!16s%2Fg%2F11sf8fdzcx?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D\" target=\"_blank\" title=\"https://www.google.com/maps/place/31+%C4%90.+Nguy%E1%BB%85n+V%C4%83n+C%E1%BB%AB,+Ph%C6%B0%E1%BB%9Dng+1,+%C4%90%C3%A0+L%E1%BA%A1t,+L%C3%A2m+%C4%90%E1%BB%93ng/@11.9400652,108.4316037,426m/data=!3m1!1e3!4m6!3m5!1s0x3171132dc3adb719:0xe4f8fcdc586a51a6!8m2!3d11.9401572!4d108.4325773!16s%2Fg%2F11sf8fdzcx?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D\">31 Nguyễn Văn Cừ, Phường Xuân Hương - Đà Lạt, Tỉnh Lâm Đồng</a></p>",
+            "padding_top": 30,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "collabsible_block_eBcFeE"
+      ],
+      "name": "THÀNH PHỐ ĐÀ LẠT",
+      "settings": {
+        "enable_global_toggle": true,
+        "remove_border_top": false,
+        "enable_border_bottom": true,
+        "open_by_default": false,
+        "title": "DA LAT CITY",
+        "heading_tag": "h3",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_top_mobile": 20,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 120
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_BXkFfc",
+    "image_carousel_pLDqbg",
+    "rich_text_amaBJ9",
+    "image_carousel_YK39QA",
+    "rich_text_JzCCmn",
+    "image_carousel_Yny3pg",
+    "rich_text_ah3XAQ",
+    "collabsible_custom_FHwd3m",
+    "collabsible_custom_ntF3mT",
+    "collabsible_custom_yrcNyz",
+    "collabsible_custom_jTRY9X",
+    "collabsible_custom_3wryTN",
+    "collabsible_custom_49bhGp",
+    "collabsible_custom_NwFr4G"
+  ]
+}

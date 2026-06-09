@@ -1,0 +1,149 @@
+{% comment %}
+  Renders a header search modal. Should be used with 'header.liquid'
+
+  Accepts:
+  - input_id: {String} Id for the search input element (required)
+
+  Usage:
+  {% render 'header-search', input_id: 'My-Id'%}
+{% endcomment %}
+
+<details-modal class="header__search">
+  <details>
+    <summary
+      class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+      aria-haspopup="dialog"
+      aria-label="{{ 'general.search.search' | t }}"
+    >
+      <span class="svg-wrapper">
+        {% render 'core-icon', name: 'search-new', class: 'modal__toggle-open icon icon-search' %}
+      </span>
+    </summary>
+    <div
+      class="search-modal modal__content gradient"
+      role="dialog"
+      aria-modal="true"
+      aria-label="{{ 'general.search.search' | t }}"
+    >
+      <div class="modal-overlay"></div>
+      <div class="page-width">
+        <div class="promo_collection">
+          <div class="content-box">
+            <div class="sub-title">
+              {{ section.settings.sub_title_collection_search }}
+            </div>
+            <div class="title">
+              {{ section.settings.title_collection_search }}
+            </div>
+            <a href="{{ section.settings.button_link_collection_search }}" class="btn btn--secondary">
+              {{ section.settings.button_text_collection_search }}
+            </a>
+          </div>
+        </div>
+        <div
+          class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
+          tabindex="-1"
+        >
+          {%- if settings.predictive_search_enabled -%}
+            <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+          {%- else -%}
+            <search-form class="search-modal__form">
+          {%- endif -%}
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+            <div class="field">
+              <input
+                class="search__input field__input"
+                id="{{ input_id }}"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+                {%- if settings.predictive_search_enabled -%}
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-owns="predictive-search-results"
+                  aria-controls="predictive-search-results"
+                  aria-haspopup="listbox"
+                  aria-autocomplete="list"
+                  autocorrect="off"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                {%- endif -%}
+              >
+              {% comment %} <label class="field__label" for="{{ input_id }}">{{ 'general.search.search' | t }}</label> {% endcomment %}
+              <input type="hidden" name="options[prefix]" value="last">
+              <button
+                type="reset"
+                class="reset__button field__button hidden{% if search.terms == blank %} hidden{% endif %}"
+                aria-label="{{ 'general.search.reset' | t }}"
+                style="display: none;"
+              >
+                <span class="svg-wrapper test">
+                  {% render 'core-icon', name: 'close', class: 'icon icon-close' %}
+                </span>
+              </button>
+            </div>
+
+            {%- if settings.predictive_search_enabled -%}
+              <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+                {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+                    <div class="predictive_search_open">
+                      <div class="main-box">
+                        <div class=""text-box></div>
+                        <div id="predictive-search-recently-viewed-group" class="predictive-search__result-group" style="display:none">
+                            <div class="predictive-search__heading-wrapper">
+                              <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
+                                {{ 'predictive_search.recently_viewed.header' | t }}
+                              </h2>
+                              <button class="predictive-search__clear-button link link--text" type="button" onclick="clearRecentlyViewedProducts()">{{ 'products.facets.clear' | t }}</button>
+                            </div>
+                            <p id="predictive-search-recently-viewed-empty" style="font-size: 12px;display: flex;justify-content: center;align-items: center;min-height: 150px;">{{ 'predictive_search.recently_viewed.title' | t }}</p>
+                            <ul id="predictive-search-recently-viewed-list" class="predictive-search__results-list list-unstyled" role="group">
+                              <!-- Recently viewed products will be rendered here by JS -->
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+              <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+            {%- endif -%}
+          </form>
+          {%- unless settings.predictive_search_enabled -%}
+          <div class="predictive_search_open">
+            <div class="main-box">
+              <div id="predictive-search-recently-viewed-group" class="predictive-search__result-group" style="">
+                  <div class="predictive-search__heading-wrapper">
+                    <h2 class="predictive-search__heading text-body caption-with-letter-spacing">
+                      {{ 'predictive_search.recently_viewed.header' | t }}
+                    </h2>
+                    <button class="predictive-search__clear-button link link--text" type="button" onclick="clearRecentlyViewedProducts()">{{ 'products.facets.clear' | t }}</button>
+                  </div>
+                  <p id="predictive-search-recently-viewed-empty" style="font-size: 12px;display: flex;justify-content: center;align-items: center;min-height: 150px;">{{ 'predictive_search.recently_viewed.title' | t }}</p>
+                  <ul id="predictive-search-recently-viewed-list" class="predictive-search__results-list list-unstyled" role="group">
+                    
+                  </ul>
+              </div>
+            </div>
+          </div>
+          {%- endunless -%}
+          {%- if settings.predictive_search_enabled -%}
+            </predictive-search>
+          {%- else -%}
+            </search-form>
+          {%- endif -%}
+          <button
+            type="button"
+            class="search-modal__close-button modal__close-button link link--text focus-inset"
+            aria-label="{{ 'accessibility.close' | t }}"
+          >
+            <span class="svg-wrapper">
+              {% render 'core-icon', name: 'close', class: 'icon icon-close' %}
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </details>
+</details-modal>

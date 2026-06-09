@@ -1,0 +1,127 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 88
+      }
+    },
+    "rich_text_KR6mXq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6Anw3d": {
+          "type": "heading",
+          "settings": {
+            "heading": "SUPPORT & CONTACT",
+            "heading_tag": "h1"
+          }
+        },
+        "text_MLpx7Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For any inquiries or collaboration requests, please reach out to SEESON and we will connect you with the appropriate team.<br/><br/>* Customer support [support@seeson.vn]<br/>* Collaborations: [creative@seeson.vn]<br/>* Hotline: (+84) 986 009 390</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6Anw3d",
+        "text_MLpx7Q"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 30,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 20
+      }
+    },
+    "image_carousel_QwKppt": {
+      "type": "image-carousel",
+      "blocks": {
+        "slide_wtf4RV": {
+          "type": "slide",
+          "settings": {
+            "link_image": false,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_wtf4RV"
+      ],
+      "disabled": true,
+      "name": "Image HANOI IRL FLAGSHIP",
+      "settings": {
+        "full_width_mobile": false,
+        "slide_height": "adapt_image",
+        "loop": true,
+        "auto_rotate": false,
+        "show_dots": true,
+        "change_slides_speed": 5,
+        "subheading": "",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "",
+        "text_alignment": "left-top",
+        "button_1_label": "",
+        "button_1_link": "",
+        "button_1_style": "primary",
+        "button_2_label": "",
+        "button_2_link": "",
+        "button_2_style": "secondary",
+        "button_3_label": "",
+        "button_3_link": "",
+        "button_3_style": "outline"
+      }
+    },
+    "rich_text_X6TN6J": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 30,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form",
+    "rich_text_KR6mXq",
+    "image_carousel_QwKppt",
+    "rich_text_X6TN6J"
+  ]
+}

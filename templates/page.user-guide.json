@@ -1,0 +1,134 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_LCwFbF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rp9Jm9": {
+          "type": "heading",
+          "settings": {
+            "heading": "USER GUIDE",
+            "heading_tag": "h1"
+          }
+        },
+        "text_cpRbWY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This guide helps you care for your SEESON frames and lenses with ease. Proper use and maintenance ensure durability, comfort, and the best visual experience.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rp9Jm9",
+        "text_cpRbWY"
+      ],
+      "name": "HƯỚNG DẪN SỬ DỤNG",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_top_mobile": 20,
+        "padding_bottom": 60,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "collapsible_content_LwEYV4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_XXEnxn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CARING FOR YOUR FRAMES",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p>DO:<br/>- Use both hands when wearing, removing, or folding your glasses.<br/>- Use lens cleaning solution and a microfiber cloth to clean your glasses.<br/>- Store your glasses in a case when not using.<br/>- Avoid dropping the product or exposing it to strong impact, especially around structural areas such as the bridge and hinges. When cleaning, hold each lens gently and avoid twisting or bending the bridge.<br/>- For products with metal details: Metal components may be sensitive to sweat, chemicals, or prolonged exposure to water. Wipe metal parts with a dry microfiber cloth after each use.<br/>- Avoid impacts that may damage the metal coating. Store your glasses in a case when not in use.<br/>- Discontinue use if signs of irritation occur on areas of skin in contact with metal parts. Please contact SEESON for support.<br/><br/>DON'T:<br/>- Avoid wearing or removing glasses with one hand or placing them on your head, as this may loosen the frame structure.<br/>- Do not use detergents or chemical solutions (such as alcohol, hand sanitizer, or soap) to clean your glasses.<br/>- Do not expose your glasses to high temperatures or direct sunlight.<br/>- Do not store your glasses with other items, especially sharp objects, without a protective case.<br/>- Avoid strong pressure or impact that may deform the frame.<br/>- Avoid wearing glasses that are misaligned, too loose, or too tight. Do not attempt to adjust or reshape the frame yourself.<br/>- If your glasses become loose or misaligned, please bring them to a SEESON IRL FLAGSHIP store for adjustment by our technical team.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_dDEBmt": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "LENS MAINTENANCE",
+            "font_body": true,
+            "icon": "none",
+            "row_content": "<p>- For optical frames, demo lenses are basic CR39 plastic lenses used to maintain the frame shape. For better eye protection, customers are encouraged to replace them with prescription or specialized lenses.<br/>- Incorrect lens fitting (too tight or too loose) may affect the quality and structure of the frame.<br/>- Clean lenses using a microfiber cloth and lens cleaning solution. Do not use chemicals, harsh cleaning agents, or rough fabrics on the lenses.<br/>- Avoid exposing lenses to high temperatures, strong pressure, or impact with hard surfaces.<br/>- Improper cleaning or handling may cause scratches and damage the protective coating on the lenses.<br/>- For customers receiving eye examinations at SEESON, please refer to the accompanying documents for detailed lens warranty and care instructions.<br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_XXEnxn",
+        "collapsible_row_dDEBmt"
+      ],
+      "custom_css": [],
+      "name": "CHI TIẾT HƯỚNG DẪN",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "rich_text_c8MNUQ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_j9LwLn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All information about your purchasing privileges and warranty terms is now available via the link below. Discover more about our commitment to your experience.<br/><br/><a href=\"/pages/sizechart\" title=\"SIZE GUIDE\">OUR POLICIES</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_j9LwLn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_id": "",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_top_mobile": 20,
+        "padding_bottom": 120,
+        "padding_bottom_mobile": 120
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_LCwFbF",
+    "collapsible_content_LwEYV4",
+    "rich_text_c8MNUQ"
+  ]
+}
