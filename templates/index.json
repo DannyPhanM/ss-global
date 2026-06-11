@@ -12,40 +12,13 @@
     "slideshow_6w4AVd": {
       "type": "slideshow",
       "blocks": {
-        "slide_NHr4VU": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "video": "",
-            "video_url": "",
-            "video_url_mobile": "",
-            "image_overlay_opacity": 0,
-            "enable_column": false,
-            "heading": "",
-            "heading_size": "h0",
-            "subheading": "",
-            "subheading_custom": "",
-            "button_label": "",
-            "link": "",
-            "button_label_2": "",
-            "link_2": "",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-4"
-          }
-        },
         "slide_kjBj9L": {
           "type": "slide",
           "settings": {
-            "video": "",
-            "video_mobile": "",
+            "video": "shopify://files/videos/The Athletes Hero Banner 1920x1007_New.mp4",
+            "video_mobile": "shopify://files/videos/THE ATHLETES mobile.mov",
             "video_url": "",
             "video_url_mobile": "",
-            "image": "shopify://shop_images/Hero_Banner.jpg",
-            "mobile_image": "shopify://shop_images/Hero_Banner_1.jpg",
             "image_overlay_opacity": 0,
             "enable_column": false,
             "heading": "THE ATHLETES COLLECTION",
@@ -54,7 +27,7 @@
             "subheading_custom": "",
             "button_label": "",
             "link": "",
-            "button_label_2": "KHÁM PHÁ BỘ SƯU TẬP",
+            "button_label_2": "EXPLORE THE COLLECTION",
             "link_2": "shopify://collections/the-athletes",
             "button_style_secondary": false,
             "show_text_box": false,
@@ -67,8 +40,8 @@
         "slide_bL94pR": {
           "type": "slide",
           "settings": {
-            "video": "",
-            "video_mobile": "",
+            "video": "shopify://files/videos/VIDEO FOR WEB.mp4",
+            "video_mobile": "shopify://files/videos/THE OFFICE mobile.mov",
             "video_url": "",
             "video_url_mobile": "",
             "image_overlay_opacity": 0,
@@ -79,7 +52,7 @@
             "subheading_custom": "",
             "button_label": "",
             "link": "",
-            "button_label_2": "KHÁM PHÁ BỘ SƯU TẬP",
+            "button_label_2": "EXPLORE THE COLLECTION",
             "link_2": "shopify://collections/the-office",
             "button_style_secondary": false,
             "show_text_box": false,
@@ -91,7 +64,6 @@
         }
       },
       "block_order": [
-        "slide_NHr4VU",
         "slide_kjBj9L",
         "slide_bL94pR"
       ],
@@ -111,8 +83,8 @@
       "type": "feature-collection-slider",
       "name": "SLIDER COLLECTION NEW",
       "settings": {
-        "heading": "Thiết kế mới",
-        "description": "<p>Những thiết kế mới nhất — tiếp nối và mở rộng ngôn ngữ thị giác của SEESON qua nhiều chất liệu và hình thái.</p>",
+        "heading": "LATEST COLLECTION",
+        "description": "<p>Recent frames — where SEESON’s visual language continues to unfold through material and form.</p>",
         "product_list": [
           "the-athletes-01",
           "the-athletes-02",
@@ -138,11 +110,11 @@
       "type": "featured-collection",
       "name": "ESSENTIAL STYLES",
       "settings": {
-        "collection": "essential-style",
+        "collection": "view-all-sun",
         "products_to_show": 8,
         "title": "BACK IN STOCK",
         "heading_size": "h1",
-        "description": "<p>Những thiết kế được yêu thích trở lại với số lượng giới hạn.</p>",
+        "description": "<p>Selected favourites are now back in limited quantities.</p>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 4,
@@ -171,7 +143,7 @@
         "text_PWQdMz": {
           "type": "text",
           "settings": {
-            "text": "<p>Khám phá các thiết kế được cân bằng giữa ngôn ngữ hình khối và tính ứng dụng thường nhật.<br/><br/><a href=\"https://www.seeson.vn/collections/all\" title=\"https://www.seeson.vn/collections/all\">KHÁM PHÁ TẤT CẢ SẢN PHẨM</a></p>"
+            "text": "<p>Explore designs that balance form and function to deliver everyday comfort<br/><br/><a href=\"/collections/view-all-sun\" title=\"ALL DESIGN\">SHOP ALL DESIGN</a></p>"
           }
         }
       },
@@ -197,14 +169,14 @@
         "heading_cDzbMc": {
           "type": "heading",
           "settings": {
-            "heading": "HỆ THỐNG CỬA HÀNG FLAGSHIP",
+            "heading": "FLAGSHIP STORES",
             "heading_tag": "h2"
           }
         },
         "text_mMRXhW": {
           "type": "text",
           "settings": {
-            "text": "<p>Nơi tinh thần Việt Nam hiện diện trong nhịp điệu đương đại. Mỗi chi tiết được xây dựng tỉ mỉ, dẫn dắt cảm nhận qua những điểm chạm có chủ đích.</p>"
+            "text": "<p>Where the Vietnamese spirit moves within a contemporary rhythm. Each detail is carefully refined, shaping the experience through intentional touches.</p>"
           }
         }
       },
@@ -233,12 +205,12 @@
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/Store_CTA_HN_5dd8bdc2-78bd-445a-9d5e-2c5695beeb0f.jpg",
-            "image_mobile": "shopify://shop_images/Store_CTA_HN_5dd8bdc2-78bd-445a-9d5e-2c5695beeb0f.jpg",
+            "image": "shopify://shop_images/Store_CTA_HN.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_HN.jpg",
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Tôn Đức Thắng, Phường Ô Chợ Dừa, Thành phố Hà Nội</p><p>9.00 AM - 10.00 PM  |  (+84) 986 009 390<br/><br/></p>",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang, O Cho Dua Ward, Hanoi City</p><p>9.00 AM - 10.00 PM | (+84) 986 009 390</p>",
             "link_label": "",
             "link": "/pages/stores#store-hanoi"
           }
@@ -248,12 +220,12 @@
           "settings": {
             "content_overlay": true,
             "content_alignment": "left-top",
-            "image": "shopify://shop_images/Store_CTA_SG_b61d741f-ffb5-4366-bdbf-03f927f4f38a.jpg",
-            "image_mobile": "shopify://shop_images/Store_CTA_SG_b61d741f-ffb5-4366-bdbf-03f927f4f38a.jpg",
+            "image": "shopify://shop_images/Store_CTA_SG.jpg",
+            "image_mobile": "shopify://shop_images/Store_CTA_SG.jpg",
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Điện Biên Phủ, Phường Xuân Hoà, Thành phố Hồ Chí Minh</p><p>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | (+84) 986 009 390</p>",
             "link_label": "",
             "link": "/pages/stores#store-saigon"
           }
@@ -293,7 +265,7 @@
         "text_QYd4pt": {
           "type": "text",
           "settings": {
-            "text": "<p>Khám phá thiết kế của SEESON tại các đối tác phân phối được chọn lọc. Tìm cửa hàng gần nhất tại đây</p><p><a href=\"/pages/stores\" title=\"STORES\">HỆ THỐNG ĐẠI LÝ PHÂN PHỐI CHÍNH THỨC</a></p>"
+            "text": "<p>Discover SEESON through a curated network of selected stockists. Find your nearest store here.</p><p><a href=\"https://en.seeson.vn/pages/stores-new\" title=\"STORES - NEW\">OFFICIAL STOCKISTS</a></p>"
           }
         }
       },

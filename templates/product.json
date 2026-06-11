@@ -48,9 +48,9 @@
             "enable_sizing_data": true,
             "heading": "SIZING",
             "icon": "none",
-            "content": "{{ product.description }}",
+            "content": "",
             "page": "",
-            "sizing_description": ""
+            "sizing_description": "{{ product.metafields.custom.eyewear_frame_style_shape.value.description | metafield_tag }}"
           }
         },
         "price": {
