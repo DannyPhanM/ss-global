@@ -402,7 +402,7 @@
 {%- if total > 0 -%}
   {%- assign first_collection = collection_list | first -%}
   {%- assign first_main_img = first_collection.featured_image | default: first_collection.products.first.featured_image -%}
-  {%- assign first_second_img = first_collection.metafields.custom.collection_banner_second | default: first_main_img -%}
+  {%- assign first_second_img = first_collection.metafields.custom.image_flip | default: first_main_img -%}
 {%- endif -%}
 
 <div class="coll-list-slider section-{{ section.id }}-padding">
@@ -424,7 +424,7 @@
               <div class="swiper-wrapper">
                 {%- for collection in collection_list -%}
                   {%- assign main_img = collection.featured_image | default: collection.products.first.featured_image -%}
-                  {%- assign second_img = collection.metafields.custom.collection_banner_second | default: main_img -%}
+                  {%- assign second_img = collection.metafields.custom.image_flip | default: main_img -%}
                   
                   <div class="swiper-slide" 
                     data-real-index="{{ forloop.index0 }}"
@@ -542,7 +542,10 @@
       slides.forEach(sl => sl.classList.add('show-item'));
       
       const slide = slides[0];
-      {% comment %} if(fCard) fCard.classList.remove('is-flipped'); {% endcomment %}
+      if(fCard) fCard.classList.remove('is-flipped');
+      mEl.querySelectorAll('.coll-thumb-flip-card').forEach(card => {
+        card.classList.remove('is-flipped');
+      });
 
       if(iEl) {
         const h2 = iEl.querySelector('h2');
@@ -573,6 +576,13 @@
           if(imgS.dataset.src) imgS.dataset.src = urlS; // For lazyload libraries
           if(fBtn) fBtn.style.display = 'flex'; 
           if(fBtnMobile) fBtnMobile.style.display = 'flex'; 
+        } else {
+          if(imgS) {
+            imgS.src = '';
+            imgS.srcset = '';
+          }
+          if(fBtn) fBtn.style.display = 'none'; 
+          if(fBtnMobile) fBtnMobile.style.display = 'none'; 
         }
       }
     }
