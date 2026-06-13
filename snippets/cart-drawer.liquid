@@ -878,7 +878,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                     <ul class="list-unstyled">
                                       <li>
                                         <span>{{ item.variant.quantity_rule.min }}+</span>
-                                        <span>{{ item.variant.price | money_with_currency }}/ea</span>
+                                        <span>{{ item.variant.price | money_without_currency }}/ea</span>
                                       </li>
                                       {%- for price_break in item.variant.quantity_price_breaks -%}
                                         <li>
@@ -886,7 +886,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
                                             {{- price_break.minimum_quantity -}}
                                             <span aria-hidden="true">+</span></span
                                           >
-                                          <span>{{ price_break.price | money_with_currency }}/ea</span>
+                                          <span>{{ price_break.price | money_without_currency }}/ea</span>
                                         </li>
                                       {%- endfor -%}
                                     </ul>
