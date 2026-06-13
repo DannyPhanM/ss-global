@@ -186,11 +186,12 @@
                         id="swym-atw-pdp-button"
                         type="button"
                         aria-label="Add to wishlist"
-                        class="swym-button swym-add-to-wishlist-view-product product_{{ product.id }} swym-bookmark atw-button-add-color atw-button-add false"
+                        class="swym-button swym-add-to-wishlist-view-product swym-bookmark atw-button-add-color atw-button-add false"
+                        data-with-epi="true"
                         data-swaction="addToWishlist"
                         data-product-id="{{ product.id }}"
                         data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-                        data-product-url="{{ shop.url }}{{ product.url }}"
+                        data-product-url="{{ request.origin }}{{ product.url }}"
                         style="background:transparent;"
                       >
 
