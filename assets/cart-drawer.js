@@ -31,6 +31,7 @@ class CartDrawer extends HTMLElement {
 
   open(triggeredBy) {
     if (triggeredBy) this.setActiveElement(triggeredBy);
+    this.scrollPosition = window.scrollY;
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
     if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);
     // here the animation doesn't seem to always get triggered. A timeout seem to help
@@ -62,6 +63,9 @@ class CartDrawer extends HTMLElement {
     document.body.classList.remove('overflow-hidden');
     document.documentElement.classList.remove('overflow-hidden');
     document.body.classList.remove('open-drawer');
+    if (this.scrollPosition !== undefined) {
+      window.scrollTo(0, this.scrollPosition);
+    }
   }
 
   setSummaryAccessibility(cartDrawerNote) {

@@ -37,8 +37,8 @@ window.SwymBeforeRender.push(function (UIObj) {
         key: "render",
         value: function render() {
           var ctx = this.context.UI;
-          var pr = this.props.listItem.pr;
-          var originalPrice = this.props.productItem.op;
+          var pr = this.props.listItem ? this.props.listItem.pr : 0;
+          var originalPrice = this.props.productItem ? this.props.productItem.op : null;
 
           ctx.FormatPrice = function (value) {
             var currency = window._swat.currency || "₫";

@@ -150,6 +150,19 @@
     justify-content: center;
     margin-top: 0;
   }
+
+  #swym-wishlist-render-container .swym-wishlist-grid .swym-wishlist-item.sold-out .swym-product-price .swym-product-final-price:not([style]) {
+    display: none !important;
+  }
+  #swym-wishlist-render-container .swym-wishlist-grid .swym-wishlist-item.sold-out .swym-product-price .swym-product-original-price {
+    display: none !important;
+  }
+  #swym-wishlist-render-container .swym-wishlist-grid .swym-wishlist-item.sold-out .swym-product-price .swym-product-final-price {
+    color: #999999 !important;
+  }
+  .swym-ui-component .swym-wishlist-grid .swym-wishlist-item.sold-out .swym-variant-title {
+    transform: translateY(0px);
+  }
 </style>
 
 
@@ -259,11 +272,20 @@
 
           const variant = productData.variants.find(v => String(v.id) === String(variantId));
           if (variant && !variant.available) {
+            item.classList.add('sold-out');
             const btn = item.querySelector('.swym-add-to-cart-btn');
             if (btn) {
               btn.classList.add('swym-out-of-stock');
               btn.setAttribute('disabled', 'disabled');
             }
+            const isEnglish = {{ request.locale.iso_code | json }} === 'en';
+            const soldOutText = isEnglish ? 'SOLD OUT' : 'HẾT HÀNG';
+            const priceEl = item.querySelector('.swym-product-price');
+            if (priceEl) {
+              priceEl.innerHTML = `<div class="swym-product-final-price swym-value" style="color: #999999 !important;">${soldOutText}</div>`;
+            }
+          } else {
+            item.classList.remove('sold-out');
           }
         } catch (err) {
           console.error('Error checking wishlist stock:', err);
@@ -558,7 +580,7 @@ window.SwymCallbacks.push(renderWishlistCounter);
             <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
               <div class="cart-drawer__empty-content">
                 <p class="cart__empty-text"> {{ 'sections.cart.empty' | t }} </p>
-                <a href="/collections/view-all-sun" class="button button--primary continue-shopping-button">
+                <a href="/collections/all-designs" class="button button--primary continue-shopping-button">
                   {{ 'general.continue_shopping' | t }}
                 </a>
               </div>
@@ -911,12 +933,12 @@ window.SwymCallbacks.push(renderWishlistCounter);
                               <button
                               type="button"
                               aria-label="Add to Wishlist"
-                              class="swym-button swym-add-to-wishlist-view-product product_{{ item.product.id }} swym-bookmark wish-list"
+                              class="swym-button swym-add-to-wishlist-view-product swym-bookmark wish-list"
                               data-with-epi="true"
                               data-swaction="addToWishlist"
                               data-product-id="{{ item.product.id }}"
                               data-variant-id="{{ item.variant.id }}"
-                              data-product-url="{{ shop.url | append: item.product.url }}"
+                              data-product-url="{{ request.origin | append: item.product.url }}"
                             >
                               <span class="svg-wrapper wishlist-icon">{% render 'core-icon', name: 'wishlist', class: 'icon-wishlist' %}</span>
                               <span class="svg-wrapper wishlist-added-icon">{% render 'core-icon', name: 'wishlist-added', class: 'icon-wishlist-added' %}</span>

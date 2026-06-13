@@ -199,7 +199,7 @@ function removeTrapFocus(elementToFocus = null) {
   document.removeEventListener('focusout', trapFocusHandlers.focusout);
   document.removeEventListener('keydown', trapFocusHandlers.keydown);
 
-  if (elementToFocus) elementToFocus.focus();
+  if (elementToFocus) elementToFocus.focus({ preventScroll: true });
 }
 
 function onKeyUpEscape(event) {
@@ -1254,7 +1254,7 @@ class ProductRecommendations extends HTMLElement {
           var maxAttempts = 3;
           function tryInitSwymRecommendations() {
             initAttempts++;
-            if (window._swat && typeof window._swat.initializeActionButtons === 'function' && typeof window._swat.fetchWishlist === 'function') {
+            if (window._swat && typeof window._swat.initializeActionButtons === 'function' && (typeof window._swat.fetch === 'function' || typeof window._swat.fetchWishlist === 'function')) {
               window._swat.initializeActionButtons('product-recommendations');
               if (typeof window.syncSwymWishlistButtons === 'function') {
                 window.syncSwymWishlistButtons(true);
@@ -1558,6 +1558,15 @@ class ProductCardCarousel extends HTMLElement {
             const newVid = swatch.dataset.variantId;
             if (oldVid !== newVid) {
               wishlistBtn.setAttribute('data-variant-id', newVid);
+              wishlistBtn.classList.remove('swym-adding', 'disabled');
+              wishlistBtn.removeAttribute('disabled');
+              
+              // Update data-product-url to include variant parameter
+              const oldUrl = wishlistBtn.getAttribute('data-product-url');
+              if (oldUrl) {
+                const baseUrl = oldUrl.split('?')[0];
+                wishlistBtn.setAttribute('data-product-url', `${baseUrl}?variant=${newVid}`);
+              }
               
               // Trigger cache-backed sync
               if (typeof window.syncSwymWishlistButtons === 'function') {
@@ -1783,6 +1792,10 @@ function handleSwymCustomizations() {
   // Safety net: re-initialize any new Swym buttons that were dynamically added
   const uninitButtons = document.querySelectorAll('.swym-button[data-swaction="addToWishlist"]:not([data-swym-processed])');
   if (uninitButtons.length > 0) {
+    if (typeof swymObserver !== 'undefined' && swymObserver.disconnect) {
+      swymObserver.disconnect();
+    }
+    
     uninitButtons.forEach(function(btn) { btn.setAttribute('data-swym-processed', 'true'); });
     if (window._swat && typeof window._swat.initializeActionButtons === 'function') {
       window._swat.initializeActionButtons();
@@ -1791,6 +1804,13 @@ function handleSwymCustomizations() {
     // Force fetch after new buttons are found
     if (typeof window.syncSwymWishlistButtons === 'function') {
       window.syncSwymWishlistButtons(true);
+    }
+    
+    if (typeof swymObserver !== 'undefined' && swymObserver.observe) {
+      swymObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
     }
   } else {
     // Just sync existing buttons from cache
@@ -1807,7 +1827,8 @@ window.swymWishlistItemsCache = null;
 window.isFetchingSwymWishlist = false;
 
 window.syncSwymWishlistButtons = function(forceFetch = false) {
-  if (!window._swat || typeof window._swat.fetchWishlist !== 'function') return;
+  const fetchFn = window._swat && (window._swat.fetch || window._swat.fetchWishlist);
+  if (!window._swat || typeof fetchFn !== 'function') return;
   
   const performSync = function(items) {
     if (!Array.isArray(items)) return;
@@ -1815,6 +1836,7 @@ window.syncSwymWishlistButtons = function(forceFetch = false) {
     // Find all wishlist buttons on the page
     const buttons = document.querySelectorAll('.swym-button[data-swaction="addToWishlist"]');
     buttons.forEach(btn => {
+      
       const pid = btn.getAttribute('data-product-id');
       const vid = btn.getAttribute('data-variant-id');
       
@@ -1824,11 +1846,11 @@ window.syncSwymWishlistButtons = function(forceFetch = false) {
         // Skip deleted/removed items (where item.d === 1 or item.d === true)
         if (item.d === 1 || item.d === true) return false;
         
-        if (vid && item.epi) {
-          return String(item.epi) === String(vid);
+        if (vid) {
+          return item.epi && String(item.epi) === String(vid);
         }
-        if (pid && item.empi) {
-          return String(item.empi) === String(pid);
+        if (pid) {
+          return item.empi && String(item.empi) === String(pid);
         }
         return false;
       });
@@ -1847,7 +1869,7 @@ window.syncSwymWishlistButtons = function(forceFetch = false) {
     if (window.isFetchingSwymWishlist && !forceFetch) return;
     window.isFetchingSwymWishlist = true;
     
-    window._swat.fetchWishlist(function(items) {
+    fetchFn.call(window._swat, function(items) {
       window.swymWishlistItemsCache = items || [];
       window.isFetchingSwymWishlist = false;
       performSync(window.swymWishlistItemsCache);
@@ -1863,7 +1885,7 @@ window.SwymCallbacks.push(function(swat) {
   
   // Listen to Swym events and update cache & buttons in a fully variant-aware manner
   swat.evtLayer.addEventListener('sw:addedtowishlist', function(e) {
-    const item = e.detail;
+    const item = e.detail ? (e.detail.d || e.detail) : null;
     if (window.swymWishlistItemsCache && item) {
       const exists = window.swymWishlistItemsCache.some(i => {
         if (item.epi && i.epi) return String(i.epi) === String(item.epi);
@@ -1877,7 +1899,7 @@ window.SwymCallbacks.push(function(swat) {
   });
   
   swat.evtLayer.addEventListener('sw:removedfromwishlist', function(e) {
-    const item = e.detail;
+    const item = e.detail ? (e.detail.d || e.detail) : null;
     if (window.swymWishlistItemsCache && item) {
       window.swymWishlistItemsCache = window.swymWishlistItemsCache.filter(i => {
         if (item.epi && i.epi) return String(i.epi) !== String(item.epi);
@@ -1887,6 +1909,116 @@ window.SwymCallbacks.push(function(swat) {
     window.syncSwymWishlistButtons();
   });
 });
+
+// Intercept all custom wishlist button clicks to call Swym SDK APIs directly with the current variant ID.
+// This bypasses Swym's default cached click handler to prevent adding the wrong/stale variant.
+// Registered exactly once globally at the document level.
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('.swym-button[data-swaction="addToWishlist"]');
+  if (!btn) return;
+  
+  // Stop Swym SDK from handling this click natively
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation();
+  
+  if (!window._swat) return;
+  const swat = window._swat;
+  
+  const pid = btn.getAttribute('data-product-id');
+  const vid = btn.getAttribute('data-variant-id');
+  const url = btn.getAttribute('data-product-url');
+  
+  if (!pid || !vid) return;
+  
+  const item = {
+    empi: parseInt(pid),
+    epi: parseInt(vid),
+    du: url
+  };
+  
+  const addFn = swat.addToWishList || swat.addToWishlist || swat.add;
+  const removeFn = swat.removeFromWishList || swat.removeFromWishlist || swat.remove;
+  
+  if (typeof addFn !== 'function' || typeof removeFn !== 'function') {
+    console.warn("Swym API add/remove functions not found on swat", swat);
+    return;
+  }
+  
+  const isAdded = btn.classList.contains('swym-added');
+  
+  // Optimistic UI Update: immediately toggle swym-added state and update cache
+  btn.classList.add('swym-adding', 'disabled');
+  btn.setAttribute('disabled', 'disabled');
+  
+  if (isAdded) {
+    // Optimistically remove
+    btn.classList.remove('swym-added');
+    if (window.swymWishlistItemsCache) {
+      window.swymWishlistItemsCache = window.swymWishlistItemsCache.filter(i => {
+        if (item.epi && i.epi) return String(i.epi) !== String(item.epi);
+        return String(i.empi) !== String(item.empi);
+      });
+    }
+    // Sync other buttons on page immediately
+    if (typeof window.syncSwymWishlistButtons === 'function') {
+      window.syncSwymWishlistButtons();
+    }
+    
+    removeFn.call(swat, item, function() {
+      btn.classList.remove('swym-adding', 'disabled');
+      btn.removeAttribute('disabled');
+    }, function(err) {
+      btn.classList.remove('swym-adding', 'disabled');
+      btn.removeAttribute('disabled');
+      // Rollback on error
+      btn.classList.add('swym-added');
+      if (window.swymWishlistItemsCache) {
+        window.swymWishlistItemsCache.push(item);
+      }
+      if (typeof window.syncSwymWishlistButtons === 'function') {
+        window.syncSwymWishlistButtons();
+      }
+      console.error("Swym remove error:", err);
+    });
+  } else {
+    // Optimistically add
+    btn.classList.add('swym-added');
+    if (window.swymWishlistItemsCache) {
+      const exists = window.swymWishlistItemsCache.some(i => {
+        if (item.epi && i.epi) return String(i.epi) === String(item.epi);
+        return String(i.empi) === String(item.empi);
+      });
+      if (!exists) {
+        window.swymWishlistItemsCache.push(item);
+      }
+    }
+    // Sync other buttons on page immediately
+    if (typeof window.syncSwymWishlistButtons === 'function') {
+      window.syncSwymWishlistButtons();
+    }
+    
+    addFn.call(swat, item, function() {
+      btn.classList.remove('swym-adding', 'disabled');
+      btn.removeAttribute('disabled');
+    }, function(err) {
+      btn.classList.remove('swym-adding', 'disabled');
+      btn.removeAttribute('disabled');
+      // Rollback on error
+      btn.classList.remove('swym-added');
+      if (window.swymWishlistItemsCache) {
+        window.swymWishlistItemsCache = window.swymWishlistItemsCache.filter(i => {
+          if (item.epi && i.epi) return String(i.epi) !== String(item.epi);
+          return String(i.empi) !== String(item.empi);
+        });
+      }
+      if (typeof window.syncSwymWishlistButtons === 'function') {
+        window.syncSwymWishlistButtons();
+      }
+      console.error("Swym add error:", err);
+    });
+  }
+}, true);
 
 // Listen for variant changes on PDP to keep the wishlist button in sync
 if (typeof subscribe === 'function' && window.PUB_SUB_EVENTS) {

@@ -226,12 +226,12 @@
           <button
             type="button"
             aria-label="Add to Wishlist"
-            class="swym-button swym-add-to-wishlist-view-product product_{{ card_product.id }} swym-bookmark"
+            class="swym-button swym-add-to-wishlist-view-product swym-bookmark"
             data-with-epi="true"
             data-swaction="addToWishlist"
             data-product-id="{{ card_product.id }}"
             data-variant-id="{{ card_product.selected_or_first_available_variant.id | default: card_product.variants[0].id }}"
-            data-product-url="{{ shop.url | append: card_product.url }}"
+            data-product-url="{{ request.origin }}{{ card_product.url }}{% if card_product.selected_or_first_available_variant.id %}?variant={{ card_product.selected_or_first_available_variant.id }}{% endif %}"
           >
             {% render 'core-icon', name: 'wishlist', class: 'icon-wishlist' %}
             {% render 'core-icon', name: 'wishlist-added', class: 'icon-wishlist-added' %}
