@@ -6362,6 +6362,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
   width: 54px;
   display: flex;
   justify-content: flex-end;
+  display: none;
 }
 
 .localization-selector+.disclosure__list-wrapper {
