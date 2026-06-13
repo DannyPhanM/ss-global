@@ -602,7 +602,7 @@ footer * {
 }
 @media(min-width: 750px) {
   .footer__content-bottom-wrapper .menu-list-custom .footer-block__details-content {
-    max-width: 460px;
+    max-width: 548px;
     justify-content: space-between;
     margin-left: auto;
     margin-right: 0;
@@ -611,7 +611,7 @@ footer * {
 
 @media(min-width:990px) {
   .footer__content-bottom-wrapper .menu-list-custom .footer-block__details-content {
-    width: 462px;
+    width: 548px;
   }
 }
 @media (max-width: 749px) {
