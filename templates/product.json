@@ -183,10 +183,10 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_fEM9Jm": {
+    "multicolumn_XjrWKU": {
       "type": "multicolumn",
       "blocks": {
-        "column_hqW6yi": {
+        "column_mGXyJ8": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -196,12 +196,12 @@
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang, O Cho Dua Ward, Hanoi City</p><p>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
+            "text": "<p><strong>HANOI IRL FLAGSHIP</strong></p><p>44 Ton Duc Thang, O Cho Dua Ward, Hanoi City</p><p>9.00 AM - 10.00 PM | (+84) 986 009 390</p>",
             "link_label": "",
             "link": "/pages/stores#store-hanoi"
           }
         },
-        "column_QANmAW": {
+        "column_tPxnhU": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -211,15 +211,15 @@
             "title": "",
             "image_link": true,
             "heading_tag": "h3",
-            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM  |  (+84) 986 009 390</p>",
+            "text": "<p><strong>SAIGON IRL FLAGSHIP</strong></p><p>199 Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City</p><p>9.00 AM - 10.00 PM | (+84) 986 009 390</p>",
             "link_label": "",
             "link": "/pages/stores#store-saigon"
           }
         }
       },
       "block_order": [
-        "column_hqW6yi",
-        "column_QANmAW"
+        "column_mGXyJ8",
+        "column_tPxnhU"
       ],
       "name": "FLAGSHIP STORES",
       "settings": {
@@ -277,7 +277,7 @@
     "related-products",
     "rich_text_BqQawY",
     "rich_text_Ap8tpF",
-    "multicolumn_fEM9Jm",
+    "multicolumn_XjrWKU",
     "rich_text_YDy3wW"
   ]
 }
