@@ -267,10 +267,10 @@
         "padding_bottom_mobile": 20
       }
     },
-    "multicolumn_tit84A": {
+    "multicolumn_r6zBwt": {
       "type": "multicolumn",
       "blocks": {
-        "column_bchcEB": {
+        "column_HkT9bL": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -285,7 +285,7 @@
             "link": "/pages/stores#store-hanoi"
           }
         },
-        "column_y8Xw9F": {
+        "column_CMx7bj": {
           "type": "column",
           "settings": {
             "content_overlay": true,
@@ -302,8 +302,8 @@
         }
       },
       "block_order": [
-        "column_bchcEB",
-        "column_y8Xw9F"
+        "column_HkT9bL",
+        "column_CMx7bj"
       ],
       "name": "FLAGSHIP STORES",
       "settings": {
@@ -363,7 +363,7 @@
     "rich_text_Bh37UM",
     "image_carousel_9zX4HU",
     "rich_text_YKfw9t",
-    "multicolumn_tit84A",
+    "multicolumn_r6zBwt",
     "rich_text_a8fbaQ"
   ]
 }
