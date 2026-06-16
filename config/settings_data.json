@@ -161,31 +161,9 @@
     },
     "content_for_index": [],
     "blocks": {
-      "17745397173975901411": {
-        "type": "shopify://apps/swym-relay/blocks/wishlist-app-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
-        "disabled": false,
-        "settings": {
-          "show_ui": true,
-          "storefront_layout_enabled": false,
-          "storefront_layout_primary_bg_color": "#000000",
-          "storefront_layout_primary_text_color": "#ffffff",
-          "storefront_layout_secondary_bg_color": "#F4F8FE",
-          "storefront_layout_secondary_text_color": "#333333",
-          "storefront_layout_ui_border_radius": 6,
-          "storefront_layout_notification_position": "left",
-          "storefront_layout_action_popup_position": "left",
-          "storefront_layout_drawer_position": "left",
-          "storefront_layout_as_section_page": ""
-        }
-      },
       "17745397173973090149": {
         "type": "shopify://apps/wishlist-plus/blocks/storefront-ui-elements/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
         "disabled": true,
-        "settings": {}
-      },
-      "1173261918193615741": {
-        "type": "shopify://apps/geo-pro-geolocation/blocks/geopro/16fc5313-7aee-4e90-ac95-f50fc7c8b657",
-        "disabled": false,
         "settings": {}
       },
       "10274264662263595587": {
@@ -213,6 +191,23 @@
           "swym_variant_selector_product_detail_font_color": "#ffffff",
           "swym_variant_selector_create_list_placeholder_text": "Enter wishlist name",
           "swym_variant_selector_create_list_title": "Name Your Wishlist"
+        }
+      },
+      "17745397173975901411": {
+        "type": "shopify://apps/wishlist-plus/blocks/wishlist-app-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "disabled": true,
+        "settings": {
+          "show_ui": true,
+          "storefront_layout_enabled": false,
+          "storefront_layout_primary_bg_color": "#000000",
+          "storefront_layout_primary_text_color": "#ffffff",
+          "storefront_layout_secondary_bg_color": "#f4f8fe",
+          "storefront_layout_secondary_text_color": "#333333",
+          "storefront_layout_ui_border_radius": 6,
+          "storefront_layout_notification_position": "left",
+          "storefront_layout_action_popup_position": "left",
+          "storefront_layout_drawer_position": "left",
+          "storefront_layout_as_section_page": ""
         }
       }
     },
