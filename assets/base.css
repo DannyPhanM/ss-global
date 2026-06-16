@@ -6394,3 +6394,7 @@ body.open-search .header-wrapper .header__heading-logo-wrapper .hidden img {
 .swym-atw-btn-wrapper.add_to_cart_button_right-position {
   width: 100%;
 }
+
+[data-tab="wishlist"], button.swym-button, .wishlist-button {
+  display: none !important;
+}
