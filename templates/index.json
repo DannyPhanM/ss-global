@@ -110,7 +110,7 @@
       "type": "featured-collection",
       "name": "ESSENTIAL STYLES",
       "settings": {
-        "collection": "view-all-sun",
+        "collection": "essential-styles",
         "products_to_show": 8,
         "title": "BACK IN STOCK",
         "heading_size": "h1",
