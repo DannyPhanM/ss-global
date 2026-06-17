@@ -542,10 +542,8 @@
       slides.forEach(sl => sl.classList.add('show-item'));
       
       const slide = slides[0];
-      if(fCard) fCard.classList.remove('is-flipped');
-      mEl.querySelectorAll('.coll-thumb-flip-card').forEach(card => {
-        card.classList.remove('is-flipped');
-      });
+      // NOTE: Flip state (is-flipped) is intentionally NOT reset here.
+      // It will only be reset below if the new collection has no real secondary image.
 
       if(iEl) {
         const h2 = iEl.querySelector('h2');
@@ -564,23 +562,37 @@
         const imgS = fCard.querySelector('.coll-master-img.secondary');
         const urlP = slide.getAttribute('data-img-primary');
         const urlS = slide.getAttribute('data-img-secondary');
+
+        // A "real" secondary image exists only when urlS is set AND different from the primary.
+        // (urlS falls back to urlP in Liquid when no image_flip metafield is set)
+        const hasRealSecondary = !!(urlS && urlP && urlS !== urlP);
         
         if(imgP && urlP) {
           imgP.src = urlP;
           imgP.srcset = urlP; // Clear/Update srcset to ensure the new image shows
           if(imgP.dataset.src) imgP.dataset.src = urlP; // For lazyload libraries
         }
-        if(imgS && urlS) {
-          imgS.src = urlS;
-          imgS.srcset = urlS; // Clear/Update srcset
-          if(imgS.dataset.src) imgS.dataset.src = urlS; // For lazyload libraries
+
+        if(hasRealSecondary) {
+          // Update secondary image and keep flip button visible
+          if(imgS) {
+            imgS.src = urlS;
+            imgS.srcset = urlS; // Clear/Update srcset
+            if(imgS.dataset.src) imgS.dataset.src = urlS; // For lazyload libraries
+          }
           if(fBtn) fBtn.style.display = 'flex'; 
           if(fBtnMobile) fBtnMobile.style.display = 'flex'; 
         } else {
+          // No real secondary image → hide flip button and reset flip to front
           if(imgS) {
             imgS.src = '';
             imgS.srcset = '';
           }
+          // Reset flip state since there is no secondary image to show
+          if(fCard) fCard.classList.remove('is-flipped');
+          mEl.querySelectorAll('.coll-thumb-flip-card').forEach(card => {
+            card.classList.remove('is-flipped');
+          });
           if(fBtn) fBtn.style.display = 'none'; 
           if(fBtnMobile) fBtnMobile.style.display = 'none'; 
         }
