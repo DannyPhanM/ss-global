@@ -459,7 +459,7 @@ button.swym-button:disabled:hover {
   .search-modal.modal__content .search-modal__content .search__input,
   .search-modal.modal__content .search-modal__content .search__input::placeholder,
   .search-modal.modal__content .search-modal__content .field__label {
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 1.2 !important;
   }
 
