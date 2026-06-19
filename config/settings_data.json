@@ -209,6 +209,11 @@
           "storefront_layout_drawer_position": "left",
           "storefront_layout_as_section_page": ""
         }
+      },
+      "18443233120380120315": {
+        "type": "shopify://apps/bl-country-blocker/blocks/country-blocker/4f9fba3d-990f-4b67-9682-e3fdc1961431",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
