@@ -64,6 +64,23 @@
       assign current_variant_handles = current_variant_handles | append: o_val_h
     endfor
     assign current_variant_handles = current_variant_handles | split: ',' | uniq | compact
+
+    assign is_available_date = false
+    assign available_date_text = ""
+    for tag in card_product.tags
+      assign tag_downcase = tag | downcase
+      if tag_downcase contains 'available-on-'
+        assign date_part = tag | slice: 13, 100
+        assign is_available_date = true
+        assign available_date_text = 'products.product.available_on' | t: date: date_part
+        break
+      elsif tag_downcase contains 'available-on-'
+        assign date_part = tag | slice: 13, 100
+        assign is_available_date = true
+        assign available_date_text = 'products.product.available_on' | t: date: date_part
+        break
+      endif
+    endfor
   -%}
   <div class="card-wrapper product-card-wrapper">
     <div
@@ -298,9 +315,15 @@
               </p>
             {%- endif -%}
 
-            {%- if card_product.available == false -%}
-              <div class="price price--sold-out">
+            {%- if is_available_date -%}
+              <div class="price price--coming-soon">
                 <span class="price-item price-item--regular" style="color: #999999 !important;">
+                   <span style="text-transform: initial;">{{ available_date_text }}</span>
+                </span>
+              </div>
+            {%- elsif card_product.available == false -%}
+              <div class="price price--sold-out">
+                <span class="price-item price-item--regular" style="color: #999999 !important; text-transform: initial;">
                   {{ 'products.product.sold_out' | t }}
                 </span>
               </div>
