@@ -185,6 +185,7 @@
         "unit_price": "Unit price"
       },
       "share": "Share this product",
+      "available_on": "Available on {{ date }}",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
