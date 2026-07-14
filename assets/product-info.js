@@ -196,14 +196,23 @@ if (!customElements.get('product-info')) {
           this.querySelector(`#Quantity-Rules-${this.dataset.section}`)?.classList.remove('hidden');
           this.querySelector(`#Volume-Note-${this.dataset.section}`)?.classList.remove('hidden');
 
+           const sourceSubmitButton = html.getElementById(`ProductSubmitButton-${this.sectionId}`);
+          const destSubmitButton = this.productForm?.submitButton;
+          if (sourceSubmitButton && destSubmitButton) {
+            const customText = sourceSubmitButton.getAttribute('data-custom-disabled-text');
+            if (customText) {
+              destSubmitButton.setAttribute('data-custom-disabled-text', customText);
+            } else {
+              destSubmitButton.removeAttribute('data-custom-disabled-text');
+            }
+          }
+
           this.productForm?.toggleSubmitButton(
             html.getElementById(`ProductSubmitButton-${this.sectionId}`)?.hasAttribute('disabled') ?? true,
             window.variantStrings.soldOut
           );
 
           // Update the add to cart button price
-          const sourceSubmitButton = html.getElementById(`ProductSubmitButton-${this.sectionId}`);
-          const destSubmitButton = this.productForm?.submitButton;
           if (sourceSubmitButton && destSubmitButton) {
             const sourcePrice = sourceSubmitButton.querySelector('.product-form__submit-price');
             const destPrice = destSubmitButton.querySelector('.product-form__submit-price');
