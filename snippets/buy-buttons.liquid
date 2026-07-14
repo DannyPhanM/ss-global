@@ -22,6 +22,23 @@
       if block.settings.show_dynamic_checkout and gift_card_recipient_feature_active == false
         assign show_dynamic_checkout = true
       endif
+
+      assign is_available_date = false
+      assign available_date_text = ""
+      for tag in product.tags
+        assign tag_downcase = tag | downcase
+        if tag_downcase contains 'available-on-'
+          assign date_part = tag | slice: 13, 100
+          assign is_available_date = true
+          assign available_date_text = 'products.product.available_on' | t: date: date_part
+          break
+        elsif tag_downcase contains 'available-on-'
+          assign date_part = tag | slice: 13, 100
+          assign is_available_date = true
+          assign available_date_text = 'products.product.available_on' | t: date: date_part
+          break
+        endif
+      endfor
     -%}
 
     <product-form
@@ -73,12 +90,18 @@
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
+              or is_available_date
             %}
               disabled
             {% endif %}
+            {% if is_available_date %}
+              data-custom-disabled-text="{{ available_date_text }}"
+            {% endif %}
           >
             <span class="product-form__submit-text">
-              {%- if product.selected_or_first_available_variant == null -%}
+              {%- if is_available_date -%}
+                {{ available_date_text | upcase }}
+              {%- elsif product.selected_or_first_available_variant == null -%}
                 {{ 'products.product.unavailable' | t }}
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
@@ -87,7 +110,7 @@
               {%- endif -%}
             </span>
             <span class="product-form__submit-price">
-              {%- if product.selected_or_first_available_variant.available -%}
+              {%- if product.selected_or_first_available_variant.available and is_available_date == false -%}
                 <div class="product-form__submit-price-wrapper">
                   {%- if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price -%}
                     <span class="product-form__submit-compare-at-price">
