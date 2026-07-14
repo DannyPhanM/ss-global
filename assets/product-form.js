@@ -138,7 +138,11 @@ if (!customElements.get('product-form')) {
       }
 
       toggleSubmitButton(disable = true, text) {
-        if (disable) {
+        const customText = this.submitButton.getAttribute('data-custom-disabled-text');
+        if (customText) {
+          this.submitButton.setAttribute('disabled', 'disabled');
+          this.submitButtonText.textContent = customText;
+        } else if (disable) {
           this.submitButton.setAttribute('disabled', 'disabled');
           if (text) this.submitButtonText.textContent = text;
         } else {
