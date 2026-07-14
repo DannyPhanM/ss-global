@@ -149,6 +149,7 @@
         "unit_price": "Đơn giá"
       },
       "share": "Chia sẻ sản phẩm này",
+       "available_on": "Mở bán vào {{ date }}",
       "sold_out": "HẾT HÀNG",
       "unavailable": "Không có sẵn",
       "vendor": "Nhà cung cấp",
