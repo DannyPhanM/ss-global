@@ -12,6 +12,31 @@
     "slideshow_6w4AVd": {
       "type": "slideshow",
       "blocks": {
+        "slide_HET6We": {
+          "type": "slide",
+          "settings": {
+            "video": "shopify://files/videos/260706 Hero P2_H264_Graded V2.mov",
+            "video_mobile": "shopify://files/videos/260706 Hero P2_H264_Graded V2.mov",
+            "video_url": "",
+            "video_url_mobile": "",
+            "image_overlay_opacity": 0,
+            "enable_column": false,
+            "heading": "THE CAR COLLECTION",
+            "heading_size": "h0",
+            "subheading": "",
+            "subheading_custom": "",
+            "button_label": "",
+            "link": "",
+            "button_label_2": "EXPLORE THE COLLECTION",
+            "link_2": "shopify://collections/the-car",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-4"
+          }
+        },
         "slide_kjBj9L": {
           "type": "slide",
           "settings": {
@@ -64,6 +89,7 @@
         }
       },
       "block_order": [
+        "slide_HET6We",
         "slide_kjBj9L",
         "slide_bL94pR"
       ],
